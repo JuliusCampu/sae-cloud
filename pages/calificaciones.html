@@ -1,0 +1,635 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Calificaciones · SAE.cloud</title><link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet"><script src="https://cdn.tailwindcss.com"></script><script src="../assets/js/tailwind-config.js"></script><link rel="stylesheet" href="../assets/css/app.css"></head><body class="bg-surface font-body-md text-on-surface antialiased" data-page="calificaciones"><main class="w-full pt-16 bg-surface"><div class="flex flex-col w-full">
+<div class="p-margin flex flex-col gap-space-xl">
+<!-- Header Contextual & Acciones Directivas -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-space-2xs">
+<nav class="flex items-center gap-space-xs font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">
+<span class="hover:text-secondary cursor-pointer transition-colors">Académico</span>
+<span class="material-symbols-outlined text-[13px] text-outline">chevron_right</span>
+<span class="hover:text-secondary cursor-pointer transition-colors">Calificaciones</span>
+<span class="material-symbols-outlined text-[13px] text-outline">chevron_right</span>
+<span class="text-secondary font-bold">Captura Oficial de Periodo</span>
+</nav>
+<div class="flex items-center gap-space-sm">
+<h1 class="font-headline-xl text-headline-xl text-on-surface">Control de Evaluaciones y Calificaciones</h1>
+<span class="px-space-xs py-0.5 rounded-full bg-surface-container-high text-secondary font-code-num text-[11px] font-semibold">OFICIAL SEP</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<span class="material-symbols-outlined text-[16px] text-secondary">schedule</span>
+<span>Periodo Activo: <strong class="text-on-surface font-headline-md text-body-sm">Ciclo 2024–2025 • 2° Trimestre / Parcial 2</strong></span>
+<span class="inline-block w-1.5 h-1.5 rounded-full bg-outline-variant"></span>
+<span class="px-space-xs py-0.5 rounded bg-error-container text-on-error-container font-label-xs text-label-xs">Cierre de plataforma en 4 días</span>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs">
+<button class="h-9 px-space-sm rounded-lg bg-surface-container-lowest text-on-surface font-label-sm text-label-sm shadow-sm hover:bg-surface-container-low transition-colors flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-[17px] text-outline">upload_file</span>
+<span>Importar Excel</span>
+</button>
+<button class="h-9 px-space-sm rounded-lg bg-surface-container-lowest text-on-surface font-label-sm text-label-sm shadow-sm hover:bg-surface-container-low transition-colors flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-[17px] text-secondary">picture_as_pdf</span>
+<span>Descargar Acta Oficial SEP (PDF)</span>
+</button>
+<button class="h-9 px-space-sm rounded-lg bg-surface-container-high text-on-surface font-label-sm text-label-sm hover:bg-surface-variant transition-colors flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-[17px] text-on-surface-variant">save</span>
+<span>Guardar Borrador</span>
+</button>
+<button class="h-9 px-space-md rounded-lg bg-secondary text-on-secondary font-label-md text-label-md hover:bg-secondary-container shadow-sm transition-all flex items-center gap-space-2xs active:scale-95">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Publicar Calificaciones a Boletas</span>
+</button>
+</div>
+</div>
+<!-- Selectores de Nivel, Grupo y Asignatura -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col xl:flex-row xl:items-center justify-between gap-space-lg">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md flex-1">
+<div class="flex flex-col gap-space-2xs">
+<label class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Nivel y Grado</label>
+<div class="relative">
+<select class="w-full h-9 pl-space-sm pr-8 rounded-lg bg-surface-container-low text-on-surface font-label-sm text-label-sm appearance-none cursor-pointer focus:outline-none focus:ring-1 focus:ring-secondary">
+<option selected="">Secundaria - 2° Grado</option>
+<option>Secundaria - 1° Grado</option>
+<option>Secundaria - 3° Grado</option>
+<option>Preparatoria - 4° Semestre</option>
+</select>
+<span class="material-symbols-outlined absolute right-space-xs top-1/2 -translate-y-1/2 text-outline pointer-events-none text-[18px]">unfold_more</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-2xs">
+<label class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Grupo y Turno</label>
+<div class="relative">
+<select class="w-full h-9 pl-space-sm pr-8 rounded-lg bg-surface-container-low text-on-surface font-label-sm text-label-sm appearance-none cursor-pointer focus:outline-none focus:ring-1 focus:ring-secondary">
+<option selected="">Grupo A (32 Alumnos) - Matutino</option>
+<option>Grupo B (30 Alumnos) - Matutino</option>
+<option>Grupo C (28 Alumnos) - Vespertino</option>
+</select>
+<span class="material-symbols-outlined absolute right-space-xs top-1/2 -translate-y-1/2 text-outline pointer-events-none text-[18px]">unfold_more</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-2xs">
+<label class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Asignatura</label>
+<div class="relative">
+<select class="w-full h-9 pl-space-sm pr-8 rounded-lg bg-surface-container-low text-on-surface font-label-sm text-label-sm appearance-none cursor-pointer focus:outline-none focus:ring-1 focus:ring-secondary">
+<option selected="">Matemáticas II (MAT-SEC-202)</option>
+<option>Física I (FIS-SEC-201)</option>
+<option>Historia Universal (HIS-SEC-204)</option>
+</select>
+<span class="material-symbols-outlined absolute right-space-xs top-1/2 -translate-y-1/2 text-outline pointer-events-none text-[18px]">unfold_more</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-2xs">
+<label class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Docente Titular</label>
+<div class="h-9 px-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-xs overflow-hidden">
+<span class="material-symbols-outlined text-[17px] text-secondary flex-shrink-0">person_pin</span>
+<span class="font-label-sm text-label-sm text-on-surface truncate">Prof. Roberto Méndez Silva</span>
+</div>
+<span class="font-label-xs text-[10px] text-on-surface-variant font-code-num px-1 py-0.5 rounded bg-surface-container-high flex-shrink-0">DOC-8831</span>
+</div>
+</div>
+</div>
+<div class="h-px xl:h-12 xl:w-px bg-surface-container"></div>
+<div class="flex flex-col gap-1 flex-shrink-0 max-w-xs">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Ponderación Oficial de Rubros</span>
+<div class="px-space-sm py-1.5 rounded-lg bg-secondary-fixed text-on-secondary-fixed flex items-center gap-space-xs font-code-num text-[11px] font-semibold">
+<span class="material-symbols-outlined text-[15px] text-secondary">pie_chart</span>
+<span>Examen 50% • Tareas 30% • Asistencia 20%</span>
+</div>
+</div>
+</div>
+<!-- Indicadores Operativos Rápidos -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-gutter">
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Promedio Grupal</span>
+<span class="px-space-xs py-0.5 rounded-full bg-surface-container-high text-secondary font-label-xs text-label-xs flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[13px]">arrow_upward</span> +0.3 vs P1
+          </span>
+</div>
+<div class="mt-space-md flex items-baseline justify-between">
+<span class="font-display-lg text-display-lg text-on-surface font-code-num">8.4</span>
+<!-- Inline Sparkline SVG -->
+<svg class="w-20 h-7 text-secondary" fill="none" viewbox="0 0 80 28">
+<path d="M2 24 L18 20 L34 22 L50 14 L66 11 L78 5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"></path>
+<path d="M2 24 L18 20 L34 22 L50 14 L66 11 L78 5 L78 27 L2 27 Z" fill="currentColor" fill-opacity="0.08"></path>
+</svg>
+</div>
+<span class="mt-1 font-body-sm text-[12px] text-on-surface-variant">Tendencia ascendente sostenida</span>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Alumnos Aprobados</span>
+<span class="w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[15px]">check</span>
+</span>
+</div>
+<div class="mt-space-md flex items-baseline gap-space-xs">
+<span class="font-display-lg text-display-lg text-on-surface font-code-num">29</span>
+<span class="font-label-md text-label-md text-on-surface-variant font-code-num">/ 32</span>
+<span class="ml-auto font-code-num text-label-md text-secondary font-bold">90.6%</span>
+</div>
+<div class="mt-2 w-full h-1.5 rounded-full bg-surface-container">
+<div class="h-1.5 rounded-full bg-secondary" style="width: 90.6%"></div>
+</div>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Alumnos en Riesgo (&lt;6.0)</span>
+<span class="w-6 h-6 rounded-full bg-error-container flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[15px]">warning</span>
+</span>
+</div>
+<div class="mt-space-md flex items-baseline gap-space-xs">
+<span class="font-display-lg text-display-lg text-error font-code-num">3</span>
+<span class="font-label-md text-label-md text-on-surface-variant font-code-num">alumnos</span>
+<span class="ml-auto font-code-num text-label-md text-error font-bold">9.4%</span>
+</div>
+<span class="mt-1 font-body-sm text-[12px] text-error">2 con citatorio a tutor expedido</span>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Actas Capturadas</span>
+<span class="font-label-xs text-label-xs font-code-num text-secondary bg-surface-container-high px-1.5 py-0.5 rounded">93.7%</span>
+</div>
+<div class="mt-space-md flex items-baseline gap-space-xs">
+<span class="font-display-lg text-display-lg text-on-surface font-code-num">30</span>
+<span class="font-label-md text-label-md text-on-surface-variant font-code-num">de 32</span>
+<span class="ml-auto font-label-xs text-label-xs text-on-surface-variant">2 pendientes</span>
+</div>
+<div class="mt-2 w-full h-1.5 rounded-full bg-surface-container">
+<div class="h-1.5 rounded-full bg-secondary-container" style="width: 93.7%"></div>
+</div>
+</div>
+</div>
+<!-- Sábana y Tabla Interactiva Oficial -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm overflow-hidden flex flex-col">
+<!-- Sub-barra de acciones de tabla y filtros rápidos -->
+<div class="p-space-md bg-surface-container-low flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="relative w-64">
+<span class="material-symbols-outlined absolute left-space-xs top-1/2 -translate-y-1/2 text-outline text-[17px]">filter_list</span>
+<input class="w-full h-8 pl-8 pr-space-sm rounded-lg bg-surface-container-lowest text-on-surface placeholder:text-outline font-body-sm text-[12px] focus:outline-none focus:ring-1 focus:ring-secondary" placeholder="Filtrar por nombre o matrícula..." type="text"/>
+</div>
+<div class="flex items-center gap-1">
+<button class="h-8 px-space-xs rounded bg-surface-container-lowest text-on-surface font-label-xs text-label-xs hover:bg-surface-container transition-colors">Todos (32)</button>
+<button class="h-8 px-space-xs rounded bg-transparent text-on-surface-variant font-label-xs text-label-xs hover:bg-surface-container transition-colors">Aprobados (29)</button>
+<button class="h-8 px-space-xs rounded bg-transparent text-error font-label-xs text-label-xs hover:bg-error-container transition-colors">En Riesgo (3)</button>
+</div>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-code-num text-label-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary">sync</span>
+<span>Autoguardado local activo (hace 2 min)</span>
+</div>
+</div>
+<!-- Tabla de Datos -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse min-w-[1150px]">
+<thead>
+<tr class="bg-surface-container text-on-surface-variant font-label-xs text-[11px] uppercase tracking-wider h-10 select-none">
+<th class="pl-space-md pr-space-xs w-12 text-center">
+<input class="w-3.5 h-3.5 rounded accent-secondary cursor-pointer" type="checkbox"/>
+</th>
+<th class="px-space-xs w-12 text-center">#</th>
+<th class="px-space-sm min-w-[240px]">Alumno / Matrícula</th>
+<th class="px-space-sm text-center w-28">
+<span>Tareas (30%)</span>
+</th>
+<th class="px-space-sm text-center w-28">
+<span>Examen (50%)</span>
+</th>
+<th class="px-space-sm text-center w-28">
+<span>Asistencia (20%)</span>
+</th>
+<th class="px-space-sm text-center w-24">
+<span class="text-outline">Parcial 1</span>
+</th>
+<th class="px-space-sm text-center w-28 bg-surface-container-high/60">
+<span class="text-secondary font-bold">Parcial 2</span>
+</th>
+<th class="px-space-sm text-center w-24">
+<span>Acumulado</span>
+</th>
+<th class="px-space-sm text-center w-36">Estatus SEP</th>
+<th class="pr-space-md pl-space-sm min-w-[180px]">Observaciones</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-body-sm text-on-surface">
+<!-- Fila 1: Valeria Méndez Treviño -->
+<tr class="hover:bg-surface-container-low transition-colors group h-12">
+<td class="pl-space-md pr-space-xs text-center">
+<input class="w-3.5 h-3.5 rounded accent-secondary cursor-pointer" type="checkbox"/>
+</td>
+<td class="px-space-xs text-center font-code-num text-on-surface-variant text-[12px]">01</td>
+<td class="px-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-headline-md text-label-xs font-bold">
+                    VM
+                  </div>
+<div class="flex flex-col">
+<span class="font-headline-md text-label-md text-on-surface leading-tight">Valeria Méndez Treviño</span>
+<span class="font-code-num text-[11px] text-on-surface-variant leading-tight">MAT-2024-0412</span>
+</div>
+</div>
+</td>
+<td class="px-space-sm text-center">
+<input class="w-16 h-8 text-center font-code-num text-label-sm font-semibold rounded bg-surface-container-low focus:bg-surface-container-lowest focus:ring-1 focus:ring-secondary focus:outline-none" step="0.1" type="number" value="9.5"/>
+</td>
+<td class="px-space-sm text-center">
+<input class="w-16 h-8 text-center font-code-num text-label-sm font-semibold rounded bg-surface-container-low focus:bg-surface-container-lowest focus:ring-1 focus:ring-secondary focus:outline-none" step="0.1" type="number" value="9.8"/>
+</td>
+<td class="px-space-sm text-center">
+<input class="w-16 h-8 text-center font-code-num text-label-sm font-semibold rounded bg-surface-container-low focus:bg-surface-container-lowest focus:ring-1 focus:ring-secondary focus:outline-none" step="0.1" type="number" value="10.0"/>
+</td>
+<td class="px-space-sm text-center font-code-num text-label-sm text-on-surface-variant">9.5</td>
+<td class="px-space-sm text-center font-code-num font-headline-md text-secondary text-[15px] bg-secondary-fixed/20 font-bold">9.8</td>
+<td class="px-space-sm text-center font-code-num font-label-md text-on-surface font-semibold">9.65</td>
+<td class="px-space-sm text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-high text-secondary font-label-xs text-label-xs font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Cuadro Honor
+                </span>
+</td>
+<td class="pr-space-md pl-space-sm">
+<input class="w-full h-8 px-space-xs rounded bg-transparent hover:bg-surface-container-low focus:bg-surface-container-lowest focus:ring-1 focus:ring-secondary font-body-sm text-[12px] truncate focus:outline-none" type="text" value="Excelente desempeño analítico"/>
+</td>
+</tr>
+<!-- Fila 2: Santiago Morales Cárdenas -->
+<tr class="hover:bg-surface-container-low transition-colors group h-12 bg-surface-container-lowest">
+<td class="pl-space-md pr-space-xs text-center">
+<input class="w-3.5 h-3.5 rounded accent-secondary cursor-pointer" type="checkbox"/>
+</td>
+<td class="px-space-xs text-center font-code-num text-on-surface-variant text-[12px]">02</td>
+<td class="px-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center font-headline-md text-label-xs font-bold">
+                    SM
+                  </div>
+<div class="flex flex-col">
+<span class="font-headline-md text-label-md text-on-surface leading-tight">Santiago Morales Cárdenas</span>
+<span class="font-code-num text-[11px] text-on-surface-variant leading-tight">MAT-2024-0418</span>
+</div>
+</div>
+</td>
+<td class="px-space-sm text-center">
+<input class="w-16 h-8 text-center font-code-num text-label-sm font-semibold rounded bg-error-container/40 text-error focus:bg-surface-container-lowest focus:ring-1 focus:ring-secondary focus:outline-none" step="0.1" type="number" value="5.0"/>
+</td>
+<td class="px-space-sm text-center">
+<input class="w-16 h-8 text-center font-code-num text-label-sm font-semibold rounded bg-surface-container-low focus:bg-surface-container-lowest focus:ring-1 focus:ring-secondary focus:outline-none" step="0.1" type="number" value="6.5"/>
+</td>
+<td class="px-space-sm text-center">
+<input class="w-16 h-8 text-center font-code-num text-label-sm font-semibold rounded bg-surface-container-low focus:bg-surface-container-lowest focus:ring-1 focus:ring-secondary focus:outline-none" step="0.1" type="number" value="7.0"/>
+</td>
+<td class="px-space-sm text-center font-code-num text-label-sm text-on-surface-variant">6.8</td>
+<td class="px-space-sm text-center font-code-num font-headline-md text-on-surface text-[15px] bg-secondary-fixed/20 font-bold">6.2</td>
+<td class="px-space-sm text-center font-code-num font-label-md text-on-surface font-semibold">6.50</td>
+<td class="px-space-sm text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-xs text-label-xs font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span> En Riesgo
+                </span>
+</td>
+<td class="pr-space-md pl-space-sm">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-outline flex-shrink-0">assignment_late</span>
+<input class="w-full h-8 px-space-xs rounded bg-transparent hover:bg-surface-container-low focus:bg-surface-container-lowest focus:ring-1 focus:ring-secondary font-body-sm text-[12px] truncate focus:outline-none" type="text" value="3 tareas sin entregar"/>
+</div>
+</td>
+</tr>
+<!-- Fila 3: Ximena Sofía Castillo Reyes -->
+<tr class="hover:bg-surface-container-low transition-colors group h-12">
+<td class="pl-space-md pr-space-xs text-center">
+<input class="w-3.5 h-3.5 rounded accent-secondary cursor-pointer" type="checkbox"/>
+</td>
+<td class="px-space-xs text-center font-code-num text-on-surface-variant text-[12px]">03</td>
+<td class="px-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-headline-md text-label-xs font-bold">
+                    XC
+                  </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1">
+<span class="font-headline-md text-label-md text-on-surface leading-tight">Ximena Sofía Castillo Reyes</span>
+<span class="material-symbols-outlined text-[14px] text-secondary" title="Alumna Becada">verified_user</span>
+</div>
+<span class="font-code-num text-[11px] text-on-surface-variant leading-tight">MAT-2024-0422</span>
+</div>
+</div>
+</td>
+<td class="px-space-sm text-center">
+<input class="w-16 h-8 text-center font-code-num text-label-sm font-semibold rounded bg-surface-container-low focus:bg-surface-container-lowest focus:ring-1 focus:ring-secondary focus:outline-none" step="0.1" type="number" value="9.8"/>
+</td>
+<td class="px-space-sm text-center">
+<input class="w-16 h-8 text-center font-code-num text-label-sm font-semibold rounded bg-surface-container-low focus:bg-surface-container-lowest focus:ring-1 focus:ring-secondary focus:outline-none" step="0.1" type="number" value="9.2"/>
+</td>
+<td class="px-space-sm text-center">
+<input class="w-16 h-8 text-center font-code-num text-label-sm font-semibold rounded bg-surface-container-low focus:bg-surface-container-lowest focus:ring-1 focus:ring-secondary focus:outline-none" step="0.1" type="number" value="10.0"/>
+</td>
+<td class="px-space-sm text-center font-code-num text-label-sm text-on-surface-variant">9.4</td>
+<td class="px-space-sm text-center font-code-num font-headline-md text-secondary text-[15px] bg-secondary-fixed/20 font-bold">9.5</td>
+<td class="px-space-sm text-center font-code-num font-label-md text-on-surface font-semibold">9.45</td>
+<td class="px-space-sm text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-high text-secondary font-label-xs text-label-xs font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Acreditado
+                </span>
+</td>
+<td class="pr-space-md pl-space-sm">
+<input class="w-full h-8 px-space-xs rounded bg-transparent hover:bg-surface-container-low focus:bg-surface-container-lowest focus:ring-1 focus:ring-secondary font-body-sm text-[12px] truncate focus:outline-none" type="text" value="Beca de excelencia renovada"/>
+</td>
+</tr>
+<!-- Fila 4: Diego Alejandro Navarro Ruiz -->
+<tr class="hover:bg-surface-container-low transition-colors group h-12 bg-surface-container-lowest">
+<td class="pl-space-md pr-space-xs text-center">
+<input class="w-3.5 h-3.5 rounded accent-secondary cursor-pointer" type="checkbox"/>
+</td>
+<td class="px-space-xs text-center font-code-num text-on-surface-variant text-[12px]">04</td>
+<td class="px-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center font-headline-md text-label-xs font-bold">
+                    DN
+                  </div>
+<div class="flex flex-col">
+<span class="font-headline-md text-label-md text-on-surface leading-tight">Diego Alejandro Navarro Ruiz</span>
+<span class="font-code-num text-[11px] text-on-surface-variant leading-tight">MAT-2024-0429</span>
+</div>
+</div>
+</td>
+<td class="px-space-sm text-center">
+<input class="w-16 h-8 text-center font-code-num text-label-sm font-semibold rounded bg-surface-container-low focus:bg-surface-container-lowest focus:ring-1 focus:ring-secondary focus:outline-none" step="0.1" type="number" value="8.5"/>
+</td>
+<td class="px-space-sm text-center">
+<input class="w-16 h-8 text-center font-code-num text-label-sm font-semibold rounded bg-surface-container-low focus:bg-surface-container-lowest focus:ring-1 focus:ring-secondary focus:outline-none" step="0.1" type="number" value="8.5"/>
+</td>
+<td class="px-space-sm text-center">
+<input class="w-16 h-8 text-center font-code-num text-label-sm font-semibold rounded bg-surface-container-low focus:bg-surface-container-lowest focus:ring-1 focus:ring-secondary focus:outline-none" step="0.1" type="number" value="9.0"/>
+</td>
+<td class="px-space-sm text-center font-code-num text-label-sm text-on-surface-variant">8.2</td>
+<td class="px-space-sm text-center font-code-num font-headline-md text-on-surface text-[15px] bg-secondary-fixed/20 font-bold">8.6</td>
+<td class="px-space-sm text-center font-code-num font-label-md text-on-surface font-semibold">8.40</td>
+<td class="px-space-sm text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-high text-secondary font-label-xs text-label-xs font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Acreditado
+                </span>
+</td>
+<td class="pr-space-md pl-space-sm">
+<input class="w-full h-8 px-space-xs rounded bg-transparent hover:bg-surface-container-low focus:bg-surface-container-lowest focus:ring-1 focus:ring-secondary font-body-sm text-[12px] truncate focus:outline-none" placeholder="Añadir nota pedagógica..." type="text"/>
+</td>
+</tr>
+<!-- Fila 5: Camila Fernanda Garza Ortiz -->
+<tr class="hover:bg-surface-container-low transition-colors group h-12">
+<td class="pl-space-md pr-space-xs text-center">
+<input class="w-3.5 h-3.5 rounded accent-secondary cursor-pointer" type="checkbox"/>
+</td>
+<td class="px-space-xs text-center font-code-num text-on-surface-variant text-[12px]">05</td>
+<td class="px-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-headline-md text-label-xs font-bold">
+                    CG
+                  </div>
+<div class="flex flex-col">
+<span class="font-headline-md text-label-md text-on-surface leading-tight">Camila Fernanda Garza Ortiz</span>
+<span class="font-code-num text-[11px] text-on-surface-variant leading-tight">MAT-2024-0435</span>
+</div>
+</div>
+</td>
+<td class="px-space-sm text-center">
+<input class="w-16 h-8 text-center font-code-num text-label-sm font-semibold rounded bg-surface-container-low focus:bg-surface-container-lowest focus:ring-1 focus:ring-secondary focus:outline-none" step="0.1" type="number" value="9.0"/>
+</td>
+<td class="px-space-sm text-center">
+<input class="w-16 h-8 text-center font-code-num text-label-sm font-semibold rounded bg-surface-container-low focus:bg-surface-container-lowest focus:ring-1 focus:ring-secondary focus:outline-none" step="0.1" type="number" value="8.8"/>
+</td>
+<td class="px-space-sm text-center">
+<input class="w-16 h-8 text-center font-code-num text-label-sm font-semibold rounded bg-surface-container-low focus:bg-surface-container-lowest focus:ring-1 focus:ring-secondary focus:outline-none" step="0.1" type="number" value="9.0"/>
+</td>
+<td class="px-space-sm text-center font-code-num text-label-sm text-on-surface-variant">8.7</td>
+<td class="px-space-sm text-center font-code-num font-headline-md text-on-surface text-[15px] bg-secondary-fixed/20 font-bold">8.9</td>
+<td class="px-space-sm text-center font-code-num font-label-md text-on-surface font-semibold">8.80</td>
+<td class="px-space-sm text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-high text-secondary font-label-xs text-label-xs font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Acreditado
+                </span>
+</td>
+<td class="pr-space-md pl-space-sm">
+<input class="w-full h-8 px-space-xs rounded bg-transparent hover:bg-surface-container-low focus:bg-surface-container-lowest focus:ring-1 focus:ring-secondary font-body-sm text-[12px] truncate focus:outline-none" type="text" value="Participación constante en clase"/>
+</td>
+</tr>
+<!-- Fila 6: Emiliano Salazar Vargas (Reprobatorio) -->
+<tr class="hover:bg-error-container/20 transition-colors group h-12 bg-error-container/10">
+<td class="pl-space-md pr-space-xs text-center">
+<input class="w-3.5 h-3.5 rounded accent-secondary cursor-pointer" type="checkbox"/>
+</td>
+<td class="px-space-xs text-center font-code-num text-error text-[12px] font-bold">06</td>
+<td class="px-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-full bg-error text-on-error flex items-center justify-center font-headline-md text-label-xs font-bold">
+                    ES
+                  </div>
+<div class="flex flex-col">
+<span class="font-headline-md text-label-md text-on-surface leading-tight">Emiliano Salazar Vargas</span>
+<span class="font-code-num text-[11px] text-error leading-tight font-semibold">MAT-2024-0441</span>
+</div>
+</div>
+</td>
+<td class="px-space-sm text-center">
+<input class="w-16 h-8 text-center font-code-num text-label-sm font-bold rounded bg-error-container text-error focus:bg-surface-container-lowest focus:ring-1 focus:ring-error focus:outline-none" step="0.1" type="number" value="4.5"/>
+</td>
+<td class="px-space-sm text-center">
+<input class="w-16 h-8 text-center font-code-num text-label-sm font-bold rounded bg-error-container text-error focus:bg-surface-container-lowest focus:ring-1 focus:ring-error focus:outline-none" step="0.1" type="number" value="5.2"/>
+</td>
+<td class="px-space-sm text-center">
+<input class="w-16 h-8 text-center font-code-num text-label-sm font-semibold rounded bg-surface-container-low focus:bg-surface-container-lowest focus:ring-1 focus:ring-secondary focus:outline-none" step="0.1" type="number" value="7.0"/>
+</td>
+<td class="px-space-sm text-center font-code-num text-label-sm text-error">5.8</td>
+<td class="px-space-sm text-center font-code-num font-headline-md text-error text-[15px] bg-error-container/40 font-bold">5.4</td>
+<td class="px-space-sm text-center font-code-num font-label-md text-error font-bold">5.60</td>
+<td class="px-space-sm text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-error-container text-error font-label-xs text-label-xs font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span> No Acreditado
+                </span>
+</td>
+<td class="pr-space-md pl-space-sm">
+<div class="flex items-center justify-between gap-space-xs">
+<span class="font-body-sm text-[11px] text-error font-medium truncate">No presentó examen parcial</span>
+<button class="h-6 px-1.5 rounded bg-error text-on-error font-label-xs text-[10px] flex items-center gap-0.5 hover:bg-on-error-container flex-shrink-0 transition-colors">
+<span class="material-symbols-outlined text-[13px]">mail</span> Citatorio
+                  </button>
+</div>
+</td>
+</tr>
+<!-- Fila 7: Renata Domínguez Lozano -->
+<tr class="hover:bg-surface-container-low transition-colors group h-12">
+<td class="pl-space-md pr-space-xs text-center">
+<input class="w-3.5 h-3.5 rounded accent-secondary cursor-pointer" type="checkbox"/>
+</td>
+<td class="px-space-xs text-center font-code-num text-on-surface-variant text-[12px]">07</td>
+<td class="px-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-full bg-surface-container-high text-on-surface flex items-center justify-center font-headline-md text-label-xs font-bold">
+                    RD
+                  </div>
+<div class="flex flex-col">
+<span class="font-headline-md text-label-md text-on-surface leading-tight">Renata Domínguez Lozano</span>
+<span class="font-code-num text-[11px] text-on-surface-variant leading-tight">MAT-2024-0447</span>
+</div>
+</div>
+</td>
+<td class="px-space-sm text-center">
+<input class="w-16 h-8 text-center font-code-num text-label-sm font-semibold rounded bg-surface-container-low focus:bg-surface-container-lowest focus:ring-1 focus:ring-secondary focus:outline-none" step="0.1" type="number" value="9.0"/>
+</td>
+<td class="px-space-sm text-center">
+<input class="w-16 h-8 text-center font-code-num text-label-sm font-semibold rounded bg-surface-container-low focus:bg-surface-container-lowest focus:ring-1 focus:ring-secondary focus:outline-none" step="0.1" type="number" value="9.5"/>
+</td>
+<td class="px-space-sm text-center">
+<input class="w-16 h-8 text-center font-code-num text-label-sm font-semibold rounded bg-surface-container-low focus:bg-surface-container-lowest focus:ring-1 focus:ring-secondary focus:outline-none" step="0.1" type="number" value="9.5"/>
+</td>
+<td class="px-space-sm text-center font-code-num text-label-sm text-on-surface-variant">9.1</td>
+<td class="px-space-sm text-center font-code-num font-headline-md text-secondary text-[15px] bg-secondary-fixed/20 font-bold">9.3</td>
+<td class="px-space-sm text-center font-code-num font-label-md text-on-surface font-semibold">9.20</td>
+<td class="px-space-sm text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-high text-secondary font-label-xs text-label-xs font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Acreditado
+                </span>
+</td>
+<td class="pr-space-md pl-space-sm">
+<input class="w-full h-8 px-space-xs rounded bg-transparent hover:bg-surface-container-low focus:bg-surface-container-lowest focus:ring-1 focus:ring-secondary font-body-sm text-[12px] truncate focus:outline-none" placeholder="Añadir comentario..." type="text"/>
+</td>
+</tr>
+<!-- Fila 8: Mateo Iker Ramírez Nava -->
+<tr class="hover:bg-surface-container-low transition-colors group h-12 bg-surface-container-lowest">
+<td class="pl-space-md pr-space-xs text-center">
+<input class="w-3.5 h-3.5 rounded accent-secondary cursor-pointer" type="checkbox"/>
+</td>
+<td class="px-space-xs text-center font-code-num text-on-surface-variant text-[12px]">08</td>
+<td class="px-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-headline-md text-label-xs font-bold">
+                    MR
+                  </div>
+<div class="flex flex-col">
+<span class="font-headline-md text-label-md text-on-surface leading-tight">Mateo Iker Ramírez Nava</span>
+<span class="font-code-num text-[11px] text-on-surface-variant leading-tight">MAT-2024-0453</span>
+</div>
+</div>
+</td>
+<td class="px-space-sm text-center">
+<input class="w-16 h-8 text-center font-code-num text-label-sm font-semibold rounded bg-surface-container-low focus:bg-surface-container-lowest focus:ring-1 focus:ring-secondary focus:outline-none" step="0.1" type="number" value="9.0"/>
+</td>
+<td class="px-space-sm text-center">
+<input class="w-16 h-8 text-center font-code-num text-label-sm font-semibold rounded bg-surface-container-low focus:bg-surface-container-lowest focus:ring-1 focus:ring-secondary focus:outline-none" step="0.1" type="number" value="9.2"/>
+</td>
+<td class="px-space-sm text-center">
+<input class="w-16 h-8 text-center font-code-num text-label-sm font-semibold rounded bg-surface-container-low focus:bg-surface-container-lowest focus:ring-1 focus:ring-secondary focus:outline-none" step="0.1" type="number" value="9.0"/>
+</td>
+<td class="px-space-sm text-center font-code-num text-label-sm text-on-surface-variant">8.9</td>
+<td class="px-space-sm text-center font-code-num font-headline-md text-secondary text-[15px] bg-secondary-fixed/20 font-bold">9.1</td>
+<td class="px-space-sm text-center font-code-num font-label-md text-on-surface font-semibold">9.00</td>
+<td class="px-space-sm text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-high text-secondary font-label-xs text-label-xs font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Acreditado
+                </span>
+</td>
+<td class="pr-space-md pl-space-sm">
+<input class="w-full h-8 px-space-xs rounded bg-transparent hover:bg-surface-container-low focus:bg-surface-container-lowest focus:ring-1 focus:ring-secondary font-body-sm text-[12px] truncate focus:outline-none" type="text" value="Participante en Olimpiada Estatal"/>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Paginador e Información de Registros -->
+<div class="px-space-lg py-space-md bg-surface-container-low flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm font-body-sm text-on-surface-variant text-[13px]">
+<span>Mostrando <strong class="text-on-surface font-semibold">1 a 8</strong> de <strong class="text-on-surface font-semibold">32</strong> alumnos en lista</span>
+<span class="h-3.5 w-px bg-surface-container"></span>
+<div class="flex items-center gap-1">
+<span class="text-label-xs uppercase">Filas:</span>
+<select class="h-7 px-1 rounded bg-surface-container-lowest text-on-surface font-code-num text-[11px] focus:outline-none">
+<option selected="">10</option>
+<option>25</option>
+<option>50</option>
+</select>
+</div>
+</div>
+<div class="flex items-center gap-1">
+<button class="w-8 h-8 rounded-lg bg-surface-container-lowest flex items-center justify-center text-outline hover:text-on-surface disabled:opacity-50 transition-colors" disabled="">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-secondary text-on-secondary font-code-num text-[12px] font-bold">1</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-lowest text-on-surface font-code-num text-[12px] hover:bg-surface-container transition-colors">2</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-lowest text-on-surface font-code-num text-[12px] hover:bg-surface-container transition-colors">3</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-lowest text-on-surface font-code-num text-[12px] hover:bg-surface-container transition-colors">4</button>
+<button class="w-8 h-8 rounded-lg bg-surface-container-lowest flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Bloque de Validación y Firma Institucional -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-gutter">
+<!-- Firma Titular -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-on-surface">
+<span class="material-symbols-outlined text-[20px] text-secondary">stylus</span>
+<span class="font-headline-md text-label-md">Firma Digital del Docente Titular</span>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-secondary font-label-xs text-label-xs font-bold">FIRMADO</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1 font-code-num text-[11px] text-on-surface-variant">
+<div class="flex justify-between">
+<span>Docente:</span>
+<span class="text-on-surface font-semibold">Prof. Roberto Méndez Silva</span>
+</div>
+<div class="flex justify-between">
+<span>Sello Digital:</span>
+<span class="text-secondary truncate max-w-[170px]">f7a29c4e8b0123ef...</span>
+</div>
+<div class="flex justify-between">
+<span>Fecha y Hora:</span>
+<span>2025-03-24 14:28:10 CST</span>
+</div>
+</div>
+<button class="h-8 px-space-sm rounded-lg bg-surface-container-high text-on-surface font-label-sm text-label-sm hover:bg-surface-variant transition-colors flex items-center justify-center gap-space-2xs">
+<span class="material-symbols-outlined text-[16px]">history_edu</span>
+<span>Ver Cadena de Certificación</span>
+</button>
+</div>
+<!-- Visto Bueno Coordinación -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-on-surface">
+<span class="material-symbols-outlined text-[20px] text-secondary">approval</span>
+<span class="font-headline-md text-label-md">Validación Académica (Vo. Bo.)</span>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-xs text-label-xs font-bold">EN REVISIÓN</span>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1 font-body-sm text-[12px] text-on-surface-variant">
+<p>La Coordinación Académica del Campus Central validará el acta una vez concluido el 100% de la captura de los 32 alumnos registrados.</p>
+<span class="mt-1 font-code-num text-[11px] text-secondary font-semibold">Coordinador Asignado: Lic. Mario Puga G.</span>
+</div>
+<button class="h-8 px-space-sm rounded-lg bg-surface-container-low text-outline font-label-sm text-label-sm cursor-not-allowed flex items-center justify-center gap-space-2xs" disabled="">
+<span class="material-symbols-outlined text-[16px]">lock_clock</span>
+<span>Autorizar Acta (Requiere 100%)</span>
+</button>
+</div>
+<!-- Seguridad y Encriptación SEP -->
+<div class="p-space-lg rounded-xl bg-surface-container-high text-on-surface shadow-sm flex flex-col justify-between gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px] text-secondary">shield</span>
+<span class="font-headline-md text-label-md">Seguridad Criptográfica SSL</span>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-lowest text-secondary font-label-xs text-label-xs font-bold">256-BIT</span>
+</div>
+<div class="flex flex-col gap-1 font-body-sm text-[12px] text-on-surface-variant">
+<p class="leading-relaxed">
+            Este libro de calificaciones está protegido contra alteraciones retroactivas bajo la norma de certificación electrónica <strong class="text-on-surface">NOM-151-SCFI-2016</strong> de expedientes educativos.
+          </p>
+</div>
+<div class="flex items-center justify-between pt-space-xs text-label-xs text-on-surface-variant font-code-num">
+<span class="flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+            Hash SHA-256 Verificado
+          </span>
+<span class="text-secondary font-bold">SAE.cloud SecID #9042</span>
+</div>
+</div>
+</div>
+</div>
+</div></main></div><script src="../assets/js/app.js"></script></body></html>

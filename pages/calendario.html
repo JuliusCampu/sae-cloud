@@ -1,0 +1,677 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Calendario y Eventos · SAE.cloud</title><link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet"><script src="https://cdn.tailwindcss.com"></script><script src="../assets/js/tailwind-config.js"></script><link rel="stylesheet" href="../assets/css/app.css"></head><body class="bg-surface font-body-md text-on-surface antialiased" data-page="calendario"><main class="w-full pt-16 bg-surface"><div class="flex flex-col w-full">
+<!-- Sub-header / Breadcrumbs & Control Topbar -->
+<section class="w-full bg-surface-container-lowest px-space-margin py-space-md shadow-sm">
+<div class="flex flex-col gap-space-sm">
+<!-- Breadcrumb Bar -->
+<nav class="flex items-center gap-space-2xs text-on-surface-variant font-label-xs text-label-xs uppercase tracking-wider">
+<span class="hover:text-secondary cursor-pointer transition-colors">Administración Escolar</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="hover:text-secondary cursor-pointer transition-colors">Comunicación &amp; Eventos</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-secondary font-bold">Calendario Institucional y Agenda Académica</span>
+</nav>
+<!-- Title + Context Badges + Master Actions -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-space-2xs">
+<div class="flex flex-wrap items-center gap-space-sm">
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">Calendario Institucional y Agenda Escolar</h1>
+<span class="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-surface-container-low text-secondary font-label-xs text-label-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+              Ciclo Escolar 2024-2025 Activo
+            </span>
+<span class="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-xs text-label-xs">
+<span class="material-symbols-outlined text-[14px] text-secondary">verified</span>
+              Sincronizado con Calendario Oficial SEP
+            </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Programación pedagógica, periodos de evaluación trimestral, sesiones colegiadas y descansos estipulados por la Secretaría de Educación Pública.
+          </p>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-wrap items-center gap-space-xs self-start lg:self-center">
+<button class="h-9 px-space-md rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md flex items-center gap-space-2xs transition-colors shadow-sm" title="Sincronizar fuentes de calendario">
+<span class="material-symbols-outlined text-[18px] text-secondary">sync</span>
+<span>Sincronizar SEP / Cal</span>
+</button>
+<button class="h-9 px-space-md rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md flex items-center gap-space-2xs transition-colors shadow-sm" title="Descargar agenda en formatos universales">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">download</span>
+<span>Descargar Cronograma (PDF / iCal)</span>
+</button>
+<button class="h-9 px-space-md rounded-lg bg-secondary hover:bg-secondary-container text-on-secondary font-label-md text-label-md flex items-center gap-space-2xs transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span>+ Agendar Evento Institucional</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Canvas Container -->
+<div class="px-space-margin py-space-xl flex flex-col gap-space-xl">
+<!-- KPI Metric Cards Grid -->
+<section class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-gutter">
+<!-- Card 1: Días Hábiles -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Días Hábiles Restantes</span>
+<div class="flex items-baseline gap-space-2xs mt-space-2xs">
+<span class="font-display-lg text-display-lg text-on-surface">74</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Días Lectivos</span>
+</div>
+</div>
+<span class="p-space-xs rounded-lg bg-surface-container text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">date_range</span>
+</span>
+</div>
+<div class="mt-space-md flex flex-col gap-space-2xs">
+<div class="flex justify-between font-label-xs text-label-xs">
+<span class="text-on-surface-variant">Progreso del Ciclo</span>
+<span class="text-secondary font-bold">68% Cubierto</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 68%;"></div>
+</div>
+</div>
+</div>
+<!-- Card 2: Próximo Hito SEP -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Próximo Hito Oficial SEP</span>
+<span class="font-headline-md text-headline-md text-on-surface mt-space-2xs leading-snug">Consejo Técnico (CTE)</span>
+<span class="font-code-num text-code-num text-secondary mt-0.5 font-bold">Viernes 25 de Abril</span>
+</div>
+<span class="p-space-xs rounded-lg bg-surface-container text-on-tertiary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">groups</span>
+</span>
+</div>
+<div class="mt-space-md flex items-center justify-between">
+<span class="inline-flex items-center gap-1 font-label-xs text-label-xs text-on-surface-variant">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> En 12 días naturales
+          </span>
+<span class="px-space-xs py-0.5 rounded-full bg-error-container text-on-error-container font-label-xs text-label-xs">
+            Suspensión Alumnos
+          </span>
+</div>
+</div>
+<!-- Card 3: Evaluaciones -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Periodo de Evaluaciones</span>
+<span class="font-headline-md text-headline-md text-on-surface mt-space-2xs">2° Parcial en Captura</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Cierre de actas docentes</span>
+</div>
+<span class="p-space-xs rounded-lg bg-surface-container text-on-tertiary-fixed-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">edit_calendar</span>
+</span>
+</div>
+<div class="mt-space-md flex items-center justify-between">
+<span class="font-code-num text-code-num text-on-surface-variant">Límite: 18 Abr, 23:59h</span>
+<span class="px-space-xs py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-xs text-label-xs">
+            87% Capturado
+          </span>
+</div>
+</div>
+<!-- Card 4: Eventos del Mes -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between relative overflow-hidden">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Actividades Programadas</span>
+<div class="flex items-baseline gap-space-2xs mt-space-2xs">
+<span class="font-display-lg text-display-lg text-on-surface">18</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Eventos Abril 2025</span>
+</div>
+</div>
+<span class="p-space-xs rounded-lg bg-surface-container text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">event_available</span>
+</span>
+</div>
+<div class="mt-space-md grid grid-cols-4 gap-1 text-center font-label-xs text-label-xs pt-1">
+<div class="flex flex-col bg-surface-container-low py-1 rounded">
+<span class="font-bold text-on-surface">5</span>
+<span class="text-[9px] text-on-surface-variant truncate px-0.5">Cívicas</span>
+</div>
+<div class="flex flex-col bg-surface-container-low py-1 rounded">
+<span class="font-bold text-on-surface">4</span>
+<span class="text-[9px] text-on-surface-variant truncate px-0.5">CTE/Acad</span>
+</div>
+<div class="flex flex-col bg-surface-container-low py-1 rounded">
+<span class="font-bold text-on-surface">6</span>
+<span class="text-[9px] text-on-surface-variant truncate px-0.5">Exámenes</span>
+</div>
+<div class="flex flex-col bg-surface-container-low py-1 rounded">
+<span class="font-bold text-on-surface">3</span>
+<span class="text-[9px] text-on-surface-variant truncate px-0.5">Comunidad</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Calendar Controls Bar: Segmented Views, Month Nav, Quick Filter Badges -->
+<section class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-md">
+<!-- Upper Control Row -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<!-- Month Navigator -->
+<div class="flex items-center gap-space-sm">
+<button class="h-9 px-space-md rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-sm text-label-sm font-semibold transition-colors">
+            Hoy
+          </button>
+<div class="flex items-center bg-surface-container-low rounded-lg p-0.5">
+<button class="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-surface text-on-surface transition-colors" title="Mes Anterior">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-surface text-on-surface transition-colors" title="Mes Siguiente">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-on-surface ml-space-xs font-bold tracking-tight">Abril 2025</h2>
+<span class="font-code-num text-code-num text-on-surface-variant hidden md:inline ml-space-xs">Semana Lectiva 28 - 32</span>
+</div>
+<!-- Right Side: School Level Selector & Segmented Control -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<!-- Level Selector Dropdown -->
+<div class="flex items-center gap-space-xs px-space-md h-9 rounded-lg bg-surface-container-low text-on-surface cursor-pointer hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">domain</span>
+<span class="font-label-sm text-label-sm">Todos los Niveles (K-12)</span>
+<span class="material-symbols-outlined text-[16px] text-outline">expand_more</span>
+</div>
+<!-- View Switcher Tabs (Segmented Control) -->
+<div class="flex items-center bg-surface-container-low p-1 rounded-lg">
+<button class="px-space-md h-7 rounded-lg bg-surface-container-lowest text-secondary font-label-sm text-label-sm shadow-sm font-semibold">
+              Mes
+            </button>
+<button class="px-space-md h-7 rounded-lg hover:text-on-surface text-on-surface-variant font-label-sm text-label-sm transition-colors">
+              Semana
+            </button>
+<button class="px-space-md h-7 rounded-lg hover:text-on-surface text-on-surface-variant font-label-sm text-label-sm transition-colors">
+              Día
+            </button>
+<button class="px-space-md h-7 rounded-lg hover:text-on-surface text-on-surface-variant font-label-sm text-label-sm transition-colors flex items-center gap-1">
+<span>Agenda</span>
+</button>
+<button class="px-space-md h-7 rounded-lg hover:text-on-surface text-on-surface-variant font-label-sm text-label-sm transition-colors hidden sm:flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">timeline</span>
+<span>Línea SEP</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Lower Filter Chips Row -->
+<div class="flex items-center gap-space-xs overflow-x-auto pt-space-xs scrollbar-none">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider shrink-0 mr-1">Filtrar por:</span>
+<!-- Filter Pills with Interactive Checked Styles -->
+<label class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-error-container/40 text-on-error-container font-label-xs text-label-xs cursor-pointer select-none hover:bg-error-container/60 transition-colors shrink-0">
+<input checked="" class="w-3.5 h-3.5 rounded text-error accent-error" type="checkbox"/>
+<span class="w-2 h-2 rounded-full bg-error"></span>
+<span>Suspensiones Oficiales SEP</span>
+</label>
+<label class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container text-on-tertiary-container font-label-xs text-label-xs cursor-pointer select-none hover:bg-surface-container-high transition-colors shrink-0">
+<input checked="" class="w-3.5 h-3.5 rounded text-primary-container accent-primary-container" type="checkbox"/>
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+<span>Consejos Técnicos (CTE)</span>
+</label>
+<label class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container-high text-on-surface font-label-xs text-label-xs cursor-pointer select-none hover:bg-surface-container-highest transition-colors shrink-0">
+<input checked="" class="w-3.5 h-3.5 rounded text-surface-tint accent-surface-tint" type="checkbox"/>
+<span class="w-2 h-2 rounded-full bg-surface-tint"></span>
+<span>Exámenes y Cierre Actas</span>
+</label>
+<label class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-xs text-label-xs cursor-pointer select-none hover:bg-secondary-fixed-dim transition-colors shrink-0">
+<input checked="" class="w-3.5 h-3.5 rounded text-secondary accent-secondary" type="checkbox"/>
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span>Ceremonias &amp; Cívicos</span>
+</label>
+<label class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container-low text-on-surface-variant font-label-xs text-label-xs cursor-pointer select-none hover:bg-surface-container transition-colors shrink-0">
+<input checked="" class="w-3.5 h-3.5 rounded text-secondary-container accent-secondary-container" type="checkbox"/>
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+<span>Deportivos &amp; STEM</span>
+</label>
+<label class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container text-on-surface font-label-xs text-label-xs cursor-pointer select-none hover:bg-surface-container-high transition-colors shrink-0">
+<input checked="" class="w-3.5 h-3.5 rounded text-tertiary-container accent-tertiary-container" type="checkbox"/>
+<span class="w-2 h-2 rounded-full bg-on-tertiary-container"></span>
+<span>Juntas Padres de Familia</span>
+</label>
+</div>
+</section>
+<!-- Main Workspace Layout: 7-Column Calendar Grid + Right Context Panel -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-gutter items-start">
+<!-- Calendar Matrix Canvas (8 Cols on XL) -->
+<section class="xl:col-span-8 bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<!-- Weekday Headers -->
+<div class="grid grid-cols-7 bg-surface-container-low text-center py-2.5 px-1 font-label-xs text-label-xs text-on-surface-variant font-bold uppercase tracking-wider">
+<span>Lun</span>
+<span>Mar</span>
+<span>Mié</span>
+<span>Jue</span>
+<span>Vie</span>
+<span class="text-secondary">Sáb</span>
+<span class="text-secondary">Dom</span>
+</div>
+<!-- Calendar Month Grid: 5 Weeks -->
+<div class="grid grid-cols-7 auto-rows-fr gap-px bg-surface-container">
+<!-- Row 1: Mar 31 to Apr 6 -->
+<!-- Day 31 (Prev Month) -->
+<div class="min-h-[120px] bg-surface-container-low/40 p-2 flex flex-col justify-between">
+<span class="font-code-num text-code-num text-outline text-left">31</span>
+<div class="flex-1 flex flex-col gap-1 mt-1 opacity-60">
+<div class="p-1 rounded bg-surface-container text-[11px] text-on-surface-variant font-medium truncate">
+                Pre-cierre de corte
+              </div>
+</div>
+</div>
+<!-- Day 1 -->
+<div class="min-h-[120px] bg-surface-container-lowest p-2 flex flex-col justify-between group hover:bg-surface-container-low/20 transition-colors">
+<span class="font-code-num text-code-num text-on-surface text-left font-bold">1</span>
+<div class="flex-1 flex flex-col gap-1 mt-1">
+<div class="px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant text-[11px] font-medium truncate" title="Publicación Convocatoria Becas">
+                Convocatoria Becas
+              </div>
+</div>
+</div>
+<!-- Day 2 -->
+<div class="min-h-[120px] bg-surface-container-lowest p-2 flex flex-col justify-between group hover:bg-surface-container-low/20 transition-colors">
+<span class="font-code-num text-code-num text-on-surface text-left font-bold">2</span>
+<div class="flex-1 flex flex-col gap-1 mt-1">
+<!-- Empty slot -->
+</div>
+</div>
+<!-- Day 3 -->
+<div class="min-h-[120px] bg-surface-container-lowest p-2 flex flex-col justify-between group hover:bg-surface-container-low/20 transition-colors">
+<span class="font-code-num text-code-num text-on-surface text-left font-bold">3</span>
+<div class="flex-1 flex flex-col gap-1 mt-1">
+<div class="px-1.5 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed text-[11px] font-medium truncate" title="Ensayo Ensamble Musical">
+                16:00 Ensamble Coro
+              </div>
+</div>
+</div>
+<!-- Day 4 (Event: Junta General de Padres) -->
+<div class="min-h-[120px] bg-surface-container-lowest p-2 flex flex-col justify-between group hover:bg-surface-container-low/20 transition-colors">
+<span class="font-code-num text-code-num text-on-surface text-left font-bold">4</span>
+<div class="flex-1 flex flex-col gap-1 mt-1">
+<div class="px-2 py-1 rounded bg-secondary-container text-on-secondary-container text-[11px] font-semibold leading-tight shadow-sm cursor-pointer hover:opacity-90" title="Junta General de Padres de Familia - Entrega de Boletas 2° Trimestre">
+<span class="block text-[9px] uppercase tracking-wider text-on-secondary-container/80">08:00 - 11:30</span>
+                Junta General Boletas
+              </div>
+</div>
+</div>
+<!-- Day 5 (Weekend) -->
+<div class="min-h-[120px] bg-surface-container-low/50 p-2 flex flex-col justify-between">
+<span class="font-code-num text-code-num text-secondary text-left">5</span>
+<div class="flex-1 mt-1">
+<div class="px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant text-[11px] truncate">
+                Taller Robótica
+              </div>
+</div>
+</div>
+<!-- Day 6 (Weekend) -->
+<div class="min-h-[120px] bg-surface-container-low/50 p-2 flex flex-col justify-between">
+<span class="font-code-num text-code-num text-secondary text-left">6</span>
+<div class="flex-1 mt-1"></div>
+</div>
+<!-- Row 2: Apr 7 to Apr 13 -->
+<!-- Day 7 -->
+<div class="min-h-[120px] bg-surface-container-lowest p-2 flex flex-col justify-between group hover:bg-surface-container-low/20 transition-colors">
+<span class="font-code-num text-code-num text-on-surface text-left font-bold">7</span>
+<div class="flex-1 flex flex-col gap-1 mt-1">
+<div class="px-1.5 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed text-[11px] font-medium truncate">
+                07:30 Homenaje Cívico
+              </div>
+</div>
+</div>
+<!-- Day 8 -->
+<div class="min-h-[120px] bg-surface-container-lowest p-2 flex flex-col justify-between group hover:bg-surface-container-low/20 transition-colors">
+<span class="font-code-num text-code-num text-on-surface text-left font-bold">8</span>
+<div class="flex-1 flex flex-col gap-1 mt-1">
+<div class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface text-[11px] font-medium truncate">
+                Simulacro Prevención
+              </div>
+</div>
+</div>
+<!-- Day 9 (STEM Science Fair) -->
+<div class="min-h-[120px] bg-surface-container-lowest p-2 flex flex-col justify-between group hover:bg-surface-container-low/20 transition-colors">
+<span class="font-code-num text-code-num text-on-surface text-left font-bold">9</span>
+<div class="flex-1 flex flex-col gap-1 mt-1">
+<div class="px-2 py-1 rounded bg-secondary text-on-secondary text-[11px] font-semibold leading-tight shadow-sm cursor-pointer hover:bg-secondary-container" title="Feria de Ciencias y Tecnología STEM 2025">
+<span class="block text-[9px] uppercase tracking-wider text-on-secondary/80">09:00 - 14:00</span>
+                Feria STEM 2025
+              </div>
+</div>
+</div>
+<!-- Day 10 -->
+<div class="min-h-[120px] bg-surface-container-lowest p-2 flex flex-col justify-between group hover:bg-surface-container-low/20 transition-colors">
+<span class="font-code-num text-code-num text-on-surface text-left font-bold">10</span>
+<div class="flex-1 flex flex-col gap-1 mt-1">
+<div class="px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant text-[11px] truncate">
+                Muestra de Proyectos
+              </div>
+</div>
+</div>
+<!-- Day 11 (Today Active Indicator Example) -->
+<div class="min-h-[120px] bg-surface-container-lowest p-2 flex flex-col justify-between group hover:bg-surface-container-low/20 transition-colors ring-2 ring-secondary ring-inset">
+<div class="flex items-center justify-between">
+<span class="w-6 h-6 rounded-full bg-secondary text-on-secondary font-code-num text-[12px] flex items-center justify-center font-bold">11</span>
+<span class="font-label-xs text-[10px] text-secondary font-bold uppercase">Hoy</span>
+</div>
+<div class="flex-1 flex flex-col gap-1 mt-1">
+<div class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface text-[11px] font-semibold truncate">
+                Último Día previo Receso
+              </div>
+<div class="px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant text-[10px] truncate">
+                13:00 Entrega Guías
+              </div>
+</div>
+</div>
+<!-- Day 12 (Weekend) -->
+<div class="min-h-[120px] bg-surface-container-low/50 p-2 flex flex-col justify-between">
+<span class="font-code-num text-code-num text-secondary text-left">12</span>
+<div class="flex-1 mt-1"></div>
+</div>
+<!-- Day 13 (Weekend) -->
+<div class="min-h-[120px] bg-surface-container-low/50 p-2 flex flex-col justify-between">
+<span class="font-code-num text-code-num text-secondary text-left">13</span>
+<div class="flex-1 mt-1"></div>
+</div>
+<!-- Row 3 & 4: Apr 14 to Apr 27 (VACACIONES DE PRIMAVERA - SPANNING 2 WEEKS) -->
+<!-- Week 3 Banner Container (Full 7-col cross) -->
+<div class="col-span-7 bg-error-container/20 p-2 flex flex-col gap-1 relative overflow-hidden">
+<div class="flex items-center justify-between px-2 py-1.5 rounded-lg bg-error-container text-on-error-container shadow-xs">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">beach_access</span>
+<span class="font-label-md text-label-md font-bold">Periodo Vacacional de Primavera / Semana Santa 2025 (Semana 1 de 2)</span>
+<span class="px-2 py-0.5 rounded bg-on-error-container/10 font-label-xs text-label-xs font-semibold">Oficial SEP DOF</span>
+</div>
+<span class="font-code-num text-code-num text-on-error-container">14 al 20 de Abril</span>
+</div>
+<!-- Sub-cells representation inside the vacation span -->
+<div class="grid grid-cols-7 gap-1 mt-1 text-center font-code-num text-code-num text-on-surface-variant/70">
+<div class="p-2 bg-surface-container-lowest/50 rounded flex flex-col items-center">
+<span>14</span><span class="text-[10px] text-error">Receso</span>
+</div>
+<div class="p-2 bg-surface-container-lowest/50 rounded flex flex-col items-center">
+<span>15</span><span class="text-[10px] text-error">Receso</span>
+</div>
+<div class="p-2 bg-surface-container-lowest/50 rounded flex flex-col items-center">
+<span>16</span><span class="text-[10px] text-error">Receso</span>
+</div>
+<div class="p-2 bg-surface-container-lowest/50 rounded flex flex-col items-center font-bold text-error">
+<span>17</span><span class="text-[10px]">Jueves Santo</span>
+</div>
+<div class="p-2 bg-surface-container-lowest/50 rounded flex flex-col items-center font-bold text-error">
+<span>18</span><span class="text-[10px]">Viernes Santo</span>
+</div>
+<div class="p-2 bg-surface-container-lowest/30 rounded flex flex-col items-center text-secondary">
+<span>19</span><span class="text-[10px]">Sábado</span>
+</div>
+<div class="p-2 bg-surface-container-lowest/30 rounded flex flex-col items-center text-secondary">
+<span>20</span><span class="text-[10px]">Domingo</span>
+</div>
+</div>
+</div>
+<!-- Week 4: Apr 21 to Apr 27 (Vacation Week 2 + CTE) -->
+<div class="col-span-7 bg-error-container/20 p-2 flex flex-col gap-1 relative overflow-hidden">
+<div class="flex items-center justify-between px-2 py-1.5 rounded-lg bg-error-container text-on-error-container shadow-xs">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">beach_access</span>
+<span class="font-label-md text-label-md font-bold">Periodo Vacacional de Primavera (Semana 2 de 2) &amp; Sesión CTE</span>
+<span class="px-2 py-0.5 rounded bg-on-error-container/10 font-label-xs text-label-xs font-semibold">Suspensión Escolar</span>
+</div>
+<span class="font-code-num text-code-num text-on-error-container">21 al 27 de Abril</span>
+</div>
+<div class="grid grid-cols-7 gap-1 mt-1 text-center font-code-num text-code-num">
+<div class="p-2 bg-surface-container-lowest/50 rounded flex flex-col items-center text-on-surface-variant">
+<span>21</span><span class="text-[10px] text-error">Receso</span>
+</div>
+<div class="p-2 bg-surface-container-lowest/50 rounded flex flex-col items-center text-on-surface-variant">
+<span>22</span><span class="text-[10px] text-error">Receso</span>
+</div>
+<div class="p-2 bg-surface-container-lowest/50 rounded flex flex-col items-center text-on-surface-variant">
+<span>23</span><span class="text-[10px] text-error">Receso</span>
+</div>
+<div class="p-2 bg-surface-container-lowest/50 rounded flex flex-col items-center text-on-surface-variant">
+<span>24</span><span class="text-[10px] text-error">Receso</span>
+</div>
+<!-- Friday 25 with CTE Emphasis -->
+<div class="p-2 bg-tertiary-container text-on-tertiary rounded flex flex-col items-center shadow-sm">
+<span class="font-bold">25</span>
+<span class="text-[9px] uppercase tracking-tight text-primary-fixed leading-tight mt-0.5">CTE Fase 6</span>
+<span class="text-[8px] opacity-75">Sesión Docente</span>
+</div>
+<div class="p-2 bg-surface-container-lowest/30 rounded flex flex-col items-center text-secondary">
+<span>26</span><span class="text-[10px]">Sábado</span>
+</div>
+<div class="p-2 bg-surface-container-lowest/30 rounded flex flex-col items-center text-secondary">
+<span>27</span><span class="text-[10px]">Domingo</span>
+</div>
+</div>
+</div>
+<!-- Row 5: Apr 28 to May 4 -->
+<!-- Day 28: Reanudación de Clases -->
+<div class="min-h-[120px] bg-surface-container-lowest p-2 flex flex-col justify-between group hover:bg-surface-container-low/20 transition-colors">
+<span class="font-code-num text-code-num text-on-surface text-left font-bold">28</span>
+<div class="flex-1 flex flex-col gap-1 mt-1">
+<div class="px-2 py-1 rounded bg-secondary-fixed text-on-secondary-fixed text-[11px] font-semibold leading-tight shadow-xs truncate" title="Reanudación de Clases y Apertura Convocatoria Becas 2025-2026">
+<span class="block text-[9px] uppercase font-bold text-secondary">07:00 Regreso</span>
+                Reanudación Clases
+              </div>
+<div class="px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant text-[10px] truncate">
+                Apertura Becas
+              </div>
+</div>
+</div>
+<!-- Day 29 -->
+<div class="min-h-[120px] bg-surface-container-lowest p-2 flex flex-col justify-between group hover:bg-surface-container-low/20 transition-colors">
+<span class="font-code-num text-code-num text-on-surface text-left font-bold">29</span>
+<div class="flex-1 flex flex-col gap-1 mt-1">
+<div class="px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant text-[11px] truncate">
+                Auditoría SEP Z-14
+              </div>
+</div>
+</div>
+<!-- Day 30: Festival Día del Niño -->
+<div class="min-h-[120px] bg-surface-container-lowest p-2 flex flex-col justify-between group hover:bg-surface-container-low/20 transition-colors">
+<span class="font-code-num text-code-num text-on-surface text-left font-bold">30</span>
+<div class="flex-1 flex flex-col gap-1 mt-1">
+<div class="px-2 py-1 rounded bg-secondary-container text-on-secondary-container text-[11px] font-semibold leading-tight shadow-sm cursor-pointer hover:opacity-90" title="Festival del Día del Niño y Kermesse Estudiantil">
+<span class="block text-[9px] uppercase tracking-wider text-on-secondary-container/80">09:00 - 13:30</span>
+                Festival Día del Niño
+              </div>
+<span class="text-[10px] text-on-surface-variant px-1">Preescolar/Prim</span>
+</div>
+</div>
+<!-- May 1 (Next Month) -->
+<div class="min-h-[120px] bg-surface-container-low/40 p-2 flex flex-col justify-between opacity-70">
+<span class="font-code-num text-code-num text-error text-left font-bold">1 May</span>
+<div class="flex-1 flex flex-col gap-1 mt-1">
+<div class="px-1.5 py-0.5 rounded bg-error-container text-on-error-container text-[11px] font-medium truncate">
+                Día del Trabajo (Inhabil)
+              </div>
+</div>
+</div>
+<!-- May 2 (Next Month) -->
+<div class="min-h-[120px] bg-surface-container-low/40 p-2 flex flex-col justify-between opacity-70">
+<span class="font-code-num text-code-num text-outline text-left">2</span>
+<div class="flex-1 mt-1"></div>
+</div>
+<!-- May 3 (Next Month) -->
+<div class="min-h-[120px] bg-surface-container-low/40 p-2 flex flex-col justify-between opacity-70">
+<span class="font-code-num text-code-num text-secondary text-left">3</span>
+<div class="flex-1 mt-1"></div>
+</div>
+<!-- May 4 (Next Month) -->
+<div class="min-h-[120px] bg-surface-container-low/40 p-2 flex flex-col justify-between opacity-70">
+<span class="font-code-num text-code-num text-secondary text-left">4</span>
+<div class="flex-1 mt-1"></div>
+</div>
+</div>
+<!-- Footer / Matrix Legend -->
+<div class="p-space-sm bg-surface-container-low flex flex-wrap items-center justify-between text-on-surface-variant font-label-xs text-label-xs gap-space-sm">
+<div class="flex items-center gap-space-md">
+<span class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded bg-secondary"></span> Eventos Oficiales Campus
+            </span>
+<span class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded bg-tertiary-container"></span> Colegiados / Docentes
+            </span>
+<span class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded bg-error-container"></span> Suspensiones / Vacaciones SEP
+            </span>
+</div>
+<span class="font-code-num text-code-num">Horario Referencial: UTC-6 (Tiempo del Centro de México)</span>
+</div>
+</section>
+<!-- Context Sidebar Panel (4 Cols on XL) -->
+<section class="xl:col-span-4 flex flex-col gap-space-gutter">
+<!-- Próximos Eventos Destacados -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px] text-secondary">upcoming</span>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">Próximos Eventos Clave</h3>
+</div>
+<button class="font-label-sm text-label-sm text-secondary hover:underline">Ver Todos (18)</button>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Event 1: STEM Fair -->
+<div class="p-space-md rounded-lg bg-surface-container-low/60 hover:bg-surface-container-low transition-colors flex flex-col gap-space-xs">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<div class="w-10 h-10 rounded-lg bg-secondary text-on-secondary flex flex-col items-center justify-center font-bold leading-none shrink-0 shadow-xs">
+<span class="text-[13px]">09</span>
+<span class="text-[9px] uppercase">ABR</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold leading-tight">Feria STEM 2025</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">09:00 - 14:00 hrs • Patios &amp; Polivalente</span>
+</div>
+</div>
+<span class="px-space-xs py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-xs text-label-xs font-semibold shrink-0">
+                  Institucional
+                </span>
+</div>
+<div class="flex items-center justify-between pt-space-xs font-label-xs text-label-xs text-on-surface-variant">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">person</span>
+                  Prof. Roberto Méndez (Coord. Ciencias)
+                </span>
+<button class="text-secondary font-bold hover:underline">Detalles</button>
+</div>
+</div>
+<!-- Event 2: Periodo Vacacional -->
+<div class="p-space-md rounded-lg bg-error-container/20 hover:bg-error-container/30 transition-colors flex flex-col gap-space-xs">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<div class="w-10 h-10 rounded-lg bg-error text-on-error flex flex-col items-center justify-center font-bold leading-none shrink-0 shadow-xs">
+<span class="text-[13px]">14</span>
+<span class="text-[9px] uppercase">ABR</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold leading-tight">Receso de Primavera SEP</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">Del 14 al 25 de Abril de 2025</span>
+</div>
+</div>
+<span class="px-space-xs py-0.5 rounded-full bg-error-container text-on-error-container font-label-xs text-label-xs font-semibold shrink-0">
+                  Inhábil Oficial
+                </span>
+</div>
+<div class="flex items-center justify-between pt-space-xs font-label-xs text-label-xs text-on-surface-variant">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">apartment</span>
+                  Comunidad Escolar Completa
+                </span>
+<button class="text-secondary font-bold hover:underline">Circular</button>
+</div>
+</div>
+<!-- Event 3: Sesión Ordinaria CTE -->
+<div class="p-space-md rounded-lg bg-surface-container-low/60 hover:bg-surface-container-low transition-colors flex flex-col gap-space-xs">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<div class="w-10 h-10 rounded-lg bg-primary-container text-surface-container-highest flex flex-col items-center justify-center font-bold leading-none shrink-0 shadow-xs">
+<span class="text-[13px]">25</span>
+<span class="text-[9px] uppercase">ABR</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-bold leading-tight">CTE Fase Ordinaria 6</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant">08:00 - 15:00 hrs • Sala de Consejo</span>
+</div>
+</div>
+<span class="px-space-xs py-0.5 rounded-full bg-surface-container text-on-tertiary-container font-label-xs text-label-xs font-semibold shrink-0">
+                  Docentes
+                </span>
+</div>
+<div class="flex items-center justify-between pt-space-xs font-label-xs text-label-xs text-on-surface-variant">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">school</span>
+                  Mtra. Carmen Valenzuela G. (Dir. Gral)
+                </span>
+<button class="text-secondary font-bold hover:underline">Guía CTE</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Protocolos & Cumplimiento Normativo SEP -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[20px] text-secondary">verified_user</span>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">Normatividad &amp; Supervisión</h3>
+</div>
+<!-- Protocol Card Alert -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary">shield</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">Validación Zona Escolar 14</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Los periodos inhábiles y sesiones de consejo técnico se rigen bajo el Acuerdo Secretarial 09/08/23 publicado en el DOF. Calendario de 190 días para educación básica.
+            </p>
+<div class="flex items-center justify-between pt-space-2xs">
+<span class="font-code-num text-[11px] text-on-surface-variant">Folio SEP: DGEI-2024-C098</span>
+<span class="px-space-xs py-0.5 rounded-full bg-surface-container text-secondary font-label-xs text-label-xs font-bold">Aprobado</span>
+</div>
+</div>
+<!-- Circular Status -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<div class="flex items-center justify-between font-label-xs text-label-xs">
+<span class="text-on-surface font-semibold flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[15px] text-secondary">mark_email_read</span>
+                Difusión de Circular Mensual a Tutores
+              </span>
+<span class="font-bold text-secondary">94.8% Confirmados</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 94.8%;"></div>
+</div>
+<span class="font-body-sm text-[11px] text-on-surface-variant">
+              1,248 de 1,316 acuses registrados vía Portal Tutores y App Móvil SAE.
+            </span>
+</div>
+<!-- Direct Export / Sync Short Actions -->
+<div class="pt-space-xs flex items-center gap-space-xs">
+<button class="flex-1 h-8 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-xs text-label-xs font-semibold flex items-center justify-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[14px]">mail</span> Reenviar Pendientes
+            </button>
+<button class="flex-1 h-8 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-xs text-label-xs font-semibold flex items-center justify-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[14px]">print</span> Imprimir Padrón
+            </button>
+</div>
+</div>
+</section>
+</div>
+</div>
+<!-- Inline Script for Tab Switcher and Interactive Visual Feedback -->
+
+</div></main></div><script src="../assets/js/app.js"></script><script>
+document.addEventListener('DOMContentLoaded', () => {
+      // Small visual active switcher for the segmented view control
+      const segmentedButtons = document.querySelectorAll('.bg-surface-container-low button');
+      segmentedButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          segmentedButtons.forEach(b => {
+            b.classList.remove('bg-surface-container-lowest', 'text-secondary', 'shadow-sm', 'font-semibold');
+            b.classList.add('text-on-surface-variant');
+          });
+          btn.classList.add('bg-surface-container-lowest', 'text-secondary', 'shadow-sm', 'font-semibold');
+          btn.classList.remove('text-on-surface-variant');
+        });
+      });
+    });
+</script></body></html>

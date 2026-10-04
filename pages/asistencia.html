@@ -1,0 +1,575 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Asistencia · SAE.cloud</title><link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet"><script src="https://cdn.tailwindcss.com"></script><script src="../assets/js/tailwind-config.js"></script><link rel="stylesheet" href="../assets/css/app.css"></head><body class="bg-surface font-body-md text-on-surface antialiased" data-page="asistencia"><main class="w-full pt-16 bg-surface"><div class="flex flex-col w-full">
+<div class="p-space-margin flex flex-col gap-space-xl">
+<!-- Encabezado y Breadcrumbs -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-lg">
+<div class="flex flex-col gap-space-2xs">
+<div class="flex items-center gap-space-2xs text-on-surface-variant font-label-xs text-label-xs uppercase tracking-wider">
+<span>Académico</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span>Asistencia</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-secondary font-bold">Pase de Lista Diario</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-on-surface tracking-tight">Control de Asistencia e Incidencias</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Toma de asistencia en tiempo real por asignatura y grupo • Ciclo 2024–2025</p>
+</div>
+<div class="flex items-center flex-wrap gap-space-sm">
+<button class="h-9 px-space-md rounded-lg bg-surface-container-lowest shadow-sm text-on-surface font-label-md text-label-md flex items-center gap-space-2xs hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-[18px] text-outline">sim_card_download</span>
+<span>Descargar Reporte Mensual</span>
+</button>
+<button class="h-9 px-space-md rounded-lg bg-surface-container-lowest shadow-sm text-on-surface font-label-md text-label-md flex items-center gap-space-2xs hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-[18px] text-secondary">chat</span>
+<span>Notificar Faltas por WhatsApp/SMS</span>
+</button>
+<button class="h-9 px-space-md rounded-lg bg-secondary text-on-secondary font-label-md text-label-md flex items-center gap-space-2xs shadow-sm hover:bg-secondary-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Cerrar Pase de Lista</span>
+</button>
+</div>
+</div>
+<!-- Metadatos de la Sesión y Filtros -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col xl:flex-row items-stretch xl:items-center justify-between gap-space-lg">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-lg flex-1">
+<div class="flex items-center gap-space-sm p-space-sm rounded-lg bg-surface-container-low">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[22px]">calendar_today</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase">Fecha de Sesión</span>
+<span class="font-label-md text-label-md text-on-surface truncate">Hoy, Jueves 15 Feb 2025</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm p-space-sm rounded-lg bg-surface-container-low">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[22px]">groups</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase">Nivel y Grupo</span>
+<span class="font-label-md text-label-md text-on-surface truncate">Secundaria • 2° Grado "A"</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm p-space-sm rounded-lg bg-surface-container-low">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[22px]">science</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase">Materia y Horario</span>
+<span class="font-label-md text-label-md text-on-surface truncate">Ciencias II (Física) • 08:00 - 08:50</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm p-space-sm rounded-lg bg-surface-container-low">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[22px]">sensor_door</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase">Ubicación y Aula</span>
+<span class="font-label-md text-label-md text-on-surface truncate">Lab. de Ciencias B-104</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-sm pl-0 xl:pl-space-lg bg-surface-container-low xl:bg-transparent p-space-sm xl:p-0 rounded-lg">
+<img alt="Docente Titular" class="w-10 h-10 rounded-full object-cover shadow-sm" data-alt="Portrait photo of Doctor Elena Treviño Garza, professional Mexican female science professor with glasses, corporate academia styling in natural school lighting with high fidelity." src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%231E3A8A'/%3E%3Ctext x='32' y='41' font-family='Arial' font-size='26' font-weight='700' fill='white' text-anchor='middle'%3EDT%3C/text%3E%3C/svg%3E"/>
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase">Docente Titular</span>
+<span class="font-headline-md text-headline-md text-on-surface leading-tight">Dra. Elena Treviño G.</span>
+</div>
+</div>
+</div>
+<!-- Indicadores KPI de la Sesión -->
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-space-md">
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Matrícula Asignada</span>
+<div class="flex items-baseline justify-between mt-space-2xs">
+<span class="font-display-lg text-display-lg text-on-surface">32</span>
+<span class="font-label-xs text-label-xs text-outline">Alumnos 100%</span>
+</div>
+<div class="w-full h-1 bg-surface-container rounded-full mt-space-sm overflow-hidden">
+<div class="h-full bg-on-surface-variant w-full rounded-full"></div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Presentes</span>
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded-full bg-surface-container-low text-secondary font-label-xs text-label-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>90.6%
+          </span>
+</div>
+<div class="flex items-baseline justify-between mt-space-2xs">
+<span class="font-display-lg text-display-lg text-on-surface">29</span>
+<span class="font-code-num text-code-num text-on-surface-variant">En aula</span>
+</div>
+<div class="w-full h-1 bg-surface-container rounded-full mt-space-sm overflow-hidden">
+<div class="h-full bg-secondary w-[90.6%] rounded-full"></div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Retardos</span>
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-xs text-label-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>3.1%
+          </span>
+</div>
+<div class="flex items-baseline justify-between mt-space-2xs">
+<span class="font-display-lg text-display-lg text-on-surface">1</span>
+<span class="font-code-num text-code-num text-on-surface-variant">Con tolerancia</span>
+</div>
+<div class="w-full h-1 bg-surface-container rounded-full mt-space-sm overflow-hidden">
+<div class="h-full bg-outline w-[3.1%] rounded-full"></div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Inasistencias</span>
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded-full bg-error-container text-on-error-container font-label-xs text-label-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>3.1%
+          </span>
+</div>
+<div class="flex items-baseline justify-between mt-space-2xs">
+<span class="font-display-lg text-display-lg text-error">1</span>
+<span class="font-code-num text-code-num text-error">Sin justificar</span>
+</div>
+<div class="w-full h-1 bg-error-container rounded-full mt-space-sm overflow-hidden">
+<div class="h-full bg-error w-[3.1%] rounded-full"></div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm col-span-2 md:col-span-4 lg:col-span-1 flex flex-col justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Justificados</span>
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-xs text-label-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>3.1%
+          </span>
+</div>
+<div class="flex items-baseline justify-between mt-space-2xs">
+<span class="font-display-lg text-display-lg text-on-surface">1</span>
+<span class="font-code-num text-code-num text-on-surface-variant">Folio CS-9921</span>
+</div>
+<div class="w-full h-1 bg-surface-container rounded-full mt-space-sm overflow-hidden">
+<div class="h-full bg-secondary-container w-[3.1%] rounded-full"></div>
+</div>
+</div>
+</div>
+<!-- Barra Operativa de Acciones Rápidas -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-md bg-surface-container-low p-space-md rounded-xl">
+<div class="flex items-center gap-space-md w-full sm:w-auto">
+<button class="h-9 px-space-md rounded-lg bg-surface-container-lowest text-secondary font-label-md text-label-md flex items-center justify-center gap-space-2xs shadow-sm hover:bg-secondary-fixed transition-colors" id="btn-marcar-todos">
+<span class="material-symbols-outlined text-[18px]">done_all</span>
+<span>Marcar Todos como Presentes</span>
+</button>
+<span class="font-body-sm text-body-sm text-on-surface-variant hidden md:inline">28 de 32 alumnos sincronizados automáticamente</span>
+</div>
+<div class="flex items-center gap-space-sm w-full sm:w-auto justify-end">
+<div class="flex items-center gap-space-xs px-space-sm py-1 rounded-lg bg-error-container/40 text-on-error-container">
+<span class="material-symbols-outlined text-[16px] text-error">crisis_alert</span>
+<span class="font-label-xs text-label-xs">1 Alumno en riesgo crítico por faltas (&lt;80% SEP)</span>
+</div>
+<button class="h-9 w-9 rounded-lg bg-surface-container-lowest flex items-center justify-center text-outline hover:text-on-surface shadow-sm">
+<span class="material-symbols-outlined text-[20px]">filter_list</span>
+</button>
+</div>
+</div>
+<!-- Tabla Principal de Asistencia -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-xs text-label-xs uppercase tracking-wider">
+<th class="py-space-sm px-space-md w-16 text-center">N°</th>
+<th class="py-space-sm px-space-md">Estudiante / Matrícula</th>
+<th class="py-space-sm px-space-md min-w-[220px]">Estatus de Hoy</th>
+<th class="py-space-sm px-space-md">Hora Ingreso</th>
+<th class="py-space-sm px-space-md">Inasistencias Acumuladas</th>
+<th class="py-space-sm px-space-md">Observaciones e Incidencias</th>
+<th class="py-space-sm px-space-md text-right">Notificar Tutor</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-low font-body-sm text-body-sm text-on-surface">
+<!-- Alumno 1 -->
+<tr class="hover:bg-surface-container-lowest transition-colors bg-surface-container-lowest">
+<td class="py-space-sm px-space-md text-center font-code-num text-code-num text-on-surface-variant">01</td>
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-space-sm">
+<img alt="Valeria Méndez" class="w-8 h-8 rounded-full object-cover" data-alt="Student headshot portrait of young Mexican female Valeria Méndez Treviño wearing clean school uniform, smiling with natural lighting in modern classroom setting." src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%237C3AED'/%3E%3Ctext x='32' y='41' font-family='Arial' font-size='26' font-weight='700' fill='white' text-anchor='middle'%3EVM%3C/text%3E%3C/svg%3E"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Valeria Méndez Treviño</span>
+<span class="font-code-num text-label-xs text-on-surface-variant">MAT-2023-9841</span>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="inline-flex p-0.5 rounded-lg bg-surface-container-low gap-1">
+<button class="px-2.5 py-1 rounded bg-secondary text-on-secondary font-label-xs text-label-xs transition-colors">P</button>
+<button class="px-2.5 py-1 rounded text-on-surface-variant hover:bg-surface-container font-label-xs text-label-xs transition-colors">R</button>
+<button class="px-2.5 py-1 rounded text-on-surface-variant hover:bg-surface-container font-label-xs text-label-xs transition-colors">F</button>
+<button class="px-2.5 py-1 rounded text-on-surface-variant hover:bg-surface-container font-label-xs text-label-xs transition-colors">J</button>
+</div>
+</td>
+<td class="py-space-sm px-space-md font-code-num text-code-num text-on-surface">08:01 AM</td>
+<td class="py-space-sm px-space-md">
+<span class="inline-flex items-center gap-1 font-label-xs text-label-xs text-on-surface-variant">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>0 faltas este mes
+                </span>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="text-outline italic font-body-sm text-body-sm">Puntual sin observaciones</span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<div class="flex items-center justify-end gap-space-2xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] text-outline">sms</span>
+<span class="font-label-xs text-label-xs text-outline">No requerido</span>
+</div>
+</td>
+</tr>
+<!-- Alumno 2: Falta e Incidencia Crítica -->
+<tr class="bg-error-container/20 hover:bg-error-container/30 transition-colors">
+<td class="py-space-sm px-space-md text-center font-code-num text-code-num text-error font-bold">02</td>
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-space-sm">
+<img alt="Santiago Morales" class="w-8 h-8 rounded-full object-cover" data-alt="Student passport photo of teenager Santiago Morales Cárdenas, neutral expression, school polo shirt, corporate white backdrop." src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%232563EB'/%3E%3Ctext x='32' y='41' font-family='Arial' font-size='26' font-weight='700' fill='white' text-anchor='middle'%3ESM%3C/text%3E%3C/svg%3E"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-error font-bold">Santiago Morales Cárdenas</span>
+<span class="font-code-num text-label-xs text-on-error-container">MAT-2023-4120</span>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="inline-flex p-0.5 rounded-lg bg-surface-container-low gap-1">
+<button class="px-2.5 py-1 rounded text-on-surface-variant hover:bg-surface-container font-label-xs text-label-xs transition-colors">P</button>
+<button class="px-2.5 py-1 rounded text-on-surface-variant hover:bg-surface-container font-label-xs text-label-xs transition-colors">R</button>
+<button class="px-2.5 py-1 rounded bg-error text-on-error font-label-xs text-label-xs transition-colors shadow-sm">F</button>
+<button class="px-2.5 py-1 rounded text-on-surface-variant hover:bg-surface-container font-label-xs text-label-xs transition-colors">J</button>
+</div>
+</td>
+<td class="py-space-sm px-space-md font-code-num text-code-num text-error">--:--</td>
+<td class="py-space-sm px-space-md">
+<span class="inline-flex items-center gap-1.5 px-space-xs py-0.5 rounded bg-error text-on-error font-label-xs text-label-xs">
+<span class="material-symbols-outlined text-[12px]">warning</span>5 faltas (76.8% SEP)
+                </span>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="text-error font-label-sm text-label-sm">Alerta crítica: Citatorio emitido a prefectura</span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<div class="inline-flex items-center gap-space-2xs text-secondary font-label-xs text-label-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary">mark_chat_read</span>
+<span>Enviado a Lic. Roberto Méndez</span>
+</div>
+</td>
+</tr>
+<!-- Alumno 3 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-space-sm px-space-md text-center font-code-num text-code-num text-on-surface-variant">03</td>
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary font-label-xs text-label-xs">XC</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Ximena Sofía Castillo Reyes</span>
+<span class="font-code-num text-label-xs text-on-surface-variant">MAT-2023-8829</span>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="inline-flex p-0.5 rounded-lg bg-surface-container-low gap-1">
+<button class="px-2.5 py-1 rounded bg-secondary text-on-secondary font-label-xs text-label-xs transition-colors">P</button>
+<button class="px-2.5 py-1 rounded text-on-surface-variant hover:bg-surface-container font-label-xs text-label-xs transition-colors">R</button>
+<button class="px-2.5 py-1 rounded text-on-surface-variant hover:bg-surface-container font-label-xs text-label-xs transition-colors">F</button>
+<button class="px-2.5 py-1 rounded text-on-surface-variant hover:bg-surface-container font-label-xs text-label-xs transition-colors">J</button>
+</div>
+</td>
+<td class="py-space-sm px-space-md font-code-num text-code-num text-on-surface">07:58 AM</td>
+<td class="py-space-sm px-space-md">
+<span class="font-label-xs text-label-xs text-on-surface-variant">0 faltas este mes</span>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="text-outline italic font-body-sm text-body-sm">Puntual</span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<span class="font-label-xs text-label-xs text-outline">No requerido</span>
+</td>
+</tr>
+<!-- Alumno 4: Retardo -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-space-sm px-space-md text-center font-code-num text-code-num text-on-surface-variant">04</td>
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-space-sm">
+<img alt="Diego Alejandro Navarro" class="w-8 h-8 rounded-full object-cover" data-alt="Corporate school student headshot of Diego Alejandro Navarro Ruiz, male Mexican high school student in light blue polo shirt with neutral soft background." src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%231E3A8A'/%3E%3Ctext x='32' y='41' font-family='Arial' font-size='26' font-weight='700' fill='white' text-anchor='middle'%3EDA%3C/text%3E%3C/svg%3E"/>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Diego Alejandro Navarro Ruiz</span>
+<span class="font-code-num text-label-xs text-on-surface-variant">MAT-2023-3392</span>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="inline-flex p-0.5 rounded-lg bg-surface-container-low gap-1">
+<button class="px-2.5 py-1 rounded text-on-surface-variant hover:bg-surface-container font-label-xs text-label-xs transition-colors">P</button>
+<button class="px-2.5 py-1 rounded bg-secondary-container text-on-secondary font-label-xs text-label-xs transition-colors">R</button>
+<button class="px-2.5 py-1 rounded text-on-surface-variant hover:bg-surface-container font-label-xs text-label-xs transition-colors">F</button>
+<button class="px-2.5 py-1 rounded text-on-surface-variant hover:bg-surface-container font-label-xs text-label-xs transition-colors">J</button>
+</div>
+</td>
+<td class="py-space-sm px-space-md font-code-num text-code-num text-on-surface-variant">08:14 AM</td>
+<td class="py-space-sm px-space-md">
+<span class="font-label-xs text-label-xs text-on-surface-variant">1 falta • 2 retardos</span>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="text-on-surface-variant font-body-sm text-body-sm">Tolerancia excedida (+14 min)</span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<div class="inline-flex items-center gap-space-2xs text-secondary font-label-xs text-label-xs">
+<span class="material-symbols-outlined text-[16px]">schedule_send</span>
+<span>Notificado SMS</span>
+</div>
+</td>
+</tr>
+<!-- Alumno 5 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-space-sm px-space-md text-center font-code-num text-code-num text-on-surface-variant">05</td>
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface font-label-xs text-label-xs">CG</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Camila Fernanda Garza Ortiz</span>
+<span class="font-code-num text-label-xs text-on-surface-variant">MAT-2023-1102</span>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="inline-flex p-0.5 rounded-lg bg-surface-container-low gap-1">
+<button class="px-2.5 py-1 rounded bg-secondary text-on-secondary font-label-xs text-label-xs transition-colors">P</button>
+<button class="px-2.5 py-1 rounded text-on-surface-variant hover:bg-surface-container font-label-xs text-label-xs transition-colors">R</button>
+<button class="px-2.5 py-1 rounded text-on-surface-variant hover:bg-surface-container font-label-xs text-label-xs transition-colors">F</button>
+<button class="px-2.5 py-1 rounded text-on-surface-variant hover:bg-surface-container font-label-xs text-label-xs transition-colors">J</button>
+</div>
+</td>
+<td class="py-space-sm px-space-md font-code-num text-code-num text-on-surface">08:00 AM</td>
+<td class="py-space-sm px-space-md">
+<span class="font-label-xs text-label-xs text-on-surface-variant">0 faltas este mes</span>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="text-outline italic font-body-sm text-body-sm">Puntual</span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<span class="font-label-xs text-label-xs text-outline">No requerido</span>
+</td>
+</tr>
+<!-- Alumno 6: Justificada -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-space-sm px-space-md text-center font-code-num text-code-num text-on-surface-variant">06</td>
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary font-label-xs text-label-xs">ES</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Emiliano Salazar Vargas</span>
+<span class="font-code-num text-label-xs text-on-surface-variant">MAT-2023-7762</span>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="inline-flex p-0.5 rounded-lg bg-surface-container-low gap-1">
+<button class="px-2.5 py-1 rounded text-on-surface-variant hover:bg-surface-container font-label-xs text-label-xs transition-colors">P</button>
+<button class="px-2.5 py-1 rounded text-on-surface-variant hover:bg-surface-container font-label-xs text-label-xs transition-colors">R</button>
+<button class="px-2.5 py-1 rounded text-on-surface-variant hover:bg-surface-container font-label-xs text-label-xs transition-colors">F</button>
+<button class="px-2.5 py-1 rounded bg-secondary text-on-secondary font-label-xs text-label-xs transition-colors">J</button>
+</div>
+</td>
+<td class="py-space-sm px-space-md font-code-num text-code-num text-on-surface-variant">--:--</td>
+<td class="py-space-sm px-space-md">
+<span class="font-label-xs text-label-xs text-on-surface-variant">1 justificada</span>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="inline-flex items-center gap-1 text-secondary font-label-xs text-label-xs">
+<span class="material-symbols-outlined text-[14px]">attachment</span>Cert. Médico Folio CS-9921
+                </span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<span class="font-label-xs text-label-xs text-outline">Prefectura enterada</span>
+</td>
+</tr>
+<!-- Alumno 7 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-space-sm px-space-md text-center font-code-num text-code-num text-on-surface-variant">07</td>
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface font-label-xs text-label-xs">RD</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Renata Domínguez Lozano</span>
+<span class="font-code-num text-label-xs text-on-surface-variant">MAT-2023-6441</span>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="inline-flex p-0.5 rounded-lg bg-surface-container-low gap-1">
+<button class="px-2.5 py-1 rounded bg-secondary text-on-secondary font-label-xs text-label-xs transition-colors">P</button>
+<button class="px-2.5 py-1 rounded text-on-surface-variant hover:bg-surface-container font-label-xs text-label-xs transition-colors">R</button>
+<button class="px-2.5 py-1 rounded text-on-surface-variant hover:bg-surface-container font-label-xs text-label-xs transition-colors">F</button>
+<button class="px-2.5 py-1 rounded text-on-surface-variant hover:bg-surface-container font-label-xs text-label-xs transition-colors">J</button>
+</div>
+</td>
+<td class="py-space-sm px-space-md font-code-num text-code-num text-on-surface">07:55 AM</td>
+<td class="py-space-sm px-space-md">
+<span class="font-label-xs text-label-xs text-on-surface-variant">0 faltas este mes</span>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="text-outline italic font-body-sm text-body-sm">Puntual</span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<span class="font-label-xs text-label-xs text-outline">No requerido</span>
+</td>
+</tr>
+<!-- Alumno 8 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-space-sm px-space-md text-center font-code-num text-code-num text-on-surface-variant">08</td>
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-on-surface font-label-xs text-label-xs">MR</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Mateo Iker Ramírez Nava</span>
+<span class="font-code-num text-label-xs text-on-surface-variant">MAT-2023-5590</span>
+</div>
+</div>
+</td>
+<td class="py-space-sm px-space-md">
+<div class="inline-flex p-0.5 rounded-lg bg-surface-container-low gap-1">
+<button class="px-2.5 py-1 rounded bg-secondary text-on-secondary font-label-xs text-label-xs transition-colors">P</button>
+<button class="px-2.5 py-1 rounded text-on-surface-variant hover:bg-surface-container font-label-xs text-label-xs transition-colors">R</button>
+<button class="px-2.5 py-1 rounded text-on-surface-variant hover:bg-surface-container font-label-xs text-label-xs transition-colors">F</button>
+<button class="px-2.5 py-1 rounded text-on-surface-variant hover:bg-surface-container font-label-xs text-label-xs transition-colors">J</button>
+</div>
+</td>
+<td class="py-space-sm px-space-md font-code-num text-code-num text-on-surface">08:04 AM</td>
+<td class="py-space-sm px-space-md">
+<span class="font-label-xs text-label-xs text-on-surface-variant">0 faltas este mes</span>
+</td>
+<td class="py-space-sm px-space-md">
+<span class="text-outline italic font-body-sm text-body-sm">Puntual</span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<span class="font-label-xs text-label-xs text-outline">No requerido</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-space-md bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Mostrando 8 de 32 alumnos en este bloque de clase</span>
+<div class="flex items-center gap-space-xs">
+<button class="h-8 px-space-sm rounded bg-surface-container-lowest text-on-surface font-label-xs text-label-xs shadow-sm hover:bg-surface-container">Anterior</button>
+<button class="h-8 w-8 rounded bg-secondary text-on-secondary font-label-xs text-label-xs flex items-center justify-center">1</button>
+<button class="h-8 w-8 rounded bg-surface-container-lowest text-on-surface font-label-xs text-label-xs flex items-center justify-center hover:bg-surface-container">2</button>
+<button class="h-8 w-8 rounded bg-surface-container-lowest text-on-surface font-label-xs text-label-xs flex items-center justify-center hover:bg-surface-container">3</button>
+<button class="h-8 px-space-sm rounded bg-surface-container-lowest text-on-surface font-label-xs text-label-xs shadow-sm hover:bg-surface-container">Siguiente</button>
+</div>
+</div>
+</div>
+<!-- Sección Inferior: Análisis Semanal y Sello de Prefectura -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-space-lg">
+<!-- Gráfico de Asistencia Semanal -->
+<div class="lg:col-span-2 bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm pb-space-md">
+<div class="flex flex-col">
+<h3 class="font-headline-md text-headline-md text-on-surface">Tendencia de Asistencia Semanal</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Comparativo de 2° "A" contra la media general de Secundaria</span>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-space-2xs">
+<span class="w-3 h-3 rounded-full bg-secondary"></span>
+<span class="font-label-xs text-label-xs text-on-surface">2° Grado "A"</span>
+</div>
+<div class="flex items-center gap-space-2xs">
+<span class="w-3 h-3 rounded-full bg-outline-variant"></span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Promedio Secundaria</span>
+</div>
+</div>
+</div>
+<!-- Gráfica SVG inline estilizada -->
+<div class="w-full h-44 flex flex-col justify-end pt-space-md">
+<div class="grid grid-cols-5 h-full items-end gap-space-md px-space-sm">
+<!-- Lunes -->
+<div class="flex flex-col items-center gap-space-xs h-full justify-end">
+<div class="w-full flex items-end justify-center gap-1.5 h-32">
+<div class="w-5 bg-outline-variant rounded-t" style="height: 88%;"></div>
+<div class="w-5 bg-secondary rounded-t" style="height: 94%;"></div>
+</div>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Lun (94%)</span>
+</div>
+<!-- Martes -->
+<div class="flex flex-col items-center gap-space-xs h-full justify-end">
+<div class="w-full flex items-end justify-center gap-1.5 h-32">
+<div class="w-5 bg-outline-variant rounded-t" style="height: 86%;"></div>
+<div class="w-5 bg-secondary rounded-t" style="height: 97%;"></div>
+</div>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Mar (97%)</span>
+</div>
+<!-- Miércoles -->
+<div class="flex flex-col items-center gap-space-xs h-full justify-end">
+<div class="w-full flex items-end justify-center gap-1.5 h-32">
+<div class="w-5 bg-outline-variant rounded-t" style="height: 89%;"></div>
+<div class="w-5 bg-secondary rounded-t" style="height: 91%;"></div>
+</div>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Mié (91%)</span>
+</div>
+<!-- Jueves (Hoy) -->
+<div class="flex flex-col items-center gap-space-xs h-full justify-end">
+<div class="w-full flex items-end justify-center gap-1.5 h-32">
+<div class="w-5 bg-outline-variant rounded-t" style="height: 85%;"></div>
+<div class="w-5 bg-secondary-container rounded-t" style="height: 90.6%;"></div>
+</div>
+<span class="font-label-xs text-label-xs text-secondary font-bold">Jue (90.6%)</span>
+</div>
+<!-- Viernes -->
+<div class="flex flex-col items-center gap-space-xs h-full justify-end opacity-40">
+<div class="w-full flex items-end justify-center gap-1.5 h-32">
+<div class="w-5 bg-outline-variant rounded-t" style="height: 82%;"></div>
+<div class="w-5 bg-secondary rounded-t" style="height: 0%;"></div>
+</div>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Vie (Pend)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Sello y Validación de Prefectura -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-space-2xs">
+<div class="flex items-center justify-between">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Validación Institucional</span>
+<span class="px-space-xs py-0.5 rounded-full bg-secondary-fixed text-secondary font-label-xs text-label-xs">En Captura</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Sello de Prefectura Escolar</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">El cierre definitivo congelará las faltas para el cálculo del promedio oficial bimestral.</p>
+</div>
+<div class="my-space-md p-space-md rounded-lg bg-surface-container-low flex flex-col gap-space-2xs">
+<div class="flex items-center justify-between text-on-surface font-label-sm text-label-sm">
+<span>Prefecto de Turno:</span>
+<span class="font-bold">Lic. Martín Ceballos R.</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-xs text-label-xs">
+<span>Hora de Apertura:</span>
+<span class="font-code-num text-code-num">08:00:14 hrs</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-label-xs text-label-xs">
+<span>Folio Criptográfico:</span>
+<span class="font-code-num text-code-num">#PRF-2025-0215-A2</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<button class="w-full h-10 rounded-lg bg-primary text-on-primary font-label-md text-label-md flex items-center justify-center gap-space-xs hover:bg-primary-container transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+<span>Firmar Digitalmente Pase de Lista</span>
+</button>
+<span class="text-center font-label-xs text-label-xs text-outline">Registrado con RFC docente bajo norma NOM-SE-2024</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main></div><script src="../assets/js/app.js"></script><script>
+// Micro-interacción: Marcar todos como presentes
+  document.getElementById('btn-marcar-todos')?.addEventListener('click', function() {
+    const presentButtons = document.querySelectorAll('button:first-child');
+    // Indicador visual de ejecución rápida
+    this.classList.add('bg-secondary-fixed');
+    setTimeout(() => {
+      this.classList.remove('bg-secondary-fixed');
+    }, 300);
+  });
+</script></body></html>

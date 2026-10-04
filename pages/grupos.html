@@ -1,0 +1,797 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Grupos y Salones · SAE.cloud</title><link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet"><script src="https://cdn.tailwindcss.com"></script><script src="../assets/js/tailwind-config.js"></script><link rel="stylesheet" href="../assets/css/app.css"></head><body class="bg-surface font-body-md text-on-surface antialiased" data-page="grupos"><main class="w-full pt-16 bg-surface"><div class="flex flex-col w-full">
+<div class="p-space-margin flex flex-col gap-space-xl">
+<!-- BREADCRUMBS & HEADER -->
+<div class="flex flex-col gap-space-sm">
+<nav class="flex items-center gap-space-xs text-on-surface-variant font-label-xs text-label-xs uppercase tracking-wider">
+<span>Administración Escolar</span>
+<span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span>
+<span>Control de Plantel</span>
+<span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span>
+<span class="text-secondary font-bold">Gestión de Grupos y Espacios Físicos</span>
+</nav>
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-md">
+<div class="flex flex-col">
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">Gestión Integral de Grupos, Salones y Aulas</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            Administración de cupos, asignación de tutores titulares, distribución por edificio y disponibilidad de aforo en tiempo real. Ciclo Escolar 2024–2025.
+          </p>
+</div>
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="h-9 px-space-md rounded-lg bg-surface-container-low text-on-surface font-label-md text-label-md flex items-center gap-space-2xs hover:bg-surface-container transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px] text-secondary">file_download</span>
+<span>Exportar Padrón (PDF/XLSX)</span>
+</button>
+<button class="h-9 px-space-md rounded-lg bg-surface-container-highest text-secondary font-label-md text-label-md flex items-center gap-space-2xs hover:bg-surface-variant transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">auto_fix_high</span>
+<span>Rebalanceo de Cupos con IA</span>
+<span class="ml-1 px-1.5 py-0.5 rounded-full bg-secondary text-on-secondary font-label-xs text-[10px]">Beta</span>
+</button>
+<button class="h-9 px-space-md rounded-lg bg-primary-container text-on-secondary-container font-label-md text-label-md flex items-center gap-space-2xs hover:bg-tertiary-container transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>Nuevo Grupo o Aula</span>
+</button>
+</div>
+</div>
+</div>
+<!-- TOP KPIS / METRICS ROW -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-gutter">
+<!-- Card 1 -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs uppercase text-on-surface-variant tracking-wider">Total de Grupos Activos</span>
+<span class="font-headline-xl text-headline-xl text-on-surface mt-1">42 Grupos</span>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[22px]">diversity_3</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">100% con Aula Titular</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-secondary font-label-xs text-label-xs font-semibold">+2 vespertinos</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs uppercase text-on-surface-variant tracking-wider">Aforo y Matrícula Actual</span>
+<div class="flex items-baseline gap-1 mt-1">
+<span class="font-headline-xl text-headline-xl text-on-surface font-code-num">1,482</span>
+<span class="font-body-md text-body-md text-outline font-code-num">/ 1,620</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[22px]">meeting_room</span>
+</div>
+</div>
+<div class="mt-space-md flex flex-col gap-1.5">
+<div class="flex justify-between items-center text-body-sm font-label-xs">
+<span class="text-on-surface-variant">Ocupación global 91.5%</span>
+<span class="text-secondary font-code-num font-semibold">138 vacantes</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 91.5%;"></div>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs uppercase text-on-surface-variant tracking-wider">Salones y Laboratorios</span>
+<span class="font-headline-xl text-headline-xl text-on-surface mt-1">48 Espacios</span>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[22px]">domain</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">34 Aulas • 14 Especializados</span>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-xs text-label-xs font-semibold">Mantenimiento: 2</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs uppercase text-on-surface-variant tracking-wider">Ratio Promedio Alumno/Aula</span>
+<span class="font-headline-xl text-headline-xl text-on-surface mt-1 font-code-num">35.2 <span class="font-body-sm text-body-sm text-outline">Alumnos</span></span>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container-low flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[22px]">verified_user</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Norma SEP: Máx. 40</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-xs text-label-xs font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+            SEP 100%
+          </span>
+</div>
+</div>
+</div>
+<!-- FILTERING & SEARCH TOOLBAR -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col xl:flex-row items-stretch xl:items-center justify-between gap-space-md">
+<!-- Search bar -->
+<div class="relative flex-1 max-w-xl">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span>
+<input class="w-full h-10 pl-10 pr-4 rounded-lg bg-surface-container-low text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none focus:bg-surface-container transition-colors" placeholder="Buscar por grado, grupo, salón, tutor o edificio... (Ctrl+K)" type="text"/>
+</div>
+<!-- View mode tabs -->
+<div class="flex items-center p-1 rounded-lg bg-surface-container-low self-start xl:self-center">
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-lowest text-secondary font-label-sm text-label-sm shadow-sm flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">groups</span>
+<span>Por Grupos y Grados</span>
+</button>
+<button class="px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[16px]">apartment</span>
+<span>Por Aulas / Edificios</span>
+</button>
+<button class="px-space-md py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[16px]">map</span>
+<span>Mapa de Planta</span>
+</button>
+</div>
+</div>
+<!-- Filters Row -->
+<div class="flex flex-wrap items-center gap-space-sm pt-space-xs">
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface text-label-sm font-label-sm cursor-pointer hover:bg-surface-container transition-colors">
+<span class="text-outline text-label-xs">Nivel:</span>
+<span>Todos los Niveles</span>
+<span class="material-symbols-outlined text-[16px] text-outline">expand_more</span>
+</div>
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface text-label-sm font-label-sm cursor-pointer hover:bg-surface-container transition-colors">
+<span class="text-outline text-label-xs">Turno:</span>
+<span>Matutino y Vespertino</span>
+<span class="material-symbols-outlined text-[16px] text-outline">expand_more</span>
+</div>
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface text-label-sm font-label-sm cursor-pointer hover:bg-surface-container transition-colors">
+<span class="text-outline text-label-xs">Edificio:</span>
+<span>Todos los Edificios</span>
+<span class="material-symbols-outlined text-[16px] text-outline">expand_more</span>
+</div>
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-low text-on-surface text-label-sm font-label-sm cursor-pointer hover:bg-surface-container transition-colors">
+<span class="text-outline text-label-xs">Capacidad:</span>
+<span>Cualquier Capacidad</span>
+<span class="material-symbols-outlined text-[16px] text-outline">expand_more</span>
+</div>
+<button class="ml-auto text-secondary hover:text-secondary-container font-label-sm text-label-sm flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[16px]">filter_alt_off</span>
+<span>Limpiar Filtros</span>
+</button>
+</div>
+</div>
+<!-- MAIN DATA TABLE -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm overflow-hidden flex flex-col">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-xs text-label-xs uppercase tracking-wider">
+<th class="py-3 px-4 font-semibold">Grupo y Nivel</th>
+<th class="py-3 px-4 font-semibold">Salón Asignado y Edificio</th>
+<th class="py-3 px-4 font-semibold">Tutor Titular</th>
+<th class="py-3 px-4 font-semibold">Aforo y Capacidad</th>
+<th class="py-3 px-4 font-semibold">Turno y Horario</th>
+<th class="py-3 px-4 font-semibold">Estatus SEP / RVOE</th>
+<th class="py-3 px-4 text-right font-semibold">Acciones</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-low text-body-sm font-body-sm text-on-surface">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group">
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-lg bg-secondary-fixed text-on-secondary-fixed font-headline-md text-headline-md flex items-center justify-center font-bold">
+                    2A
+                  </div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-on-surface font-semibold leading-snug">2° Secundaria "A"</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Secundaria Técnica • CCT 09PST0144Z</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">meeting_room</span>
+                    Aula 2-A
+                  </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Edificio A • Nivel 1</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-2">
+<img class="w-7 h-7 rounded-full object-cover" data-alt="Corporate headshot of male Mexican high school teacher Roberto Mendez wearing formal eyeglasses and blazer against neutral gray background" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23047857'/%3E%3Ctext x='32' y='41' font-family='Arial' font-size='26' font-weight='700' fill='white' text-anchor='middle'%3ECH%3C/text%3E%3C/svg%3E"/>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-medium leading-tight">Prof. Roberto Méndez Silva</span>
+<span class="font-code-num text-code-num text-on-surface-variant">DOC-8831</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col gap-1 w-44">
+<div class="flex justify-between items-center text-label-xs font-code-num">
+<span class="font-bold text-on-surface">32 / 35</span>
+<span class="text-secondary font-semibold">3 vacantes</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 91%;"></div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface">Matutino</span>
+<span class="font-code-num text-code-num text-on-surface-variant">07:10 - 14:20 hrs</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-xs text-label-xs font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Oficial SEP • Activo
+                </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="inline-flex items-center gap-1 opacity-90 group-hover:opacity-100 transition-opacity">
+<button class="px-2.5 py-1 rounded bg-surface-container-low hover:bg-surface-container text-secondary font-label-xs text-label-xs font-semibold transition-colors">
+                    Ver Alumnos
+                  </button>
+<button class="p-1 rounded hover:bg-surface-container-low text-on-surface-variant transition-colors" title="Cambiar Salón">
+<span class="material-symbols-outlined text-[18px]">swap_horiz</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container-low text-on-surface-variant transition-colors" title="Más opciones">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group">
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high text-on-surface font-headline-md text-headline-md flex items-center justify-center font-bold">
+                    2B
+                  </div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-on-surface font-semibold leading-snug">2° Secundaria "B"</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Secundaria Técnica • CCT 09PST0144Z</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">meeting_room</span>
+                    Aula 2-B
+                  </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Edificio A • Nivel 1</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-2">
+<img class="w-7 h-7 rounded-full object-cover" data-alt="Portrait of senior female Mexican academic and coordinator Dra Elena Trevino Garza smiling warmly with glasses in office setting" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23047857'/%3E%3Ctext x='32' y='41' font-family='Arial' font-size='26' font-weight='700' fill='white' text-anchor='middle'%3EPO%3C/text%3E%3C/svg%3E"/>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-medium leading-tight">Dra. Elena Treviño Garza</span>
+<span class="font-code-num text-code-num text-on-surface-variant">DOC-7140</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col gap-1 w-44">
+<div class="flex justify-between items-center text-label-xs font-code-num">
+<span class="font-bold text-on-surface">34 / 35</span>
+<span class="text-on-surface-variant font-semibold">1 vacante</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 97%;"></div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface">Matutino</span>
+<span class="font-code-num text-code-num text-on-surface-variant">07:10 - 14:20 hrs</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-xs text-label-xs font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Oficial SEP • Activo
+                </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="inline-flex items-center gap-1 opacity-90 group-hover:opacity-100 transition-opacity">
+<button class="px-2.5 py-1 rounded bg-surface-container-low hover:bg-surface-container text-secondary font-label-xs text-label-xs font-semibold transition-colors">
+                    Ver Alumnos
+                  </button>
+<button class="p-1 rounded hover:bg-surface-container-low text-on-surface-variant transition-colors" title="Cambiar Salón">
+<span class="material-symbols-outlined text-[18px]">swap_horiz</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container-low text-on-surface-variant transition-colors" title="Más opciones">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group">
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high text-on-surface font-headline-md text-headline-md flex items-center justify-center font-bold">
+                    1B
+                  </div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-on-surface font-semibold leading-snug">1° Secundaria "B"</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Robótica e Informática • Ingreso 2024</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">meeting_room</span>
+                    Salón 104
+                  </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Edificio B • Nivel 1</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-2">
+<img class="w-7 h-7 rounded-full object-cover" data-alt="Professional headshot of young male computer science instructor Arturo Ruiz Carvajal dressed in blue polo with university robotics lab background" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%230E7490'/%3E%3Ctext x='32' y='41' font-family='Arial' font-size='26' font-weight='700' fill='white' text-anchor='middle'%3EPH%3C/text%3E%3C/svg%3E"/>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-medium leading-tight">Ing. Arturo Ruiz Carvajal</span>
+<span class="font-code-num text-code-num text-on-surface-variant">DOC-6512</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col gap-1 w-44">
+<div class="flex justify-between items-center text-label-xs font-code-num">
+<span class="font-bold text-on-surface">28 / 32</span>
+<span class="text-secondary font-semibold">4 vacantes</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 87.5%;"></div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface">Matutino</span>
+<span class="font-code-num text-code-num text-on-surface-variant">07:00 - 14:15 hrs</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-surface-variant text-on-surface font-label-xs text-label-xs font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-surface-tint"></span>
+                  En Cierre de Matrícula
+                </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="inline-flex items-center gap-1 opacity-90 group-hover:opacity-100 transition-opacity">
+<button class="px-2.5 py-1 rounded bg-surface-container-low hover:bg-surface-container text-secondary font-label-xs text-label-xs font-semibold transition-colors">
+                    Ver Alumnos
+                  </button>
+<button class="p-1 rounded hover:bg-surface-container-low text-on-surface-variant transition-colors" title="Cambiar Salón">
+<span class="material-symbols-outlined text-[18px]">swap_horiz</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container-low text-on-surface-variant transition-colors" title="Más opciones">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group">
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-lg bg-primary-container text-on-secondary-container font-headline-md text-headline-md flex items-center justify-center font-bold">
+                    6A
+                  </div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-on-surface font-semibold leading-snug">6° Bachillerato "A"</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Físico-Matemático • RVOE SEP-2018-09</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">meeting_room</span>
+                    Aula Bach 6-A
+                  </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Edificio C • Nivel 2</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-2">
+<img class="w-7 h-7 rounded-full object-cover" data-alt="Portrait of female physics lecturer Sofia Morales Garza in laboratory wearing lab coat holding syllabus documents" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%231E3A8A'/%3E%3Ctext x='32' y='41' font-family='Arial' font-size='26' font-weight='700' fill='white' text-anchor='middle'%3EPO%3C/text%3E%3C/svg%3E"/>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-medium leading-tight">Mtra. Sofía Morales Garza</span>
+<span class="font-code-num text-code-num text-on-surface-variant">DOC-9022</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col gap-1 w-44">
+<div class="flex justify-between items-center text-label-xs font-code-num">
+<span class="font-bold text-on-surface">35 / 35</span>
+<span class="text-error font-bold">Aforo Máximo</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-error rounded-full" style="width: 100%;"></div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface">Matutino</span>
+<span class="font-code-num text-code-num text-on-surface-variant">07:10 - 14:30 hrs</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-error-container text-on-error-container font-label-xs text-label-xs font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                  Cupo Lleno
+                </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="inline-flex items-center gap-1 opacity-90 group-hover:opacity-100 transition-opacity">
+<button class="px-2.5 py-1 rounded bg-surface-container-low hover:bg-surface-container text-secondary font-label-xs text-label-xs font-semibold transition-colors">
+                    Ver Alumnos
+                  </button>
+<button class="p-1 rounded hover:bg-surface-container-low text-on-surface-variant transition-colors" title="Cambiar Salón">
+<span class="material-symbols-outlined text-[18px]">swap_horiz</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container-low text-on-surface-variant transition-colors" title="Más opciones">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group">
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high text-on-surface font-headline-md text-headline-md flex items-center justify-center font-bold">
+                    4C
+                  </div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-on-surface font-semibold leading-snug">4° Primaria "C"</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Primaria Bilingüe • CCT 09PPR0821M</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">meeting_room</span>
+                    Aula Prim 4-C
+                  </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Edificio Sur • Planta Baja</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-2">
+<img class="w-7 h-7 rounded-full object-cover" data-alt="Portrait of male elementary bilingual teacher Carlos Fuentes Macias with approachable smile in modern primary school classroom" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23B45309'/%3E%3Ctext x='32' y='41' font-family='Arial' font-size='26' font-weight='700' fill='white' text-anchor='middle'%3EPO%3C/text%3E%3C/svg%3E"/>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-medium leading-tight">Lic. Carlos Fuentes Macías</span>
+<span class="font-code-num text-code-num text-on-surface-variant">DOC-3190</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col gap-1 w-44">
+<div class="flex justify-between items-center text-label-xs font-code-num">
+<span class="font-bold text-on-surface">30 / 35</span>
+<span class="text-secondary font-semibold">5 vacantes</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 85%;"></div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface">Matutino</span>
+<span class="font-code-num text-code-num text-on-surface-variant">07:30 - 14:00 hrs</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-xs text-label-xs font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Oficial SEP • Activo
+                </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="inline-flex items-center gap-1 opacity-90 group-hover:opacity-100 transition-opacity">
+<button class="px-2.5 py-1 rounded bg-surface-container-low hover:bg-surface-container text-secondary font-label-xs text-label-xs font-semibold transition-colors">
+                    Ver Alumnos
+                  </button>
+<button class="p-1 rounded hover:bg-surface-container-low text-on-surface-variant transition-colors" title="Cambiar Salón">
+<span class="material-symbols-outlined text-[18px]">swap_horiz</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container-low text-on-surface-variant transition-colors" title="Más opciones">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 6 -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group">
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-2.5">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high text-on-surface font-headline-md text-headline-md flex items-center justify-center font-bold">
+                    M3
+                  </div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-on-surface font-semibold leading-snug">3° Maternal</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Preescolar Inicial • Clave INC-2021-04</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">meeting_room</span>
+                    Salón K-3
+                  </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Pabellón Infantil • PB c/ Jardín</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex items-center gap-2">
+<img class="w-7 h-7 rounded-full object-cover" data-alt="Portrait of young female preschool educator Mariana Ramos in colorful educational vest inside preschool classroom" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%237C3AED'/%3E%3Ctext x='32' y='41' font-family='Arial' font-size='26' font-weight='700' fill='white' text-anchor='middle'%3EPO%3C/text%3E%3C/svg%3E"/>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-medium leading-tight">Lic. Mariana Ramos</span>
+<span class="font-code-num text-code-num text-on-surface-variant">DOC-1104</span>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col gap-1 w-44">
+<div class="flex justify-between items-center text-label-xs font-code-num">
+<span class="font-bold text-on-surface">20 / 22</span>
+<span class="text-secondary font-semibold">2 vacantes</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 90%;"></div>
+</div>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface">Matutino</span>
+<span class="font-code-num text-code-num text-on-surface-variant">08:30 - 13:00 hrs</span>
+</div>
+</td>
+<td class="py-3.5 px-4">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-xs text-label-xs font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Incorporado SEP
+                </span>
+</td>
+<td class="py-3.5 px-4 text-right">
+<div class="inline-flex items-center gap-1 opacity-90 group-hover:opacity-100 transition-opacity">
+<button class="px-2.5 py-1 rounded bg-surface-container-low hover:bg-surface-container text-secondary font-label-xs text-label-xs font-semibold transition-colors">
+                    Ver Alumnos
+                  </button>
+<button class="p-1 rounded hover:bg-surface-container-low text-on-surface-variant transition-colors" title="Cambiar Salón">
+<span class="material-symbols-outlined text-[18px]">swap_horiz</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container-low text-on-surface-variant transition-colors" title="Más opciones">
+<span class="material-symbols-outlined text-[18px]">more_vert</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer / Pagination -->
+<div class="p-space-md bg-surface-container-low/50 flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+          Mostrando <span class="font-semibold text-on-surface">1–6</span> de <span class="font-semibold text-on-surface">42</span> grupos registrados
+        </span>
+<div class="flex items-center gap-1">
+<button class="w-8 h-8 rounded flex items-center justify-center bg-surface-container-lowest text-on-surface-variant hover:text-on-surface disabled:opacity-40 transition-colors" disabled="">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button class="w-8 h-8 rounded flex items-center justify-center bg-secondary text-on-secondary font-label-sm text-label-sm font-semibold">1</button>
+<button class="w-8 h-8 rounded flex items-center justify-center bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-sm text-label-sm transition-colors">2</button>
+<button class="w-8 h-8 rounded flex items-center justify-center bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-sm text-label-sm transition-colors">3</button>
+<span class="px-1 text-outline">...</span>
+<button class="w-8 h-8 rounded flex items-center justify-center bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-sm text-label-sm transition-colors">7</button>
+<button class="w-8 h-8 rounded flex items-center justify-center bg-surface-container-lowest hover:bg-surface-container text-on-surface-variant transition-colors">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- BOTTOM AUDIT & INFRASTRUCTURE PANELS -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-gutter items-start">
+<!-- Left Panel: Auditoría de Espacios Especiales (60% -> 7 cols) -->
+<div class="lg:col-span-7 p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[22px]">science</span>
+<div class="flex flex-col">
+<h2 class="font-headline-md text-headline-md text-on-surface">Distribución Física y Auditoría de Espacios Especiales</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Monitoreo de laboratorios, talleres y áreas de alta concurrencia</span>
+</div>
+</div>
+<span class="px-2 py-1 rounded bg-surface-container text-on-surface font-code-num text-code-num">5 Áreas Clave</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Space 1 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-start gap-3">
+<div class="p-2 rounded bg-surface-container-lowest text-secondary">
+<span class="material-symbols-outlined text-[20px]">biotech</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Laboratorio de Ciencias II</span>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-xs text-[10px] font-bold">Ocupado</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Edif. B - Salón 104 • 2° Sec "B" (Dra. Elena Treviño)</span>
+</div>
+</div>
+<div class="flex items-center gap-3 self-end sm:self-center">
+<div class="flex flex-col text-right font-code-num text-label-xs">
+<span class="text-on-surface font-semibold">Cap. 40 personas</span>
+<span class="text-on-surface-variant">Uso actual: 34 (85%)</span>
+</div>
+</div>
+</div>
+<!-- Space 2 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-start gap-3">
+<div class="p-2 rounded bg-surface-container-lowest text-secondary">
+<span class="material-symbols-outlined text-[20px]">precision_manufacturing</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Taller STEM &amp; Robótica</span>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-xs text-[10px] font-bold">Ocupado</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Edif. B - Planta Baja • 1° Sec "B" (Ing. Arturo Ruiz)</span>
+</div>
+</div>
+<div class="flex items-center gap-3 self-end sm:self-center">
+<div class="flex flex-col text-right font-code-num text-label-xs">
+<span class="text-on-surface font-semibold">Cap. 36 personas</span>
+<span class="text-on-surface-variant">Uso actual: 28 (78%)</span>
+</div>
+</div>
+</div>
+<!-- Space 3 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-start gap-3">
+<div class="p-2 rounded bg-surface-container-lowest text-secondary">
+<span class="material-symbols-outlined text-[20px]">translate</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Laboratorio de Idiomas 1</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-xs text-[10px] font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                    Libre Ahora
+                  </span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Edif. C - Nivel 1 • Próxima clase: 11:00 hrs (Prof. David Miller)</span>
+</div>
+</div>
+<div class="flex items-center gap-3 self-end sm:self-center">
+<div class="flex flex-col text-right font-code-num text-label-xs">
+<span class="text-on-surface font-semibold">Cap. 35 alumnos</span>
+<span class="text-secondary font-semibold">Disponible</span>
+</div>
+</div>
+</div>
+<!-- Space 4 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-start gap-3">
+<div class="p-2 rounded bg-surface-container-lowest text-secondary">
+<span class="material-symbols-outlined text-[20px]">sports_soccer</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Cancha Polideportiva Exterior</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface font-label-xs text-[10px] font-bold">Programada</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Patio Central • Educación Física (Prof. Manuel Garza)</span>
+</div>
+</div>
+<div class="flex items-center gap-3 self-end sm:self-center">
+<div class="flex flex-col text-right font-code-num text-label-xs">
+<span class="text-on-surface font-semibold">Aforo Exterior 90</span>
+<span class="text-on-surface-variant">Turno completo</span>
+</div>
+</div>
+</div>
+<!-- Space 5 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex items-start gap-3">
+<div class="p-2 rounded bg-surface-container-lowest text-secondary">
+<span class="material-symbols-outlined text-[20px]">theater_comedy</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Aula Magna / Auditorio A</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface font-label-xs text-[10px] font-bold">Reservado</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Edif. Administrativo • Reservado p/ Consejo Técnico Escolar (Viernes 28)</span>
+</div>
+</div>
+<div class="flex items-center gap-3 self-end sm:self-center">
+<div class="flex flex-col text-right font-code-num text-label-xs">
+<span class="text-on-surface font-semibold">Cap. 220 butacas</span>
+<span class="text-on-surface-variant">Bloqueo Oficial</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Panel: Parámetros Oficiales SEP y Seguridad (40% -> 5 cols) -->
+<div class="lg:col-span-5 p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center gap-2 pb-space-xs">
+<span class="material-symbols-outlined text-secondary text-[22px]">policy</span>
+<div class="flex flex-col">
+<h2 class="font-headline-md text-headline-md text-on-surface">Parámetros Oficiales SEP y Seguridad</h2>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Normativa de seguridad estructural y cumplimiento DGIR</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Item 1: Dictamen PC -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Dictamen de Protección Civil Vigente</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                Aprobado bajo folio oficial <span class="font-code-num text-code-num font-semibold text-on-surface">PC-CDMX-2025/998</span>. Válido hasta enero 2026 para todos los pabellones escolares.
+              </p>
+</div>
+</div>
+<!-- Item 2: Semáforo de Densidad Sísmica -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container text-secondary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">emergency</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Semáforo Sísmico y Rutas de Evacuación</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                Capacidad por metro cuadrado en pasillos y escaleras verificada al 100%. Puntos de reunión en Patio Central y Explanada Norte certificados.
+              </p>
+<div class="flex items-center gap-2 mt-2">
+<span class="px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-code-num text-label-xs font-semibold">Edif. A: Óptimo</span>
+<span class="px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-code-num text-label-xs font-semibold">Edif. B: Óptimo</span>
+<span class="px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-code-num text-label-xs font-semibold">Edif. C: Óptimo</span>
+</div>
+</div>
+</div>
+<!-- Item 3: Acreditación RVOE -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container text-secondary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">account_balance</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface font-semibold">Cédula Técnica de Aulas DGIR-SEP</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                Distribución métrica que cumple con la normativa federal de 1.50 m² mínimos de ventilación y luz natural por alumno matriculado.
+              </p>
+</div>
+</div>
+</div>
+<button class="w-full mt-space-2xs py-2.5 px-space-md rounded-lg bg-secondary text-on-secondary font-label-md text-label-md flex items-center justify-center gap-2 hover:bg-secondary-container transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">download_for_offline</span>
+<span>Descargar Cédula DGIR-SEP (Formato Oficial)</span>
+</button>
+</div>
+</div>
+</div>
+</div></main></div><script src="../assets/js/app.js"></script></body></html>

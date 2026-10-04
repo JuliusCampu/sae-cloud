@@ -1,0 +1,873 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Centro de Reportes · SAE.cloud</title><link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet"><script src="https://cdn.tailwindcss.com"></script><script src="../assets/js/tailwind-config.js"></script><link rel="stylesheet" href="../assets/css/app.css"></head><body class="bg-surface font-body-md text-on-surface antialiased" data-page="reportes"><main class="w-full pt-16 bg-surface"><div class="flex flex-col w-full">
+<!-- PADDING CONTENEDOR PRINCIPAL CON ESPACIADO CORPORATIVO -->
+<div class="p-margin flex flex-col gap-space-xl">
+<!-- 1. CABECERA Y METADATOS OFICIALES -->
+<section class="flex flex-col gap-space-md">
+<!-- Breadcrumbs técnicos institucionales -->
+<nav aria-label="Navegación secundaria" class="flex items-center gap-space-2xs text-on-surface-variant font-label-xs text-label-xs uppercase tracking-wider">
+<span>Administración Escolar</span>
+<span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span>
+<span>Control Académico &amp; Certificación</span>
+<span class="material-symbols-outlined text-[14px] text-outline">chevron_right</span>
+<span class="text-secondary font-semibold">Centro de Reportes y Boletas Oficiales SEP</span>
+</nav>
+<!-- Título de pantalla y barra superior de acciones -->
+<div class="flex flex-col xl:flex-row xl:items-start justify-between gap-space-lg">
+<div class="flex flex-col gap-space-2xs max-w-4xl">
+<div class="flex items-center gap-space-sm flex-wrap">
+<h1 class="font-display-lg text-display-lg text-on-surface tracking-tight">Centro de Emisión de Reportes y Boletas Oficiales SEP</h1>
+<span class="px-space-xs py-0.5 rounded-full bg-surface-container-high text-secondary font-code-num text-code-num font-semibold">vDGAIR-2025.2</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Generación automatizada de boletas de evaluación bimestrales/trimestrales, concentrados de calificaciones, certificados y sábanas estadísticas en estricto cumplimiento con los lineamientos de la Dirección General de Acreditación, Incorporación y Revalidación (DGAIR) y acuerdos SEP vigentes.
+          </p>
+<!-- Badges de Certificación Normativa y Criptográfica -->
+<div class="flex items-center gap-space-sm flex-wrap mt-space-2xs">
+<div class="flex items-center gap-space-2xs px-space-sm py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-xs text-label-xs">
+<span class="material-symbols-outlined text-[15px] text-secondary">verified</span>
+<span>Normativa SEP Ciclo 2024-2025 Vigente</span>
+</div>
+<div class="flex items-center gap-space-2xs px-space-sm py-1 rounded-full bg-surface-container-low text-on-surface font-label-xs text-label-xs">
+<span class="material-symbols-outlined text-[15px] text-secondary">security</span>
+<span>Sello Digital SHA-256 Activo</span>
+</div>
+<div class="flex items-center gap-space-2xs px-space-sm py-1 rounded-full bg-surface-container-low text-on-surface font-label-xs text-label-xs">
+<span class="material-symbols-outlined text-[15px] text-outline">qr_code_2</span>
+<span>Validación QR • CCT 09PST0144Z</span>
+</div>
+<div class="flex items-center gap-space-2xs px-space-sm py-1 rounded-full bg-surface-container-low text-outline font-label-xs text-label-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>
+<span>Zona Escolar: 14 DGEI</span>
+</div>
+</div>
+</div>
+<!-- Botones de Acción Masiva Superior -->
+<div class="flex items-center gap-space-sm flex-wrap self-start">
+<button class="h-9 px-space-md rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container-high transition-colors shadow-sm font-label-md text-label-md flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-outline">dashboard_customize</span>
+<span>Configurar Plantillas</span>
+</button>
+<button class="h-9 px-space-md rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container-high transition-colors shadow-sm font-label-md text-label-md flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary">key</span>
+<span>Firma Electrónica Masiva</span>
+</button>
+<button class="h-9 px-space-md rounded-lg bg-secondary text-on-secondary hover:bg-secondary-container transition-all shadow-md font-label-md text-label-md flex items-center gap-space-xs active:scale-[0.98]">
+<span class="material-symbols-outlined text-[18px]">add_task</span>
+<span>+ Generar Lote SEP</span>
+</button>
+</div>
+</div>
+</section>
+<!-- 2. TARJETAS DE INDICADORES Y KPIS DE EMISIÓN -->
+<section class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-gutter">
+<!-- KPI 1: Cobertura Boletas -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-space-md hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="flex flex-col gap-space-2xs">
+<span class="font-label-xs text-label-xs text-outline tracking-wider uppercase">Boletas 2° Periodo Generadas</span>
+<div class="flex items-baseline gap-space-2xs">
+<span class="font-headline-xl text-headline-xl text-on-surface">1,420</span>
+<span class="font-label-md text-label-md text-outline">/ 1,482</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-secondary-fixed flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[22px]">description</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<div class="flex justify-between font-label-xs text-label-xs">
+<span class="text-secondary font-semibold">95.8% cobertura del plantel</span>
+<span class="text-outline font-code-num text-code-num">62 pendientes</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container">
+<div class="h-full rounded-full bg-secondary transition-all duration-500" style="width: 95.8%"></div>
+</div>
+<span class="font-body-sm text-body-sm text-outline mt-1 text-[11px]">En espera de cierre de actas: 2° Sec 'C' y 3° Bach 'B'</span>
+</div>
+</div>
+<!-- KPI 2: Timbrado y Sellado Digital -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-space-md hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="flex flex-col gap-space-2xs">
+<span class="font-label-xs text-label-xs text-outline tracking-wider uppercase">Timbrado &amp; Sellado Criptográfico</span>
+<div class="flex items-baseline gap-space-2xs">
+<span class="font-headline-xl text-headline-xl text-on-surface">1,390</span>
+<span class="font-label-md text-label-md text-outline">Selladas</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[22px]">verified_user</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-2xs">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Con Sello Digital XML/QR Oficial</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline text-[11px]">
+            30 boletas en cola de procesamiento criptográfico por el motor HSM ministerial.
+          </p>
+</div>
+</div>
+<!-- KPI 3: Acuse y Entrega de Tutores -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-space-md hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="flex flex-col gap-space-2xs">
+<span class="font-label-xs text-label-xs text-outline tracking-wider uppercase">Acuse y Descarga de Tutores</span>
+<div class="flex items-baseline gap-space-2xs">
+<span class="font-headline-xl text-headline-xl text-on-surface">1,248</span>
+<span class="font-label-md text-label-md text-secondary font-semibold">(87.8%)</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[22px]">mark_email_read</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-2xs">
+<div class="flex items-center justify-between font-label-xs text-label-xs">
+<span class="text-on-surface-variant">Portal Web &amp; App Padres</span>
+<span class="text-error font-medium">172 sin abrir</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container">
+<div class="h-full rounded-full bg-secondary-container transition-all duration-500" style="width: 87.8%"></div>
+</div>
+<span class="font-body-sm text-body-sm text-outline text-[11px]">Notificaciones push programadas para mañana a las 09:00 hrs.</span>
+</div>
+</div>
+<!-- KPI 4: Auditoría de Zona Escolar -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-space-md hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="flex flex-col gap-space-2xs">
+<span class="font-label-xs text-label-xs text-outline tracking-wider uppercase">Auditoría Supervisión Escolar</span>
+<div class="flex items-baseline gap-space-2xs">
+<span class="font-headline-xl text-headline-xl text-on-surface text-[20px]">Aprobada</span>
+<span class="font-label-sm text-label-sm text-outline">Sin observaciones</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[22px]">gavel</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-2xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary">assignment_turned_in</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Acta DGEI-2025-088</span>
+</div>
+<span class="font-body-sm text-body-sm text-outline text-[11px]">Validación ministerial certificada para cierre del 2° Trimestre.</span>
+</div>
+</div>
+</section>
+<!-- 3. BARRA DE HERRAMIENTAS, PESTAÑAS Y SELECTORES -->
+<section class="flex flex-col gap-space-md">
+<!-- Pestañas Horizontales Oficiales -->
+<div class="flex items-center justify-between overflow-x-auto bg-surface-container-lowest rounded-xl shadow-sm px-space-md py-space-xs">
+<div class="flex items-center gap-space-xs">
+<button class="flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-secondary-fixed text-on-secondary-fixed font-headline-md text-headline-md">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+<span>Boletas de Evaluación SEP</span>
+<span class="px-space-xs py-0.5 rounded-full bg-surface-container-lowest text-secondary font-code-num text-code-num">32</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-colors font-headline-md text-headline-md">
+<span class="material-symbols-outlined text-[18px]">grid_on</span>
+<span>Concentrados y Sábanas de Calificaciones</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-colors font-headline-md text-headline-md">
+<span class="material-symbols-outlined text-[18px]">query_stats</span>
+<span>Estadística y Eficiencia Terminal (911)</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-low transition-colors font-headline-md text-headline-md">
+<span class="material-symbols-outlined text-[18px]">history</span>
+<span>Historial de Lotes y Timbrados</span>
+</button>
+</div>
+<div class="hidden lg:flex items-center gap-space-xs text-outline font-label-xs text-label-xs">
+<span class="material-symbols-outlined text-[16px]">sync</span>
+<span>Sincronizado con SIGED: Hoy 11:42 hrs</span>
+</div>
+</div>
+<!-- Barra de Filtros Operativos de Grupo -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-md">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-sm flex-1">
+<!-- Filtro Nivel -->
+<div class="flex flex-col gap-1">
+<label class="font-label-xs text-label-xs text-outline uppercase tracking-wider">Nivel Escolar</label>
+<div class="relative">
+<select class="w-full h-9 pl-3 pr-8 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-secondary appearance-none cursor-pointer">
+<option>Secundaria Técnica / General</option>
+<option>Preescolar Incorporado</option>
+<option>Primaria Oficial</option>
+<option>Bachillerato General</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-outline text-[18px] pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Filtro Grado y Grupo -->
+<div class="flex flex-col gap-1">
+<label class="font-label-xs text-label-xs text-outline uppercase tracking-wider">Grado y Grupo</label>
+<div class="relative">
+<select class="w-full h-9 pl-3 pr-8 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-secondary appearance-none cursor-pointer">
+<option selected="">2° Secundaria "A" (32 Alumnos)</option>
+<option>2° Secundaria "B" (30 Alumnos)</option>
+<option>1° Secundaria "A" (34 Alumnos)</option>
+<option>3° Secundaria "A" (29 Alumnos)</option>
+<option>Todos los Grupos del Plantel</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-outline text-[18px] pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Filtro Periodo -->
+<div class="flex flex-col gap-1">
+<label class="font-label-xs text-label-xs text-outline uppercase tracking-wider">Periodo Evaluativo SEP</label>
+<div class="relative">
+<select class="w-full h-9 pl-3 pr-8 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-secondary appearance-none cursor-pointer">
+<option selected="">2° Periodo (Dic - Mar 2025)</option>
+<option>1° Periodo (Sep - Nov 2024)</option>
+<option>3° Periodo (Abr - Jul 2025)</option>
+<option>Ordinario Final Consolidado</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-outline text-[18px] pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Filtro Estatus -->
+<div class="flex flex-col gap-1">
+<label class="font-label-xs text-label-xs text-outline uppercase tracking-wider">Estatus de Certificación</label>
+<div class="relative">
+<select class="w-full h-9 pl-3 pr-8 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-secondary appearance-none cursor-pointer">
+<option selected="">Todos los estados (32)</option>
+<option>Selladas y Firmadas (28)</option>
+<option>Generadas - Pendiente Firma (3)</option>
+<option>En Captura Docente (1)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 top-1/2 -translate-y-1/2 text-outline text-[18px] pointer-events-none">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Búsqueda específica de alumno dentro del grupo -->
+<div class="flex flex-col gap-1 min-w-[260px]">
+<label class="font-label-xs text-label-xs text-outline uppercase tracking-wider">Búsqueda Rápida</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span>
+<input class="w-full h-9 pl-9 pr-3 rounded-lg bg-surface-container-low text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-secondary" placeholder="Filtrar por alumno, folio o CURP..." type="text"/>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. SECCIÓN PRINCIPAL EN 2 COLUMNAS (TABLA OPERATIVA 65% + PREVISUALIZADOR OFICIAL SEP 35%) -->
+<section class="grid grid-cols-1 xl:grid-cols-12 gap-gutter items-start">
+<!-- COLUMNA IZQUIERDA: GESTOR DE LOTES Y PADRÓN DE ALUMNOS (8 Cols en XL) -->
+<div class="xl:col-span-8 flex flex-col gap-space-md">
+<!-- Barra de Acciones de Lote del Grupo -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<input checked="" class="w-4 h-4 rounded text-secondary focus:ring-0 cursor-pointer" id="selectAll" type="checkbox"/>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-on-surface">2° Secundaria "A" • Ciclo 2024-2025</span>
+<span class="font-body-sm text-body-sm text-outline">Tutor Titular: Prof. Roberto Méndez Silva • 32 Alumnos registrados</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs flex-wrap">
+<button class="h-8 px-space-sm rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-sm text-label-sm flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-[16px] text-secondary">folder_zip</span>
+<span>Lote PDF (ZIP)</span>
+</button>
+<button class="h-8 px-space-sm rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-sm text-label-sm flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-[16px] text-secondary">forward_to_inbox</span>
+<span>Enviar a Tutores</span>
+</button>
+<button class="h-8 px-space-sm rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-sm text-label-sm flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-[16px] text-secondary">table_view</span>
+<span>Excel Sábana</span>
+</button>
+</div>
+</div>
+<!-- Tabla de Datos Oficiales de Alumnos -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-xs text-label-xs uppercase tracking-wider h-10 border-b border-surface-container">
+<th class="px-space-md w-10">
+<span class="sr-only">Seleccionar</span>
+</th>
+<th class="px-space-md py-space-xs">Alumno / CURP / Matrícula</th>
+<th class="px-space-md py-space-xs text-center">Prom. 2° P.</th>
+<th class="px-space-md py-space-xs text-center">Asistencia</th>
+<th class="px-space-md py-space-xs">Estado de Boleta</th>
+<th class="px-space-md py-space-xs">Folio SEP Digital</th>
+<th class="px-space-md py-space-xs text-right">Acciones</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-body-sm text-body-sm">
+<!-- Fila 1: Sofía Valentina (Seleccionada para preview activo) -->
+<tr class="bg-secondary-fixed/30 hover:bg-secondary-fixed/50 transition-colors group cursor-pointer" onclick="selectStudentPreview('sofia')">
+<td class="px-space-md py-space-sm text-center">
+<input checked="" class="w-4 h-4 rounded text-secondary focus:ring-0 cursor-pointer" type="checkbox"/>
+</td>
+<td class="px-space-md py-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm flex items-center justify-center font-bold">
+                        SV
+                      </div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-on-surface group-hover:text-secondary transition-colors">Sofía Valentina Hernández R.</span>
+<div class="flex items-center gap-space-xs font-code-num text-[11px] text-outline">
+<span>SAE-2024-0012</span>
+<span>•</span>
+<span>HERS090412MDFRRN08</span>
+</div>
+</div>
+</div>
+</td>
+<td class="px-space-md py-space-sm text-center">
+<span class="font-headline-md text-headline-md text-on-surface font-semibold bg-surface-container px-2 py-0.5 rounded">9.8</span>
+</td>
+<td class="px-space-md py-space-sm text-center">
+<span class="font-code-num text-code-num text-on-surface">98.2%</span>
+</td>
+<td class="px-space-md py-space-sm">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-label-xs font-label-xs bg-surface-container text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                      Sellada y Firmada
+                    </span>
+</td>
+<td class="px-space-md py-space-sm font-code-num text-[11px] text-outline">
+                    SEP-24-098741-A
+                  </td>
+<td class="px-space-md py-space-sm text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded hover:bg-surface-container text-secondary" title="Ver Boleta">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant" title="Descargar PDF Oficial">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant" title="Reenviar a Tutor">
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Fila 2: Mateo Emiliano -->
+<tr class="hover:bg-surface-container-low transition-colors group cursor-pointer" onclick="selectStudentPreview('mateo')">
+<td class="px-space-md py-space-sm text-center">
+<input checked="" class="w-4 h-4 rounded text-secondary focus:ring-0 cursor-pointer" type="checkbox"/>
+</td>
+<td class="px-space-md py-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm flex items-center justify-center font-bold">
+                        MG
+                      </div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-on-surface group-hover:text-secondary transition-colors">Mateo Emiliano García T.</span>
+<div class="flex items-center gap-space-xs font-code-num text-[11px] text-outline">
+<span>SAE-2024-0045</span>
+<span>•</span>
+<span>GATM090715HDFRRD03</span>
+</div>
+</div>
+</div>
+</td>
+<td class="px-space-md py-space-sm text-center">
+<span class="font-headline-md text-headline-md text-on-surface font-semibold bg-surface-container px-2 py-0.5 rounded">8.4</span>
+</td>
+<td class="px-space-md py-space-sm text-center">
+<span class="font-code-num text-code-num text-on-surface">94.0%</span>
+</td>
+<td class="px-space-md py-space-sm">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-label-xs font-label-xs bg-surface-container text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                      Sellada y Firmada
+                    </span>
+</td>
+<td class="px-space-md py-space-sm font-code-num text-[11px] text-outline">
+                    SEP-24-098742-B
+                  </td>
+<td class="px-space-md py-space-sm text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant" title="Ver Boleta">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant" title="Descargar PDF Oficial">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant" title="Reenviar a Tutor">
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Fila 3: Camila Morales -->
+<tr class="hover:bg-surface-container-low transition-colors group cursor-pointer" onclick="selectStudentPreview('camila')">
+<td class="px-space-md py-space-sm text-center">
+<input checked="" class="w-4 h-4 rounded text-secondary focus:ring-0 cursor-pointer" type="checkbox"/>
+</td>
+<td class="px-space-md py-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm flex items-center justify-center font-bold">
+                        CM
+                      </div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-on-surface group-hover:text-secondary transition-colors">Camila Morales Estrada</span>
+<div class="flex items-center gap-space-xs font-code-num text-[11px] text-outline">
+<span>SAE-2024-0089</span>
+<span>•</span>
+<span>MOEC091102MDFRLS01</span>
+</div>
+</div>
+</div>
+</td>
+<td class="px-space-md py-space-sm text-center">
+<span class="font-headline-md text-headline-md text-on-surface font-semibold bg-surface-container px-2 py-0.5 rounded">9.2</span>
+</td>
+<td class="px-space-md py-space-sm text-center">
+<span class="font-code-num text-code-num text-on-surface">96.5%</span>
+</td>
+<td class="px-space-md py-space-sm">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-label-xs font-label-xs bg-surface-container-high text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>
+                      Generada - Pendiente Firma
+                    </span>
+</td>
+<td class="px-space-md py-space-sm font-code-num text-[11px] text-outline">
+                    SEP-24-098743-C
+                  </td>
+<td class="px-space-md py-space-sm text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant" title="Ver Boleta">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-secondary" title="Firmar Individualmente">
+<span class="material-symbols-outlined text-[18px]">draw</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-outline opacity-40 cursor-not-allowed" title="Reenviar a Tutor">
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Fila 4: Diego Alexander -->
+<tr class="hover:bg-surface-container-low transition-colors group cursor-pointer" onclick="selectStudentPreview('diego')">
+<td class="px-space-md py-space-sm text-center">
+<input checked="" class="w-4 h-4 rounded text-secondary focus:ring-0 cursor-pointer" type="checkbox"/>
+</td>
+<td class="px-space-md py-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm flex items-center justify-center font-bold">
+                        DO
+                      </div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-on-surface group-hover:text-secondary transition-colors">Diego Alexander Ortiz P.</span>
+<div class="flex items-center gap-space-xs font-code-num text-[11px] text-outline">
+<span>SAE-2024-0104</span>
+<span>•</span>
+<span>ORPD090129HDFRNR09</span>
+</div>
+</div>
+</div>
+</td>
+<td class="px-space-md py-space-sm text-center">
+<span class="font-headline-md text-headline-md text-on-surface font-semibold bg-surface-container px-2 py-0.5 rounded">7.9</span>
+</td>
+<td class="px-space-md py-space-sm text-center">
+<span class="font-code-num text-code-num text-on-surface">89.0%</span>
+</td>
+<td class="px-space-md py-space-sm">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-label-xs font-label-xs bg-surface-container text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                      Sellada y Firmada
+                    </span>
+</td>
+<td class="px-space-md py-space-sm font-code-num text-[11px] text-outline">
+                    SEP-24-098744-D
+                  </td>
+<td class="px-space-md py-space-sm text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant" title="Ver Boleta">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant" title="Descargar PDF Oficial">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant" title="Reenviar a Tutor">
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Fila 5: Valentina Navarro -->
+<tr class="hover:bg-surface-container-low transition-colors group cursor-pointer" onclick="selectStudentPreview('valentina')">
+<td class="px-space-md py-space-sm text-center">
+<input checked="" class="w-4 h-4 rounded text-secondary focus:ring-0 cursor-pointer" type="checkbox"/>
+</td>
+<td class="px-space-md py-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm flex items-center justify-center font-bold">
+                        VN
+                      </div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-on-surface group-hover:text-secondary transition-colors">Valentina Navarro Ruiz</span>
+<div class="flex items-center gap-space-xs font-code-num text-[11px] text-outline">
+<span>SAE-2024-0133</span>
+<span>•</span>
+<span>NARV090822MDFRUT06</span>
+</div>
+</div>
+</div>
+</td>
+<td class="px-space-md py-space-sm text-center">
+<span class="font-headline-md text-headline-md text-on-surface font-semibold bg-surface-container px-2 py-0.5 rounded">9.6</span>
+</td>
+<td class="px-space-md py-space-sm text-center">
+<span class="font-code-num text-code-num text-on-surface">100%</span>
+</td>
+<td class="px-space-md py-space-sm">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-label-xs font-label-xs bg-surface-container text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                      Sellada y Firmada
+                    </span>
+</td>
+<td class="px-space-md py-space-sm font-code-num text-[11px] text-outline">
+                    SEP-24-098745-E
+                  </td>
+<td class="px-space-md py-space-sm text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant" title="Ver Boleta">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant" title="Descargar PDF Oficial">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+<button class="p-1.5 rounded hover:bg-surface-container text-on-surface-variant" title="Reenviar a Tutor">
+<span class="material-symbols-outlined text-[18px]">send</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Fila 6: Santiago Mendoza (Pendiente) -->
+<tr class="hover:bg-surface-container-low transition-colors group cursor-pointer" onclick="selectStudentPreview('santiago')">
+<td class="px-space-md py-space-sm text-center">
+<input class="w-4 h-4 rounded text-secondary focus:ring-0 cursor-pointer" type="checkbox"/>
+</td>
+<td class="px-space-md py-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container text-on-surface font-label-sm text-label-sm flex items-center justify-center font-bold">
+                        SM
+                      </div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-on-surface group-hover:text-secondary transition-colors">Santiago Mendoza Cruz</span>
+<div class="flex items-center gap-space-xs font-code-num text-[11px] text-outline">
+<span>SAE-2024-0178</span>
+<span>•</span>
+<span>MECS090330HDFRLZ04</span>
+</div>
+</div>
+</div>
+</td>
+<td class="px-space-md py-space-sm text-center">
+<span class="font-headline-md text-headline-md text-outline font-semibold bg-surface-container px-2 py-0.5 rounded">8.1</span>
+</td>
+<td class="px-space-md py-space-sm text-center">
+<span class="font-code-num text-code-num text-on-surface">92.1%</span>
+</td>
+<td class="px-space-md py-space-sm">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-label-xs font-label-xs bg-surface-container text-outline">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+                      En Captura Docente
+                    </span>
+</td>
+<td class="px-space-md py-space-sm font-code-num text-[11px] text-outline italic">
+                    Sin Folio Asignado
+                  </td>
+<td class="px-space-md py-space-sm text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 rounded hover:bg-surface-container text-outline" title="Exigir Cierre de Acta">
+<span class="material-symbols-outlined text-[18px]">notification_important</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Paginador de Tabla Operativa -->
+<div class="p-space-md bg-surface-container-low flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-outline">
+              Mostrando <span class="font-semibold text-on-surface">1 - 6</span> de <span class="font-semibold text-on-surface">32</span> alumnos matriculados
+            </span>
+<div class="flex items-center gap-space-xs">
+<button class="h-8 px-2.5 rounded bg-surface-container-lowest text-outline text-label-xs font-label-xs hover:bg-surface-container transition-colors disabled:opacity-50" disabled="">
+                Anterior
+              </button>
+<button class="h-8 w-8 rounded bg-secondary text-on-secondary font-label-xs text-label-xs font-bold">
+                1
+              </button>
+<button class="h-8 w-8 rounded bg-surface-container-lowest text-on-surface font-label-xs text-label-xs hover:bg-surface-container transition-colors">
+                2
+              </button>
+<button class="h-8 w-8 rounded bg-surface-container-lowest text-on-surface font-label-xs text-label-xs hover:bg-surface-container transition-colors">
+                3
+              </button>
+<button class="h-8 px-2.5 rounded bg-surface-container-lowest text-on-surface text-label-xs font-label-xs hover:bg-surface-container transition-colors">
+                Siguiente
+              </button>
+</div>
+</div>
+</div>
+<!-- Alerta Informativa sobre Acuerdos SEP -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex items-start gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[22px] mt-0.5">info</span>
+<div class="flex flex-col gap-1 text-on-surface">
+<span class="font-headline-md text-headline-md">Nota de Cumplimiento Ministerial 2024-2025</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Conforme al nuevo Plan de Estudio de la Nueva Escuela Mexicana (NEM), las evaluaciones se organizan por los 4 Campos Formativos esenciales. La escala de calificaciones autorizada es numérica del 5 al 10 en números enteros y decimales, considerando 6.0 como calificación mínima aprobatoria en nivel secundaria.
+            </p>
+</div>
+</div>
+</div>
+<!-- COLUMNA DERECHA: INSPECTOR Y PREVISUALIZADOR BOLETA SEP (4 Cols en XL) -->
+<div class="xl:col-span-4 flex flex-col gap-space-md sticky top-20">
+<!-- Tarjeta de Hoja Oficial SEP -->
+<div class="bg-surface-container-lowest rounded-xl shadow-md p-space-lg flex flex-col gap-space-md">
+<!-- Encabezado de la caja del visor -->
+<div class="flex items-center justify-between pb-space-xs border-b border-surface-container">
+<div class="flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-secondary text-[20px]">picture_as_pdf</span>
+<span class="font-headline-md text-headline-md text-on-surface">Visor Oficial DGAIR / SEP</span>
+</div>
+<span class="px-space-xs py-0.5 rounded text-[10px] font-code-num bg-surface-container text-secondary font-semibold">VALIDADO</span>
+</div>
+<!-- MINI DOCUMENTO OFICIAL RENDERIZADO (ESTILO PAPEL GUBERNAMENTAL) -->
+<div class="bg-surface-bright rounded-lg p-space-md flex flex-col gap-space-sm shadow-inner relative overflow-hidden text-[11px] leading-tight">
+<!-- Marca de agua decorativa institucional -->
+<div class="absolute -right-8 -bottom-8 opacity-[0.03] pointer-events-none select-none">
+<span class="material-symbols-outlined text-[180px]">account_balance</span>
+</div>
+<!-- Cabecera de Boleta Oficial SEP -->
+<div class="flex flex-col items-center text-center gap-1 pb-space-xs border-b border-surface-container">
+<div class="flex items-center justify-between w-full px-1">
+<span class="font-label-xs text-[9px] uppercase font-bold text-on-surface">GOBIERNO DE MÉXICO</span>
+<span class="font-label-xs text-[9px] uppercase font-bold text-secondary">SECRETARÍA DE EDUCACIÓN PÚBLICA</span>
+</div>
+<span class="font-label-xs text-[10px] font-bold text-on-surface mt-1">SISTEMA EDUCATIVO NACIONAL</span>
+<span class="text-[9px] uppercase tracking-wider text-outline font-semibold">BOLETA DE EVALUACIÓN • EDUCACIÓN SECUNDARIA</span>
+<span class="font-code-num text-[9px] text-outline">CICLO ESCOLAR 2024 - 2025</span>
+</div>
+<!-- Datos Generales de la Escuela y Alumno -->
+<div class="grid grid-cols-2 gap-x-2 gap-y-1 bg-surface-container-low p-2 rounded">
+<div class="flex flex-col">
+<span class="text-[9px] text-outline uppercase font-semibold">CCT:</span>
+<span class="font-code-num text-[10px] font-bold text-on-surface">09PST0144Z</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[9px] text-outline uppercase font-semibold">Turno / Zona:</span>
+<span class="text-[10px] text-on-surface">Matutino • Zona 14</span>
+</div>
+<div class="flex flex-col col-span-2 mt-1">
+<span class="text-[9px] text-outline uppercase font-semibold">Nombre del Alumno(a):</span>
+<span class="font-bold text-[11px] text-secondary">HERNÁNDEZ R. SOFÍA VALENTINA</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[9px] text-outline uppercase font-semibold">CURP:</span>
+<span class="font-code-num text-[9px] text-on-surface">HERS090412MDFRRN08</span>
+</div>
+<div class="flex flex-col">
+<span class="text-[9px] text-outline uppercase font-semibold">Grado y Grupo:</span>
+<span class="font-bold text-[10px] text-on-surface">2° Grado - "A"</span>
+</div>
+</div>
+<!-- Mini Tabla Curricular de Calificaciones por Campos Formativos -->
+<div class="flex flex-col gap-1">
+<span class="font-label-xs text-[9px] uppercase tracking-wider text-outline font-bold">Campos Formativos (Plan de Estudio NEM)</span>
+<table class="w-full text-left border-collapse text-[10px]">
+<thead>
+<tr class="bg-surface-container-high text-on-surface-variant font-semibold">
+<th class="p-1">Disciplina / Campo</th>
+<th class="p-1 text-center w-8">1°P</th>
+<th class="p-1 text-center w-8 bg-secondary-fixed/50 text-secondary">2°P</th>
+<th class="p-1 text-center w-8 text-outline">3°P</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-code-num">
+<tr>
+<td class="p-1 font-sans text-[10px] font-medium text-on-surface">Lenguajes (Español / Inglés)</td>
+<td class="p-1 text-center text-outline">9.9</td>
+<td class="p-1 text-center font-bold text-secondary bg-secondary-fixed/20">9.9</td>
+<td class="p-1 text-center text-outline">-</td>
+</tr>
+<tr>
+<td class="p-1 font-sans text-[10px] font-medium text-on-surface">Saberes y Pensamiento Científico</td>
+<td class="p-1 text-center text-outline">9.5</td>
+<td class="p-1 text-center font-bold text-secondary bg-secondary-fixed/20">9.6</td>
+<td class="p-1 text-center text-outline">-</td>
+</tr>
+<tr>
+<td class="p-1 font-sans text-[10px] font-medium text-on-surface">Ética, Naturaleza y Sociedades</td>
+<td class="p-1 text-center text-outline">10.0</td>
+<td class="p-1 text-center font-bold text-secondary bg-secondary-fixed/20">9.9</td>
+<td class="p-1 text-center text-outline">-</td>
+</tr>
+<tr>
+<td class="p-1 font-sans text-[10px] font-medium text-on-surface">De lo Humano y lo Comunitario</td>
+<td class="p-1 text-center text-outline">10.0</td>
+<td class="p-1 text-center font-bold text-secondary bg-secondary-fixed/20">10.0</td>
+<td class="p-1 text-center text-outline">-</td>
+</tr>
+</tbody>
+</table>
+<!-- Fila de Promedio General del Periodo -->
+<div class="flex items-center justify-between p-1.5 rounded bg-surface-container font-semibold mt-1">
+<span class="text-[10px] uppercase text-on-surface font-sans">Promedio Acumulado:</span>
+<span class="font-code-num text-[12px] text-secondary">9.8 • ACREDITADA</span>
+</div>
+</div>
+<!-- Bloque de Autenticidad, Criptografía y QR -->
+<div class="mt-1 pt-2 border-t border-surface-container flex items-start gap-space-sm">
+<!-- QR Generado Dinámicamente en SVG -->
+<div class="w-16 h-16 bg-surface-container-lowest p-1 rounded shadow-sm flex items-center justify-center shrink-0">
+<svg class="w-full h-full text-on-surface fill-current" viewbox="0 0 44 44">
+<path d="M0 0h16v16H0V0zm4 4v8h8V4H4zm24-4h16v16H28V0zm4 4v8h8V4h-8zM0 28h16v16H0V28zm4 4v8h8v-8H4zm20-12h4v4h-4v-4zm-8 4h4v4h-4v-4zm4 4h4v4h-4v-4zm12 0h4v4h-4v-4zm4-4h4v4h-4v-4zm-8 12h4v4h-4v-4zm12 0h4v4h-4v-4zm-4 4h4v4h-4v-4zm-8-4h4v4h-4v-4zm12-8h4v4h-4v-4z"></path>
+</svg>
+</div>
+<!-- Cadena Digital y Firma -->
+<div class="flex flex-col gap-0.5 overflow-hidden">
+<span class="text-[8px] font-bold text-outline uppercase tracking-wider">Cadena Original de Sello Digital SEP</span>
+<p class="font-code-num text-[8px] text-on-surface-variant truncate">
+                  ||09PST0144Z|2024-2025|2P|HERS090412MDFRRN08|9.8|SHA256:d8a2f64c1b9e54a...||
+                </p>
+<div class="mt-1 flex flex-col">
+<span class="text-[8px] font-bold text-on-surface leading-none">Mtra. Carmen Valenzuela G.</span>
+<span class="text-[7.5px] text-outline leading-tight">Dirección General • e.firma Certificada</span>
+<span class="text-[7.5px] font-code-num text-outline">Fecha Timbrado: 2025-03-24 10:14:32</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Botones Operativos Rápidos del Visor -->
+<div class="flex flex-col gap-space-xs">
+<button class="w-full h-9 rounded-lg bg-secondary text-on-secondary hover:bg-secondary-container transition-colors font-label-md text-label-md flex items-center justify-center gap-space-xs shadow-sm">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Descargar Boleta Oficial (PDF)</span>
+</button>
+<div class="grid grid-cols-2 gap-space-xs">
+<button class="h-8 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-sm text-label-sm flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-outline">print</span>
+<span>Imprimir Directo</span>
+</button>
+<button class="h-8 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-label-sm text-label-sm flex items-center justify-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">code</span>
+<span>Ver XML / Sello</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Ficha de Seguridad del Documento -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[20px]">shield</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Trazabilidad Criptográfica</span>
+<span class="font-body-sm text-body-sm text-outline text-[11px]">
+              El folio asignado cuenta con validez nacional verificable en el portal de la SEP (<span class="font-code-num text-secondary">siged.sep.gob.mx</span>).
+            </span>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. SECCIÓN INFERIOR: OTROS REPORTES Y REPORTES NORMATIVOS SEP DISPONIBLES -->
+<section class="flex flex-col gap-space-md pt-space-md border-t border-surface-container">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Reportes Normativos y Estadísticos Oficiales</h2>
+<p class="font-body-sm text-body-sm text-outline">Cédulas para auditoría de zona escolar, control estadístico federal y retención estudiantil.</p>
+</div>
+<button class="text-secondary font-label-sm text-label-sm hover:underline flex items-center gap-1">
+<span>Ver catálogo completo de reportes DGAIR</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+<!-- Grid de 3 Tarjetas de Reportes Gubernamentales -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Tarjeta Reporte 1: Formato 911 -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-space-md hover:shadow-md transition-all">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[24px]">analytics</span>
+</div>
+<span class="px-space-xs py-0.5 rounded text-[11px] font-label-xs bg-surface-container-high text-on-surface">Federal SEP</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-headline-md text-headline-md text-on-surface">Formato 911 (Cédula de Estadística)</span>
+<p class="font-body-sm text-body-sm text-outline">
+                Generación automatizada de las cédulas de fin de cursos para el sistema de planeación de la SEP. Desglose por edad, sexo y nivel.
+              </p>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-sm border-t border-surface-container">
+<span class="font-code-num text-code-num text-outline">911.6B Actualizado</span>
+<button class="h-8 px-space-md rounded-lg bg-secondary text-on-secondary font-label-sm text-label-sm hover:bg-secondary-container transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">download</span>
+<span>Cédula 911</span>
+</button>
+</div>
+</div>
+<!-- Tarjeta Reporte 2: Sábana General de Acreditación -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-space-md hover:shadow-md transition-all">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[24px]">table_rows</span>
+</div>
+<span class="px-space-xs py-0.5 rounded text-[11px] font-label-xs bg-surface-container-high text-on-surface">Inspección de Zona</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-headline-md text-headline-md text-on-surface">Sábana General de Concentrado</span>
+<p class="font-body-sm text-body-sm text-outline">
+                Matriz completa de calificaciones por grupo, asignatura y promedios bimestrales para entrega obligatoria a la Supervisión Escolar.
+              </p>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-sm border-t border-surface-container">
+<span class="font-code-num text-code-num text-outline">Excel / CSV UTF-8</span>
+<button class="h-8 px-space-md rounded-lg bg-surface-container-high text-on-surface font-label-sm text-label-sm hover:bg-surface-container transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+<span>Exportar Sábana</span>
+</button>
+</div>
+</div>
+<!-- Tarjeta Reporte 3: Alerta de Rezago y Deserción -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-space-md hover:shadow-md transition-all">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[24px]">warning</span>
+</div>
+<span class="px-space-xs py-0.5 rounded text-[11px] font-label-xs bg-surface-container-high text-error font-medium">Preventivo</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-headline-md text-headline-md text-on-surface">Riesgo de Rezago &amp; Deserción</span>
+<p class="font-body-sm text-body-sm text-outline">
+                Detección precoz de alumnos con promedio menor a 7.0 o asistencia menor al 85%. Emisión automática de citatorios para tutores.
+              </p>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-sm border-t border-surface-container">
+<span class="font-code-num text-code-num text-error font-medium">8 Alumnos en Riesgo</span>
+<button class="h-8 px-space-md rounded-lg bg-surface-container-high text-on-surface font-label-sm text-label-sm hover:bg-surface-container transition-colors flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+<span>Ver Diagnóstico</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+<!-- SCRIPTS DE INTERACCIÓN LIGERA CLIENT-SIDE -->
+</main></div><script src="../assets/js/app.js"></script><script>
+function selectStudentPreview(studentKey) {
+    // Permite interacción visual fluida sin navegación completa
+    SAE.toast("Vista previa de boleta: " + studentKey);
+  }
+</script></body></html>

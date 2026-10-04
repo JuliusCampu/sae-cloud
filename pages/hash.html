@@ -1,0 +1,1055 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Verificación NOM-151 · SAE.cloud</title><link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet"><script src="https://cdn.tailwindcss.com"></script><script src="../assets/js/tailwind-config.js"></script><link rel="stylesheet" href="../assets/css/app.css"></head><body class="bg-surface font-body-md text-on-surface antialiased" data-page="hash"><main class="w-full px-margin pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Context & Certifications Bar -->
+<div class="flex flex-col gap-space-md pb-space-lg">
+<!-- Breadcrumb & System Timestamp -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-2xs text-on-surface-variant font-label-xs text-label-xs uppercase tracking-wider">
+<span>Administración Escolar</span>
+<span class="material-symbols-outlined text-[13px] text-outline">chevron_right</span>
+<span>Seguridad y Gobernanza</span>
+<span class="material-symbols-outlined text-[13px] text-outline">chevron_right</span>
+<span class="text-secondary font-bold">Bitácora Forense y Auditoría NOM-151</span>
+</div>
+<div class="flex items-center gap-space-sm bg-surface-container-lowest px-space-md py-1 rounded-full shadow-sm">
+<span class="flex h-2 w-2 relative">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
+</span>
+<span class="font-code-num text-code-num text-on-surface-variant font-medium">NTP Stratum-1 CENAM: <span class="text-on-surface font-semibold">2025-04-11 14:32:08 UTC-6</span></span>
+<span class="text-outline">|</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">CCT: <strong class="text-on-surface">09PST0144Z</strong></span>
+</div>
+</div>
+<!-- Main Title Block & Quick Actions -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-lg bg-surface-container-lowest p-space-xl rounded-xl shadow-sm">
+<div class="flex flex-col gap-space-xs max-w-4xl">
+<div class="flex flex-wrap items-center gap-space-sm">
+<h1 class="font-display-lg text-display-lg font-bold text-on-surface tracking-tight">Centro de Bitácora Forense y Auditoría NOM-151</h1>
+<span class="px-space-xs py-0.5 rounded font-label-xs text-label-xs font-bold bg-secondary-fixed text-on-secondary-fixed tracking-wide">LEGAL PROBATORIO</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          Registro inmutable de trazabilidad de operaciones, sellos digitales de tiempo (TSA), firmas electrónicas avanzadas (<span class="font-semibold text-on-surface">e.firma/FIEL</span>) y constancias de conservación NOM-151 con valor probatorio legal pleno ante autoridades jurisdiccionales, SEP y SAT.
+        </p>
+<!-- Compliance Badges Row -->
+<div class="flex flex-wrap items-center gap-space-xs pt-space-xs">
+<div class="flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container-high text-on-tertiary-fixed-variant font-label-xs text-label-xs font-bold">
+<span class="material-symbols-outlined text-[15px] text-secondary">verified</span>
+<span>PSC Acreditado Secretaría de Economía (SE 04/2018)</span>
+</div>
+<div class="flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container-low text-on-surface-variant font-label-xs text-label-xs font-medium">
+<span class="material-symbols-outlined text-[15px] text-on-surface">fingerprint</span>
+<span>Hashing SHA-256 Inmutable</span>
+</div>
+<div class="flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container-low text-on-surface-variant font-label-xs text-label-xs font-medium">
+<span class="material-symbols-outlined text-[15px] text-on-surface">link</span>
+<span>Cadena de Custodia Criptográfica Activa</span>
+</div>
+<div class="flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container-low text-on-surface-variant font-label-xs text-label-xs font-medium">
+<span class="material-symbols-outlined text-[15px] text-on-surface">policy</span>
+<span>Cumplimiento LFPDPPP &amp; SEP DGAIR</span>
+</div>
+</div>
+</div>
+<!-- Action Buttons Group -->
+<div class="flex flex-wrap lg:flex-nowrap items-center gap-space-sm">
+<button class="flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition-all shadow-sm border border-secondary/20 hover:border-secondary hover:shadow" id="open-verify-modal-btn" onclick="openHashModal()">
+<span class="material-symbols-outlined text-[18px] text-secondary">gpp_maybe</span>
+<span class="font-bold">Verificar Integridad Hash</span>
+<span class="flex h-2 w-2 relative ml-1">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
+</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">workspace_premium</span>
+<span>Constancia NOM-151 (.ASN.1)</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-space-sm rounded-lg bg-secondary text-on-secondary font-label-md text-label-md hover:bg-secondary-container transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+<span>Exportar Expediente Forense</span>
+</button>
+</div>
+</div>
+</div>
+<!-- KPI / Criptographic Integrity Cards (4 Columns) -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md mb-space-lg">
+<!-- KPI 1 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider font-bold">Total de Eventos Registrados</span>
+<span class="font-headline-xl text-headline-xl font-bold text-on-surface mt-1">248,912</span>
+</div>
+<div class="p-space-xs rounded-lg bg-surface-container text-secondary">
+<span class="material-symbols-outlined text-[22px]">database</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-md mt-space-sm">
+<div class="flex items-center gap-1 font-label-xs text-label-xs text-secondary font-bold">
+<span class="material-symbols-outlined text-[14px]">trending_up</span>
+<span>+1,420 en últimas 24h</span>
+</div>
+<span class="font-label-xs text-label-xs text-on-surface-variant font-medium">100% encadenados</span>
+</div>
+</div>
+<!-- KPI 2 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider font-bold">Constancias NOM-151 Emitidas</span>
+<span class="font-headline-xl text-headline-xl font-bold text-on-surface mt-1">14,890</span>
+</div>
+<div class="p-space-xs rounded-lg bg-surface-container-high text-secondary">
+<span class="material-symbols-outlined text-[22px]">verified_user</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-md mt-space-sm">
+<div class="flex items-center gap-1 font-label-xs text-label-xs text-on-surface-variant">
+<span class="inline-block w-2 h-2 rounded-full bg-secondary"></span>
+<span>TSA Autorizado PSC Advanta</span>
+</div>
+<span class="font-label-xs text-label-xs text-secondary font-bold">Sin observaciones</span>
+</div>
+</div>
+<!-- KPI 3 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider font-bold">Eventos Críticos / Auditoría</span>
+<span class="font-headline-xl text-headline-xl font-bold text-on-surface mt-1">3 <span class="font-label-md text-label-md font-semibold text-on-surface-variant">Casos Abiertos</span></span>
+</div>
+<div class="p-space-xs rounded-lg bg-error-container text-on-error-container">
+<span class="material-symbols-outlined text-[22px]">policy_alert</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-md mt-space-sm">
+<span class="font-label-xs text-label-xs text-on-surface-variant font-medium">0 brechas de integridad</span>
+<span class="px-space-xs py-0.5 rounded font-label-xs text-label-xs font-bold bg-surface-container-high text-on-surface">3 justificados</span>
+</div>
+</div>
+<!-- KPI 4 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider font-bold">Árbol Merkle &amp; Bloques</span>
+<div class="flex items-center gap-2 mt-1">
+<span class="font-headline-xl text-headline-xl font-bold text-on-surface">#4,812</span>
+<span class="px-space-xs py-0.5 rounded font-label-xs text-label-xs font-bold bg-secondary-fixed text-on-secondary-fixed">Íntegro</span>
+</div>
+</div>
+<div class="p-space-xs rounded-lg bg-surface-container text-secondary">
+<span class="material-symbols-outlined text-[22px]">hub</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-md mt-space-sm font-code-num text-code-num">
+<span class="text-on-surface-variant truncate max-w-[140px]" title="Root: 8f920ade5419b67a">Root: 8f92...a0de</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Sellado: 4m atrás</span>
+</div>
+</div>
+</div>
+<!-- Multi-dimensional Forensics Filter Section -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm mb-space-lg flex flex-col gap-space-md">
+<div class="flex flex-col lg:flex-row gap-space-md">
+<!-- Search Input Omni -->
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-space-md top-1/2 -translate-y-1/2 text-outline">manage_search</span>
+<input class="w-full pl-10 pr-space-md py-space-sm bg-surface-container-low font-body-sm text-body-sm text-on-surface placeholder:text-outline rounded-lg focus:outline-none focus:bg-surface-container" placeholder="Buscar por Hash SHA-256, Matrícula de Alumno, Folio CFDI, IP de origen, o ID de Empleado..." type="text" value="ACT-2SEC-A-MAT2-2025"/>
+</div>
+<!-- Quick Date Range -->
+<div class="flex items-center gap-space-xs bg-surface-container-low p-1 rounded-lg">
+<button class="px-space-md py-space-xs rounded font-label-sm text-label-sm font-medium text-on-surface-variant hover:text-on-surface">24 Horas</button>
+<button class="px-space-md py-space-xs rounded font-label-sm text-label-sm font-semibold bg-surface-container-lowest text-secondary shadow-sm">Últimos 7 días</button>
+<button class="px-space-md py-space-xs rounded font-label-sm text-label-sm font-medium text-on-surface-variant hover:text-on-surface">Abril 2025</button>
+<button class="px-space-sm py-space-xs text-on-surface-variant hover:text-on-surface"><span class="material-symbols-outlined text-[18px]">calendar_today</span></button>
+</div>
+</div>
+<!-- Secondary Filters Row -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-space-md pt-space-xs">
+<!-- Severidad -->
+<div class="flex flex-col gap-1">
+<label class="font-label-xs text-label-xs text-on-surface-variant font-bold uppercase tracking-wider">Nivel de Severidad</label>
+<div class="relative">
+<select class="w-full appearance-none bg-surface-container-low text-on-surface font-body-sm text-body-sm px-space-md py-space-xs rounded-lg focus:outline-none focus:bg-surface-container cursor-pointer pr-8">
+<option>Todos los niveles (Auditoría completa)</option>
+<option selected="">Modificación de Calificaciones / Actas</option>
+<option>Crítico / Bloqueos de Seguridad</option>
+<option>Advertencias y Excepciones</option>
+<option>Informativo / Operativo Regular</option>
+</select>
+<span class="material-symbols-outlined absolute right-space-sm top-1/2 -translate-y-1/2 text-outline pointer-events-none text-body-lg">arrow_drop_down</span>
+</div>
+</div>
+<!-- Módulo -->
+<div class="flex flex-col gap-1">
+<label class="font-label-xs text-label-xs text-on-surface-variant font-bold uppercase tracking-wider">Módulo Escolar Afectado</label>
+<div class="relative">
+<select class="w-full appearance-none bg-surface-container-low text-on-surface font-body-sm text-body-sm px-space-md py-space-xs rounded-lg focus:outline-none focus:bg-surface-container cursor-pointer pr-8">
+<option>Todos los módulos académicos y fiscales</option>
+<option selected="">Control Escolar &amp; Actas SEP</option>
+<option>Tesorería, Facturación &amp; CFDI 4.0</option>
+<option>Gobernanza RBAC &amp; Credenciales</option>
+<option>Expedientes Digitales Alumnos</option>
+</select>
+<span class="material-symbols-outlined absolute right-space-sm top-1/2 -translate-y-1/2 text-outline pointer-events-none text-body-lg">arrow_drop_down</span>
+</div>
+</div>
+<!-- Actor -->
+<div class="flex flex-col gap-1">
+<label class="font-label-xs text-label-xs text-on-surface-variant font-bold uppercase tracking-wider">Rol de Actor / Entidad</label>
+<div class="relative">
+<select class="w-full appearance-none bg-surface-container-low text-on-surface font-body-sm text-body-sm px-space-md py-space-xs rounded-lg focus:outline-none focus:bg-surface-container cursor-pointer pr-8">
+<option>Todos los actores</option>
+<option selected="">Docentes Titulares</option>
+<option>Super Administrador / Rectoría</option>
+<option>Personal de Caja y Finanzas</option>
+<option>Servicios Autónomos / DAEMON</option>
+</select>
+<span class="material-symbols-outlined absolute right-space-sm top-1/2 -translate-y-1/2 text-outline pointer-events-none text-body-lg">arrow_drop_down</span>
+</div>
+</div>
+<!-- Toggles & Quick Clean -->
+<div class="flex items-end justify-between gap-space-sm">
+<label class="flex items-center gap-space-xs cursor-pointer select-none py-space-xs">
+<input checked="" class="w-4 h-4 rounded text-secondary bg-surface-container-low focus:ring-0" type="checkbox"/>
+<span class="font-label-xs text-label-xs text-on-surface font-semibold">Solo con firma electrónica (e.firma/TSA)</span>
+</label>
+<button class="px-space-md py-space-xs rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant font-label-xs text-label-xs font-bold transition-colors">
+          Restablecer
+        </button>
+</div>
+</div>
+</div>
+<!-- Main Work Surface: Split Grid (Audit Logs Table 68% + Forensics Inspector 32%) -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start pb-space-2xl">
+<!-- Left Column: Master Audit Log Table (8 cols on XL) -->
+<div class="xl:col-span-8 flex flex-col bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<!-- Table Header Status Bar -->
+<div class="flex items-center justify-between px-space-lg py-space-md bg-surface-container-low">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-[20px] text-secondary">shield_locked</span>
+<span class="font-headline-md text-headline-md font-bold text-on-surface">Cadena de Eventos Auditables</span>
+<span class="px-space-xs py-0.5 rounded-full font-label-xs text-label-xs bg-surface-container-high text-on-surface font-semibold">5 eventos mostrados</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-label-xs text-label-xs">
+<span>Vista compacta</span>
+<button class="p-1 hover:text-on-surface"><span class="material-symbols-outlined text-[18px]">sync</span></button>
+<button class="p-1 hover:text-on-surface"><span class="material-symbols-outlined text-[18px]">tune</span></button>
+</div>
+</div>
+<!-- Forensics Data Table -->
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container text-on-surface-variant font-label-xs text-label-xs uppercase tracking-wider">
+<th class="py-space-sm px-space-md">Sello / Timestamp</th>
+<th class="py-space-sm px-space-md">Evento &amp; Módulo</th>
+<th class="py-space-sm px-space-md">Sujeto / Actor</th>
+<th class="py-space-sm px-space-md">Entidad Afectada</th>
+<th class="py-space-sm px-space-md">Constancia NOM-151 / Hash</th>
+<th class="py-space-sm px-space-md text-right">Acción</th>
+</tr>
+</thead>
+<tbody class="font-body-sm text-body-sm text-on-surface divide-y divide-transparent">
+<!-- Row 1: Selected / Critical Grade Change -->
+<tr class="bg-surface-container-high/40 hover:bg-surface-container-high transition-colors cursor-pointer relative" onclick="openHashModal()">
+<td class="py-space-md px-space-md align-top">
+<div class="flex items-start gap-space-xs">
+<div class="w-1.5 h-12 bg-secondary rounded-full"></div>
+<div class="flex flex-col">
+<span class="font-code-num text-code-num font-semibold text-on-surface">11/Abr/2025</span>
+<span class="font-code-num text-code-num text-on-surface-variant text-[11px]">14:12:05 CST</span>
+<span class="font-label-xs text-label-xs text-secondary font-mono mt-0.5">IP: 187.190.45.12</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-1.5">
+<span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-error-container text-on-error-container">MODIF. ACTA</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Acta 2° Parcial (Matemáticas II)</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Corrección extemporánea autorizada</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Control Escolar &gt; Secundaria Técnica</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Prof. Roberto Méndez S.</span>
+<span class="font-code-num text-code-num text-[11px] text-on-surface-variant">DOC-8831 [Titular]</span>
+<span class="font-label-xs text-label-xs text-on-primary-fixed-variant mt-0.5">MFA Token Validado</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Santiago Mendoza Cruz</span>
+<span class="font-code-num text-code-num text-[11px] text-on-surface-variant">SAE-2024-0178</span>
+<div class="flex items-center gap-1 text-[11px] font-semibold mt-1">
+<span class="text-error line-through">7.8</span>
+<span class="material-symbols-outlined text-[12px]">arrow_forward</span>
+<span class="text-secondary font-bold">8.5</span>
+</div>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="flex flex-col gap-1">
+<span class="px-space-xs py-0.5 rounded font-label-xs text-label-xs font-bold bg-secondary-fixed text-on-secondary-fixed w-max">e.firma + NOM-151</span>
+<span class="font-code-num text-code-num text-[11px] text-on-surface font-semibold">NOM-2025-CCT-889104</span>
+<span class="font-code-num text-code-num text-[10px] text-on-surface-variant truncate max-w-[130px]" title="e810a724b1c900eafc78a123">Hash: e810a7...fc78a</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top text-right">
+<button class="p-1 rounded bg-secondary text-on-secondary hover:bg-secondary-container transition-colors shadow-sm" onclick="event.stopPropagation(); openHashModal();" title="Verificar Criptográficamente">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+</button>
+</td>
+</tr>
+<!-- Row 2: SAT Invoice CFDI 4.0 -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-space-md px-space-md align-top">
+<div class="flex flex-col">
+<span class="font-code-num text-code-num font-semibold text-on-surface">11/Abr/2025</span>
+<span class="font-code-num text-code-num text-on-surface-variant text-[11px]">13:45:22 CST</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant font-mono mt-0.5">IP: 201.144.120.9</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-1.5">
+<span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-surface-container text-secondary">CFDI 4.0</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Timbrado Fiscal Complemento IEDU</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Colegiatura Abril 2025 ($8,450.00 MXN)</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Finanzas &gt; PAC Finkok Acreditado</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">C.P. Mariana Rendón</span>
+<span class="font-code-num text-code-num text-[11px] text-on-surface-variant">FIN-104 [Caja Central]</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant mt-0.5">CSD Vigente SAT</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">UUID: 4E5A8B91-3C2D</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Tutor: Ing. Carlos Mendoza</span>
+<span class="font-code-num text-code-num text-[11px] text-on-surface font-semibold">$8,450.00 MXN</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="flex flex-col gap-1">
+<span class="px-space-xs py-0.5 rounded font-label-xs text-label-xs font-bold bg-surface-container-high text-on-surface w-max">SAT + TSA Finkok</span>
+<span class="font-code-num text-code-num text-[11px] text-on-surface font-semibold">NOM-2025-CCT-889103</span>
+<span class="font-code-num text-code-num text-[10px] text-on-surface-variant truncate max-w-[130px]">Hash: 4b29f0...9a12c</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top text-right">
+<button class="p-1 rounded bg-surface-container-low hover:bg-surface-container text-on-surface transition-colors" title="Ver comprobante">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+</button>
+</td>
+</tr>
+<!-- Row 3: Security Critical Alert -->
+<tr class="hover:bg-surface-container-low transition-colors bg-error-container/10">
+<td class="py-space-md px-space-md align-top">
+<div class="flex flex-col">
+<span class="font-code-num text-code-num font-semibold text-on-surface">11/Abr/2025</span>
+<span class="font-code-num text-code-num text-on-surface-variant text-[11px]">10:04:19 CST</span>
+<span class="font-label-xs text-label-xs text-error font-mono mt-0.5 font-bold">IP: 189.203.18.220</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-1.5">
+<span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-error text-on-error">SEGURIDAD CRÍTICA</span>
+<span class="font-label-sm text-label-sm font-bold text-error">Bloqueo Preventivo 2FA</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">3 intentos erróneos desde IP no corporativa</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Firewall Zero-Trust Escolar</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Sistema Automatizado SOC</span>
+<span class="font-code-num text-code-num text-[11px] text-on-surface-variant">Daemon Watchdog #04</span>
+<span class="font-label-xs text-label-xs text-error font-bold mt-0.5">Acceso Revocado</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">aux.caja02@sae.cloud</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Nodo Cajas Ventanilla 2</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Ubicación Geo: No identificada</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="flex flex-col gap-1">
+<span class="px-space-xs py-0.5 rounded font-label-xs text-label-xs font-bold bg-error-container text-on-error-container w-max">Incidente SOC-81</span>
+<span class="font-code-num text-code-num text-[11px] text-on-surface-variant">Sin constancia (Alerta)</span>
+<span class="font-code-num text-code-num text-[10px] text-on-surface-variant truncate max-w-[130px]">Hash: 00bfa7...11df8</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top text-right">
+<button class="p-1 rounded bg-surface-container-low hover:bg-error-container text-error transition-colors" title="Investigar Incidente">
+<span class="material-symbols-outlined text-[18px]">lock_reset</span>
+</button>
+</td>
+</tr>
+<!-- Row 4: SEP Bulk Certifications Batch -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-space-md px-space-md align-top">
+<div class="flex flex-col">
+<span class="font-code-num text-code-num font-semibold text-on-surface">11/Abr/2025</span>
+<span class="font-code-num text-code-num text-on-surface-variant text-[11px]">08:30:10 CST</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant font-mono mt-0.5">AWS GovCloud (MX)</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-1.5">
+<span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-surface-container text-on-surface">SEP / SIGED</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Sellado Masivo de 1,390 Boletas</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Cierre de 2° Trimestre Académico</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Prestador EDICOM PSC Autorizado</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Mtra. Carmen Valenzuela</span>
+<span class="font-code-num text-code-num text-[11px] text-on-surface-variant">DIR-GEN-01 [Super Admin]</span>
+<span class="font-label-xs text-label-xs text-secondary font-semibold mt-0.5">e.firma Vigente</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">LOTE-SEP-2025-04A</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Secundaria Técnica Matutina</span>
+<span class="font-label-xs text-label-xs text-secondary font-semibold">1,390 alumnos sellados</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="flex flex-col gap-1">
+<span class="px-space-xs py-0.5 rounded font-label-xs text-label-xs font-bold bg-surface-container-high text-on-surface w-max">DGAIR Certificado</span>
+<span class="font-code-num text-code-num text-[11px] text-on-surface font-semibold">NOM-2025-CCT-889098</span>
+<span class="font-code-num text-code-num text-[10px] text-on-surface-variant truncate max-w-[130px]">Hash: 8f920a...5419b</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top text-right">
+<button class="p-1 rounded bg-surface-container-low hover:bg-surface-container text-on-surface transition-colors" title="Descargar paquete">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+</td>
+</tr>
+<!-- Row 5: RBAC Role Update -->
+<tr class="hover:bg-surface-container-low transition-colors">
+<td class="py-space-md px-space-md align-top">
+<div class="flex flex-col">
+<span class="font-code-num text-code-num font-semibold text-on-surface">10/Abr/2025</span>
+<span class="font-code-num text-code-num text-on-surface-variant text-[11px]">17:15:40 CST</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant font-mono mt-0.5">IP: 187.190.45.12</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="flex flex-col gap-0.5">
+<div class="flex items-center gap-1.5">
+<span class="inline-flex items-center px-1.5 py-0.5 rounded text-[10px] font-bold bg-surface-container-low text-on-surface-variant">GOBERNANZA</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Modificación Matriz de Permisos</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Habilitación de consulta médica a Enfermería</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Seguridad Escolar &gt; Perfiles RBAC</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-semibold text-on-surface">Lic. Carlos Fuentes M.</span>
+<span class="font-code-num text-code-num text-[11px] text-on-surface-variant">CTRL-ESC-201</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant mt-0.5">Auditoría Interna</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Rol: Enfermería y Salud</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Acceso: Expediente Clínico Alumnos</span>
+<span class="font-label-xs text-label-xs text-secondary font-semibold">2 usuarios afectados</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top">
+<div class="flex flex-col gap-1">
+<span class="px-space-xs py-0.5 rounded font-label-xs text-label-xs font-bold bg-surface-container-high text-on-surface w-max">Bitácora Interna</span>
+<span class="font-code-num text-code-num text-[11px] text-on-surface font-semibold">NOM-2025-CCT-889045</span>
+<span class="font-code-num text-code-num text-[10px] text-on-surface-variant truncate max-w-[130px]">Hash: 3c88b0...ff99a</span>
+</div>
+</td>
+<td class="py-space-md px-space-md align-top text-right">
+<button class="p-1 rounded bg-surface-container-low hover:bg-surface-container text-on-surface transition-colors" title="Ver detalle de permisos">
+<span class="material-symbols-outlined text-[18px]">rule</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination & Cryptographic Integrity Footer -->
+<div class="flex flex-col sm:flex-row items-center justify-between px-space-lg py-space-md bg-surface-container-low gap-space-sm font-label-sm text-label-sm">
+<div class="flex items-center gap-space-sm text-on-surface-variant">
+<span>Mostrando 1 a 5 de 248,912 registros</span>
+<span class="text-outline">•</span>
+<span class="font-code-num text-code-num text-[11px]">Sincronía Blockchain Local: 100% OK</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="px-space-sm py-1 rounded bg-surface-container-lowest text-on-surface-variant hover:text-on-surface disabled:opacity-40" disabled=""><span class="material-symbols-outlined text-[16px]">chevron_left</span></button>
+<button class="px-space-md py-1 rounded bg-secondary text-on-secondary font-bold">1</button>
+<button class="px-space-md py-1 rounded bg-surface-container-lowest text-on-surface hover:bg-surface-container">2</button>
+<button class="px-space-md py-1 rounded bg-surface-container-lowest text-on-surface hover:bg-surface-container">3</button>
+<span class="px-1 text-outline">...</span>
+<button class="px-space-md py-1 rounded bg-surface-container-lowest text-on-surface hover:bg-surface-container">4,978</button>
+<button class="px-space-sm py-1 rounded bg-surface-container-lowest text-on-surface-variant hover:text-on-surface"><span class="material-symbols-outlined text-[16px]">chevron_right</span></button>
+</div>
+</div>
+</div>
+<!-- Right Column: Forensic Inspector & Live Verification Panel (4 cols on XL) -->
+<div class="xl:col-span-4 flex flex-col gap-space-md">
+<!-- Panel A: Inspector Forense Activo -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<!-- Inspector Header -->
+<div class="p-space-lg bg-surface-container-low flex items-start justify-between">
+<div class="flex flex-col">
+<div class="flex items-center gap-1.5 text-secondary font-label-xs text-label-xs font-bold uppercase tracking-wider">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span>Constancia Verificada en Vivo</span>
+</div>
+<h2 class="font-headline-md text-headline-md font-bold text-on-surface mt-0.5">Expediente #EVT-2025-889104</h2>
+</div>
+<span class="px-space-xs py-0.5 rounded font-label-xs text-label-xs font-bold bg-secondary-fixed text-on-secondary-fixed">NO ALTERADO</span>
+</div>
+<div class="p-space-lg flex flex-col gap-space-md">
+<!-- Merkle Root & Cryptographic Details -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col gap-space-xs">
+<div class="flex items-center justify-between text-[11px]">
+<span class="text-on-surface-variant font-label-xs text-label-xs font-semibold">PRESTADOR NOM-151</span>
+<span class="font-bold text-on-surface">Advanta PSC (SE Acred. 04/2018)</span>
+</div>
+<div class="flex items-center justify-between text-[11px]">
+<span class="text-on-surface-variant font-label-xs text-label-xs font-semibold">ESTAMPA DE TIEMPO (TSA)</span>
+<span class="font-code-num text-code-num text-[11px] text-on-surface">2025-04-11T20:12:05.819Z</span>
+</div>
+<div class="flex flex-col gap-0.5 pt-1">
+<span class="text-on-surface-variant font-label-xs text-label-xs font-semibold">CADENA HASH DEL REGISTRO (SHA-256)</span>
+<span class="font-code-num text-code-num text-[10px] text-secondary break-all bg-surface-container-lowest p-1.5 rounded">e810a724b1c900eafc78a1239841029abde44910cf91a0293847291aebcd8819</span>
+</div>
+<div class="flex flex-col gap-0.5 pt-1">
+<span class="text-on-surface-variant font-label-xs text-label-xs font-semibold">MERKLE ROOT ANTERIOR</span>
+<span class="font-code-num text-code-num text-[10px] text-on-surface-variant break-all">7d88921a9ef1c2b3e4f5a6b7c8d9e0f123456789abcdef0123456789abcdef01</span>
+</div>
+</div>
+<!-- JSON Diff Inspector -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-label-xs text-label-xs font-bold text-on-surface-variant uppercase tracking-wider">Inspección de Cambio (Payload Diff JSON)</span>
+<span class="font-code-num text-code-num text-[11px] text-secondary font-semibold">RFC: MESR780211-K82</span>
+</div>
+<div class="bg-primary-container text-on-primary p-space-md rounded-lg font-code-num text-code-num text-[12px] leading-relaxed overflow-x-auto shadow-inner">
+<span class="text-on-primary-container">{</span><br/>
+                <span class="text-secondary-fixed">"entidad"</span>: <span class="text-on-secondary-fixed">"alumno_calificaciones"</span>,<br/>
+                <span class="text-secondary-fixed">"matricula"</span>: <span class="text-on-secondary-fixed">"SAE-2024-0178"</span>,<br/>
+                <span class="text-secondary-fixed">"materia"</span>: <span class="text-on-secondary-fixed">"Matemáticas II (Secundaria 2°)"</span>,<br/>
+                <span class="text-secondary-fixed">"cambio_estado"</span>: {<br/>
+                  <span class="text-error-container line-through">"calificacion_anterior": 7.8</span>,<br/>
+                  <span class="text-secondary-fixed-dim font-bold">"calificacion_nueva": 8.5</span><br/>
+                },<br/>
+                <span class="text-secondary-fixed">"motivo_oficial"</span>: <span class="text-on-secondary-fixed">"Aclaración de examen extraordinario con evidencia física foliada"</span>,<br/>
+                <span class="text-secondary-fixed">"autorizacion_director"</span>: <span class="text-on-secondary-fixed">"DIR-AUTH-8812-OK"</span>,<br/>
+                <span class="text-secondary-fixed">"tsa_serial_number"</span>: <span class="text-on-secondary-fixed">"ADV-TSA-2025-0914"</span><br/>
+<span class="text-on-primary-container">}</span>
+</div>
+</div>
+<!-- Dual Inspector Action Buttons -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<button class="w-full flex items-center justify-center gap-space-xs px-space-md py-space-sm rounded-lg bg-secondary text-on-secondary font-label-md text-label-md hover:bg-secondary-container transition-colors shadow-sm" onclick="openHashModal()">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Verificar Criptográficamente en Vivo</span>
+</button>
+<button class="w-full flex items-center justify-center gap-space-xs px-space-md py-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors">
+<span class="material-symbols-outlined text-[18px]">folder_zip</span>
+<span>Descargar Paquete Probatorio (.ZIP Cifrado)</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Panel B: Legal Framework & Evidentiary Value -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center gap-space-xs text-on-surface">
+<span class="material-symbols-outlined text-[20px] text-secondary">gavel</span>
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface">Validez y Marco Jurídico Vigente</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+          Toda transacción asentada en este módulo goza de presunción de no alteración y valor probatorio pleno conforme a la legislación mercantil y educativa mexicana:
+        </p>
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<div class="p-space-xs bg-surface-container-low rounded flex flex-col">
+<span class="font-label-xs text-label-xs font-bold text-on-surface">NOM-151-SCFI-2016</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[12px]">Requisitos para la conservación de mensajes de datos y digitalización de documentos.</span>
+</div>
+<div class="p-space-xs bg-surface-container-low rounded flex flex-col">
+<span class="font-label-xs text-label-xs font-bold text-on-surface">Código de Comercio (Arts. 89 al 114)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[12px]">Reconocimiento de Firma Electrónica Avanzada y presunción de integridad.</span>
+</div>
+<div class="p-space-xs bg-surface-container-low rounded flex flex-col">
+<span class="font-label-xs text-label-xs font-bold text-on-surface">Código Federal de Procedimientos Civiles (Art. 210-A)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant text-[12px]">Eficacia probatoria de la información generada o comunicada en medios electrónicos.</span>
+</div>
+</div>
+<div class="mt-space-xs p-space-xs rounded bg-surface-container-high flex items-center justify-between text-[11px] text-on-surface font-semibold">
+<span>Cadena auditada por: Órgano de Control Escolar SEP</span>
+<span class="material-symbols-outlined text-[16px] text-secondary">check_circle</span>
+</div>
+</div>
+</div>
+</div>
+</div></main></div>
+<!-- MODAL / CONSOLA INTERACTIVA: SIMULACIÓN DE VERIFICACIÓN DE HASH SHA-256 EN TIEMPO REAL -->
+<div class="fixed inset-0 bg-primary/70 backdrop-blur-sm z-[100] hidden items-center justify-center p-4 overflow-y-auto" id="crypto-modal-backdrop">
+<div class="bg-surface-container-lowest w-full max-w-4xl rounded-2xl shadow-2xl border border-surface-container-high overflow-hidden flex flex-col my-8 transition-all transform duration-300">
+<!-- Modal Top Bar -->
+<div class="bg-primary-container text-on-primary px-space-xl py-space-md flex items-center justify-between border-b border-primary-container">
+<div class="flex items-center gap-space-sm">
+<div class="p-2 rounded-lg bg-secondary-container text-on-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">gpp_good</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-headline-md text-headline-md font-bold tracking-tight text-on-primary">Motor Criptográfico Forense NOM-151</span>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-secondary text-on-secondary tracking-wider">SHA-256 LIVE VALIDATOR</span>
+</div>
+<span class="font-label-xs text-label-xs text-on-primary-container">Verificación matemática en tiempo real de cadenas de custodia digital y sellos de tiempo TSA</span>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<div class="hidden sm:flex items-center gap-1.5 px-3 py-1 rounded-full bg-tertiary-container text-secondary-fixed-dim text-[11px] font-mono">
+<span class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span>
+<span>NODO LOCAL: EN LÍNEA</span>
+</div>
+<button class="text-on-primary-container hover:text-on-primary p-1.5 rounded-lg hover:bg-inverse-surface transition-colors" onclick="closeHashModal()">
+<span class="material-symbols-outlined text-[22px]">close</span>
+</button>
+</div>
+</div>
+<!-- Modal Body Content -->
+<div class="p-space-xl flex flex-col gap-space-lg bg-surface">
+<!-- Event Selector & Test Manipulation Toggle Bar -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-md items-center bg-surface-container-lowest p-space-md rounded-xl border border-surface-container">
+<div class="md:col-span-7 flex flex-col gap-1">
+<label class="font-label-xs text-label-xs text-on-surface-variant font-bold uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-secondary">receipt_long</span>
+<span>Evento Forense Seleccionado</span>
+</label>
+<div class="relative">
+<select class="w-full appearance-none bg-surface-container-low text-on-surface font-body-sm text-body-sm font-semibold px-space-md py-space-xs rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary cursor-pointer pr-8 border border-surface-container" id="event-selector" onchange="handleEventChange()">
+<option selected="" value="evt-889104">#EVT-2025-889104 — Modificación Acta Matemáticas II (Prof. Méndez / Alumno Mendoza)</option>
+<option value="evt-889103">#EVT-2025-889103 — CFDI 4.0 Colegiatura IEDU ($8,450.00 MXN / PAC Finkok)</option>
+<option value="evt-889098">#EVT-2025-889098 — Sellado Masivo SEP/SIGED (1,390 Boletas / Mtra. Carmen Valenzuela)</option>
+</select>
+<span class="material-symbols-outlined absolute right-space-sm top-1/2 -translate-y-1/2 text-outline pointer-events-none text-body-lg">arrow_drop_down</span>
+</div>
+</div>
+<!-- Fraud Simulation Toggle -->
+<div class="md:col-span-5 flex flex-col justify-center">
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low border border-surface-container">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-bold text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-error">pest_control</span>
+<span>Simular Alteración Ilícita</span>
+</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant text-[11px]">Inyectar modificación no autorizada</span>
+</div>
+<label class="relative inline-flex items-center cursor-pointer">
+<input class="sr-only peer" id="tamper-toggle" onchange="toggleTamperMode()" type="checkbox"/>
+<div class="w-11 h-6 bg-surface-container-highest peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-error"></div>
+</label>
+</div>
+</div>
+</div>
+<!-- Dual Data Panels: Canonical Payload vs Distributed Hash -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- Left Subpanel: Canonical Payload JSON -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl border border-surface-container flex flex-col gap-2">
+<div class="flex items-center justify-between pb-1 border-b border-surface-container">
+<span class="font-label-xs text-label-xs font-bold text-on-surface-variant uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-secondary">code</span>
+<span>Payload Canónico Normalizado (JSON-LD)</span>
+</span>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-secondary-fixed text-on-secondary-fixed" id="tamper-status-badge">ORIGINAL INTACTO</span>
+</div>
+<div class="relative">
+<pre class="bg-primary-container text-secondary-fixed font-code-num text-code-num text-[11px] p-3 rounded-lg overflow-x-auto h-36 font-mono leading-relaxed border border-primary-container selection:bg-secondary selection:text-white" id="payload-display">{
+  "folio": "EVT-2025-889104",
+  "cct": "09PST0144Z",
+  "modulo": "control_escolar",
+  "alumno_id": "SAE-2024-0178",
+  "docente_rfc": "MESR780211-K82",
+  "calificacion_ant": 7.8,
+  <span class="text-secondary-fixed-dim font-bold" id="tampered-field">"calificacion_nueva": 8.5</span>,
+  "timestamp_cenam": "2025-04-11T20:12:05.819Z",
+  "tsa_serial": "ADV-TSA-2025-0914"
+}</pre>
+</div>
+<div class="flex items-center justify-between text-[11px] text-on-surface-variant">
+<span>Codificación: <strong class="text-on-surface">UTF-8 Canónica RFC 8785</strong></span>
+<span>Bytes: <strong class="text-on-surface" id="payload-bytes">284 B</strong></span>
+</div>
+</div>
+<!-- Right Subpanel: Distributed Ledger Hash & Merkle Node -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl border border-surface-container flex flex-col gap-2">
+<div class="flex items-center justify-between pb-1 border-b border-surface-container">
+<span class="font-label-xs text-label-xs font-bold text-on-surface-variant uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px] text-secondary">hub</span>
+<span>Hash Inmutable en Merkle Tree #4,812</span>
+</span>
+<span class="px-2 py-0.5 rounded text-[10px] font-bold bg-surface-container-high text-on-surface">DISTRIBUIDO</span>
+</div>
+<div class="flex flex-col gap-2 h-36 justify-between py-1">
+<div class="flex flex-col gap-1">
+<span class="text-[11px] font-semibold text-on-surface-variant">Hash Original Asentado (Constancia NOM-151):</span>
+<div class="p-2.5 rounded-lg bg-surface-container-low border border-surface-container text-on-surface font-code-num text-code-num text-[11px] break-all font-mono">
+<span class="text-secondary font-bold" id="registered-hash">e810a724b1c900eafc78a1239841029abde44910cf91a0293847291aebcd8819</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2 text-[11px] bg-surface-container-low p-2 rounded-lg">
+<div>
+<span class="text-on-surface-variant block">Prestador Acreditado:</span>
+<span class="font-bold text-on-surface">Advanta PSC (SE)</span>
+</div>
+<div>
+<span class="text-on-surface-variant block">Algoritmo:</span>
+<span class="font-bold text-on-surface">FIPS 180-4 SHA-256</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between text-[11px] text-on-surface-variant">
+<span>Sello de tiempo: <strong class="text-on-surface font-mono">2025-04-11 14:12:05 UTC-6</strong></span>
+<span class="text-secondary font-bold">Inmutable</span>
+</div>
+</div>
+</div>
+<!-- Execution Action Trigger Button -->
+<div class="flex items-center justify-between bg-surface-container-lowest p-space-md rounded-xl border border-surface-container shadow-sm">
+<div class="flex items-center gap-3">
+<div class="p-2.5 rounded-lg bg-surface-container text-secondary">
+<span class="material-symbols-outlined text-[24px]">terminal</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">Comprobación Criptográfica Bit a Bit</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Ejecuta el cómputo del digest SHA-256 local y valida la paridad contra el árbol Merkle y el PSC.</span>
+</div>
+</div>
+<button class="flex items-center gap-2 px-space-xl py-2.5 rounded-lg bg-secondary hover:bg-secondary-container text-on-secondary font-label-md text-label-md transition-all shadow-md active:scale-95 cursor-pointer whitespace-nowrap" id="run-verify-btn" onclick="executeCryptoVerification()">
+<span class="material-symbols-outlined text-[20px]">memory</span>
+<span id="run-btn-text">Ejecutar Verificación Criptográfica SHA-256</span>
+</button>
+</div>
+<!-- Execution Animation & Micro-Terminal Console (Visible during and after run) -->
+<div class="bg-primary-container text-on-primary rounded-xl p-space-lg shadow-inner flex flex-col gap-space-md transition-all duration-300" id="execution-console-card">
+<!-- Header Console -->
+<div class="flex items-center justify-between pb-2 border-b border-inverse-surface">
+<div class="flex items-center gap-2 font-mono text-[12px] text-on-primary-container">
+<span class="w-3 h-3 rounded-full bg-error inline-block"></span>
+<span class="w-3 h-3 rounded-full bg-yellow-400 inline-block"></span>
+<span class="w-3 h-3 rounded-full bg-green-400 inline-block"></span>
+<span class="ml-2 font-bold text-on-primary">NOM151-SHA256-VERIFIER://cli/audit-engine</span>
+</div>
+<div class="flex items-center gap-3 font-code-num text-code-num text-[11px] text-secondary-fixed">
+<span id="crypto-clock">CYCLE TIME: 0.042 ms</span>
+<span class="px-2 py-0.5 rounded bg-inverse-surface font-semibold text-secondary-fixed-dim" id="crypto-state-label">ESTADO: LISTO</span>
+</div>
+</div>
+<!-- Progress Bar -->
+<div class="w-full bg-inverse-surface rounded-full h-2 overflow-hidden">
+<div class="bg-secondary-container h-full rounded-full transition-all duration-300 w-0" id="crypto-progress-bar"></div>
+</div>
+<!-- Terminal Step Lines -->
+<div class="font-mono text-[12px] leading-relaxed flex flex-col gap-1.5 text-on-primary-container min-h-[90px]" id="terminal-steps">
+<div class="text-on-primary-container">Listo para iniciar verificación criptográfica. Presione el botón 'Ejecutar Verificación'.</div>
+</div>
+<!-- Dynamic Output Result Box -->
+<div class="mt-1 hidden" id="verification-result-box">
+<!-- Will be injected dynamically with Valid or Tampered Result -->
+</div>
+</div>
+</div>
+<!-- Modal Footer Controls -->
+<div class="bg-surface-container-low px-space-xl py-space-md border-t border-surface-container flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-2 text-on-surface-variant font-label-xs text-label-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary">security</span>
+<span>Conforme a la NOM-151-SCFI-2016 y Art. 89 del Código de Comercio de México</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="px-space-md py-space-xs rounded-lg bg-surface-container-lowest hover:bg-surface-container text-on-surface font-label-md text-label-md transition-colors border border-surface-container" onclick="closeHashModal()">
+          Cerrar Consola
+        </button>
+<button class="flex items-center gap-1.5 px-space-md py-space-xs rounded-lg bg-secondary text-on-secondary font-label-md text-label-md hover:bg-secondary-container transition-colors shadow-sm" id="download-forensic-report-btn" onclick="alert('Constancia de Verificación Forense generada exitosamente en formato PDF con firma criptográfica y sello NOM-151.')">
+<span class="material-symbols-outlined text-[18px]">download_for_offline</span>
+<span>Descargar Acta de Verificación Forense (.PDF)</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Engine Vanilla Script -->
+
+<script src="../assets/js/app.js"></script><script>
+// State objects for verification demo
+  const ORIGINAL_HASH = "e810a724b1c900eafc78a1239841029abde44910cf91a0293847291aebcd8819";
+  const TAMPERED_HASH = "f921bc470a1e3458cd892a017281bcda901928374650192837465019283746fa";
+  
+  let isTampered = false;
+  let isRunning = false;
+
+  function openHashModal() {
+    const backdrop = document.getElementById('crypto-modal-backdrop');
+    backdrop.classList.remove('hidden');
+    backdrop.classList.add('flex');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeHashModal() {
+    const backdrop = document.getElementById('crypto-modal-backdrop');
+    backdrop.classList.add('hidden');
+    backdrop.classList.remove('flex');
+    document.body.style.overflow = '';
+  }
+
+  // Close with Esc key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeHashModal();
+  });
+
+  function toggleTamperMode() {
+    const toggle = document.getElementById('tamper-toggle');
+    isTampered = toggle.checked;
+
+    const payloadPre = document.getElementById('payload-display');
+    const statusBadge = document.getElementById('tamper-status-badge');
+    const bytesLabel = document.getElementById('payload-bytes');
+
+    if (isTampered) {
+      statusBadge.textContent = 'ALTERACIÓN INYECTADA';
+      statusBadge.className = 'px-2 py-0.5 rounded text-[10px] font-bold bg-error-container text-on-error-container animate-pulse';
+      
+      payloadPre.innerHTML = `{\n  "folio": "EVT-2025-889104",\n  "cct": "09PST0144Z",\n  "modulo": "control_escolar",\n  "alumno_id": "SAE-2024-0178",\n  "docente_rfc": "MESR780211-K82",\n  "calificacion_ant": 7.8,\n  <span class="text-error bg-error-container/30 px-1 rounded font-bold underline">"calificacion_nueva": 9.0</span>,  // <--- VALOR ALTERADO SIN AUTORIZACIÓN\n  "timestamp_cenam": "2025-04-11T20:12:05.819Z",\n  "tsa_serial": "ADV-TSA-2025-0914"\n}`;
+      bytesLabel.textContent = '284 B (Modificado)';
+    } else {
+      statusBadge.textContent = 'ORIGINAL INTACTO';
+      statusBadge.className = 'px-2 py-0.5 rounded text-[10px] font-bold bg-secondary-fixed text-on-secondary-fixed';
+      
+      payloadPre.innerHTML = `{\n  "folio": "EVT-2025-889104",\n  "cct": "09PST0144Z",\n  "modulo": "control_escolar",\n  "alumno_id": "SAE-2024-0178",\n  "docente_rfc": "MESR780211-K82",\n  "calificacion_ant": 7.8,\n  <span class="text-secondary-fixed-dim font-bold">"calificacion_nueva": 8.5</span>,\n  "timestamp_cenam": "2025-04-11T20:12:05.819Z",\n  "tsa_serial": "ADV-TSA-2025-0914"\n}`;
+      bytesLabel.textContent = '284 B';
+    }
+
+    // Reset result view to force re-verification
+    resetExecutionUI();
+  }
+
+  function handleEventChange() {
+    const sel = document.getElementById('event-selector').value;
+    const regHash = document.getElementById('registered-hash');
+    const toggle = document.getElementById('tamper-toggle');
+    toggle.checked = false;
+    isTampered = false;
+
+    if (sel === 'evt-889104') {
+      regHash.textContent = 'e810a724b1c900eafc78a1239841029abde44910cf91a0293847291aebcd8819';
+    } else if (sel === 'evt-889103') {
+      regHash.textContent = '4b29f07a123cde89012456789abcde0123456789abcdef0123456789abcdef01';
+    } else {
+      regHash.textContent = '8f920ade5419b67a9821045bbca23091ff7820129845cd12093847291aebcd88';
+    }
+    toggleTamperMode();
+  }
+
+  function resetExecutionUI() {
+    const progressBar = document.getElementById('crypto-progress-bar');
+    const stepsDiv = document.getElementById('terminal-steps');
+    const resultBox = document.getElementById('verification-result-box');
+    const stateLabel = document.getElementById('crypto-state-label');
+    const btnText = document.getElementById('run-btn-text');
+
+    progressBar.style.width = '0%';
+    progressBar.className = 'bg-secondary-container h-full rounded-full transition-all duration-300 w-0';
+    stepsDiv.innerHTML = `<div class="text-on-primary-container">Esperando ejecución. Presione 'Ejecutar Verificación Criptográfica SHA-256' para validar el hash actual.</div>`;
+    resultBox.classList.add('hidden');
+    resultBox.innerHTML = '';
+    stateLabel.textContent = 'ESTADO: LISTO';
+    stateLabel.className = 'px-2 py-0.5 rounded bg-inverse-surface font-semibold text-secondary-fixed-dim';
+    btnText.textContent = 'Ejecutar Verificación Criptográfica SHA-256';
+  }
+
+  function executeCryptoVerification() {
+    if (isRunning) return;
+    isRunning = true;
+
+    const progressBar = document.getElementById('crypto-progress-bar');
+    const stepsDiv = document.getElementById('terminal-steps');
+    const resultBox = document.getElementById('verification-result-box');
+    const stateLabel = document.getElementById('crypto-state-label');
+    const runBtn = document.getElementById('run-verify-btn');
+    const btnText = document.getElementById('run-btn-text');
+
+    runBtn.classList.add('opacity-75', 'cursor-not-allowed');
+    btnText.textContent = 'Calculando digest bit a bit...';
+    resultBox.classList.add('hidden');
+    stepsDiv.innerHTML = '';
+    stateLabel.textContent = 'PROCESANDO...';
+    stateLabel.className = 'px-2 py-0.5 rounded bg-secondary text-white font-semibold animate-pulse';
+
+    // Step 1: Canonical payload reading (250ms)
+    setTimeout(() => {
+      progressBar.style.width = '25%';
+      stepsDiv.innerHTML = `
+        <div class="flex items-center gap-2 text-secondary-fixed">
+          <span class="material-symbols-outlined text-[15px] text-green-400">check_circle</span>
+          <span>[Paso 1/4] Normalización RFC 8785 completada. Lectura de Payload y TimeStamp Stratum-1 CENAM OK.</span>
+        </div>
+      `;
+    }, 300);
+
+    // Step 2: SHA-256 Computation (700ms)
+    setTimeout(() => {
+      progressBar.style.width = '55%';
+      stepsDiv.innerHTML += `
+        <div class="flex items-center gap-2 text-secondary-fixed">
+          <span class="material-symbols-outlined text-[15px] text-green-400">check_circle</span>
+          <span>[Paso 2/4] Cálculo criptográfico FIPS 180-4 ejecutado: 256 bits generados en 1.84ms.</span>
+        </div>
+      `;
+    }, 750);
+
+    // Step 3: Merkle Tree comparison (1200ms)
+    setTimeout(() => {
+      progressBar.style.width = '80%';
+      stepsDiv.innerHTML += `
+        <div class="flex items-center gap-2 text-secondary-fixed">
+          <span class="material-symbols-outlined text-[15px] text-green-400">check_circle</span>
+          <span>[Paso 3/4] Comparación bit a bit vs Bloque Árbol Merkle #4,812 (Raíz: 8f92...a0de).</span>
+        </div>
+      `;
+    }, 1200);
+
+    // Step 4: PSC Advanta Query & Final Verdict (1650ms)
+    setTimeout(() => {
+      progressBar.style.width = '100%';
+      isRunning = false;
+      runBtn.classList.remove('opacity-75', 'cursor-not-allowed');
+      btnText.textContent = 'Volver a Ejecutar Verificación';
+
+      if (!isTampered) {
+        // CASE: INTEGRITY 100% VALID
+        stateLabel.textContent = 'VERIFICACIÓN: VÁLIDA';
+        stateLabel.className = 'px-2 py-0.5 rounded bg-emerald-500 text-white font-bold';
+
+        stepsDiv.innerHTML += `
+          <div class="flex items-center gap-2 text-emerald-300 font-bold">
+            <span class="material-symbols-outlined text-[15px] text-emerald-400">verified</span>
+            <span>[Paso 4/4] Consulta PSC Advanta: Constancia ASN.1 vigente. Sello de tiempo auténtico. Coincidencia idéntica 100%.</span>
+          </div>
+        `;
+
+        resultBox.innerHTML = `
+          <div class="bg-surface-container-lowest text-on-surface p-space-md rounded-xl border-2 border-emerald-500 shadow-md flex flex-col gap-3">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="flex h-3 w-3 relative">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+                </span>
+                <span class="font-headline-md text-headline-md font-bold text-emerald-700">INTEGRIDAD 100% VÁLIDA — NO ALTERADO</span>
+              </div>
+              <span class="px-2.5 py-0.5 rounded text-[11px] font-bold bg-emerald-100 text-emerald-800">VALOR PROBATORIO PLENO</span>
+            </div>
+
+            <div class="flex flex-col gap-1.5 font-mono text-[11px] bg-surface-container-low p-3 rounded-lg border border-surface-container">
+              <div class="flex items-center justify-between">
+                <span class="text-on-surface-variant font-semibold">Hash Calculado en Cliente:</span>
+                <span class="text-emerald-700 font-bold">${ORIGINAL_HASH}</span>
+              </div>
+              <div class="flex items-center justify-between border-t border-surface-container pt-1">
+                <span class="text-on-surface-variant font-semibold">Hash Registrado en Blockchain:</span>
+                <span class="text-emerald-700 font-bold">${ORIGINAL_HASH}</span>
+              </div>
+              <div class="text-[10px] text-emerald-600 font-bold pt-1 flex items-center gap-1">
+                <span class="material-symbols-outlined text-[14px]">done_all</span>
+                <span>Los 64 caracteres hexadecimales son exactamente idénticos (0 bits de discrepancia).</span>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-2 text-[11px] bg-surface-container-low p-2.5 rounded-lg text-on-surface-variant">
+              <div>
+                <span class="block text-on-surface-variant">Folio ASN.1 NOM-151:</span>
+                <strong class="text-on-surface font-mono">NOM-2025-CCT-889104</strong>
+              </div>
+              <div>
+                <span class="block text-on-surface-variant">Sello Digital TSA:</span>
+                <strong class="text-on-surface font-mono">ADV-TSA-2025-0914</strong>
+              </div>
+              <div>
+                <span class="block text-on-surface-variant">Acreditación:</span>
+                <strong class="text-on-surface">Secretaría de Economía</strong>
+              </div>
+            </div>
+          </div>
+        `;
+      } else {
+        // CASE: FRAUD / TAMPER DETECTED
+        stateLabel.textContent = 'ALERTA: HASH MISMATCH';
+        stateLabel.className = 'px-2 py-0.5 rounded bg-error text-white font-bold animate-bounce';
+        progressBar.className = 'bg-error h-full rounded-full transition-all duration-300 w-full';
+
+        stepsDiv.innerHTML += `
+          <div class="flex items-center gap-2 text-error-container font-bold">
+            <span class="material-symbols-outlined text-[15px] text-error">dangerous</span>
+            <span>[Paso 4/4] DISCREPANCIA CRIPTOGRÁFICA DETECTADA: Los hashes no coinciden. Evidencia de alteración de datos posterior al sellado.</span>
+          </div>
+        `;
+
+        resultBox.innerHTML = `
+          <div class="bg-error-container/20 text-on-surface p-space-md rounded-xl border-2 border-error shadow-md flex flex-col gap-3">
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-error text-[24px]">crisis_alert</span>
+                <span class="font-headline-md text-headline-md font-bold text-error">ALERTA: HASH MISMATCH — INTEGRIDAD COMPROMETIDA</span>
+              </div>
+              <span class="px-2.5 py-0.5 rounded text-[11px] font-bold bg-error text-on-error">FRAUDE DETECTADO</span>
+            </div>
+
+            <p class="text-[12px] text-on-surface leading-snug">
+              El contenido del registro fue modificado arbitrariamente (calificación alterada a <strong>9.0</strong>). Debido al efecto avalancha del algoritmo SHA-256, el nuevo hash calculado difiere por completo de la constancia NOM-151 registrada originalmente por el PSC Advanta.
+            </p>
+
+            <div class="flex flex-col gap-1.5 font-mono text-[11px] bg-surface-container-lowest p-3 rounded-lg border border-error/30">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                <span class="text-error font-bold">Hash Recalculado (Datos Alterados):</span>
+                <span class="text-error font-bold break-all bg-error-container/40 p-1 rounded">${TAMPERED_HASH}</span>
+              </div>
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1 border-t border-surface-container pt-1">
+                <span class="text-on-surface-variant font-semibold">Hash Original en Cadena NOM-151:</span>
+                <span class="text-secondary font-bold break-all">${ORIGINAL_HASH}</span>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between bg-error/10 p-2.5 rounded-lg border border-error/20 text-[11px]">
+              <span class="text-error font-bold flex items-center gap-1">
+                <span class="material-symbols-outlined text-[16px]">warning</span>
+                <span>Acción preventiva: Evento reportado a la Dirección General para Acta Administrativa.</span>
+              </span>
+              <button onclick="toggleTamperMode(); document.getElementById('tamper-toggle').checked = false;" class="px-2.5 py-1 bg-surface-container-lowest hover:bg-surface-container text-on-surface font-bold rounded shadow-sm border border-surface-container">
+                Restaurar Datos Originales
+              </button>
+            </div>
+          </div>
+        `;
+      }
+
+      resultBox.classList.remove('hidden');
+    }, 1700);
+  }
+</script></body></html>

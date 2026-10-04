@@ -1,0 +1,938 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Horarios · SAE.cloud</title><link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet"><script src="https://cdn.tailwindcss.com"></script><script src="../assets/js/tailwind-config.js"></script><link rel="stylesheet" href="../assets/css/app.css"></head><body class="bg-surface font-body-md text-on-surface antialiased" data-page="horarios"><main class="w-full pt-16 bg-surface"><div class="flex flex-col w-full">
+<div class="p-space-margin flex flex-col gap-space-lg">
+<!-- Breadcrumb and Quick Status Ribbon -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant">
+<span class="hover:text-secondary cursor-pointer transition-colors">Académico</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="hover:text-secondary cursor-pointer transition-colors">Horarios</span>
+<span class="material-symbols-outlined text-[14px]">chevron_right</span>
+<span class="text-on-surface font-semibold">Planificación Semanal</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-code-num text-code-num">
+<span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span>
+          Motor Algorítmico Activo
+        </span>
+<span class="text-on-surface-variant font-code-num text-code-num">Sincronizado: Hoy 08:42 AM</span>
+</div>
+</div>
+<!-- Header Actions & Meta -->
+<div class="flex flex-col xl:flex-row xl:items-end justify-between gap-space-lg">
+<div class="max-w-3xl">
+<div class="inline-flex items-center gap-space-2xs px-space-xs py-0.5 rounded bg-primary-container text-on-primary-container font-label-xs text-label-xs tracking-wider uppercase mb-space-2xs">
+          Gestión Curricular v3.8
+        </div>
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">
+          Matriz y Planificación de Horarios Escolares
+        </h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+          Visualización multidimensional por Grupo, Aula y Docente con Detección Automática de Conflictos
+        </p>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<div class="flex items-center gap-1.5 px-space-sm py-1.5 rounded-lg bg-surface-container-low text-on-surface font-label-sm text-label-sm shadow-sm">
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+<span>Cruces y Conflictos:</span>
+<span class="font-bold text-secondary">0 detectados</span>
+</div>
+<button class="h-9 px-space-md rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-md text-label-md flex items-center gap-space-2xs shadow-sm transition-all">
+<span class="material-symbols-outlined text-[18px] text-secondary">print</span>
+<span>Imprimir Horario</span>
+</button>
+<button class="h-9 px-space-md rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container font-label-md text-label-md flex items-center gap-space-2xs shadow-sm transition-all">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">calendar_today</span>
+<span>Exportar iCal / PDF</span>
+</button>
+<button class="h-9 px-space-md rounded-lg bg-secondary text-on-secondary hover:bg-secondary-container font-label-md text-label-md flex items-center gap-space-2xs shadow-md transition-all">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span>Nuevo Horario</span>
+</button>
+</div>
+</div>
+<!-- Filters & Selectors Bar -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<!-- Tabs -->
+<div class="flex items-center gap-space-2xs p-1 bg-surface-container-low rounded-lg">
+<button class="px-space-md py-1.5 rounded-md bg-secondary text-on-secondary font-label-sm text-label-sm shadow-sm transition-all flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">groups</span>
+<span>Por Grupo</span>
+</button>
+<button class="px-space-md py-1.5 rounded-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-sm text-label-sm transition-all flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">badge</span>
+<span>Por Docente</span>
+</button>
+<button class="px-space-md py-1.5 rounded-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container font-label-sm text-label-sm transition-all flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">meeting_room</span>
+<span>Por Aula / Lab</span>
+</button>
+</div>
+<!-- Selectors Stack -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-sm flex-1 lg:max-w-2xl">
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs text-on-surface-variant mb-0.5">Nivel Educativo</span>
+<div class="relative">
+<select class="w-full h-8 pl-2 pr-7 rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface focus:outline-none appearance-none cursor-pointer">
+<option>Secundaria</option>
+<option>Bachillerato</option>
+<option>Licenciatura</option>
+</select>
+<span class="material-symbols-outlined absolute right-1.5 top-1/2 -translate-y-1/2 text-outline text-[16px] pointer-events-none">expand_more</span>
+</div>
+</div>
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs text-on-surface-variant mb-0.5">Grado</span>
+<div class="relative">
+<select class="w-full h-8 pl-2 pr-7 rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface focus:outline-none appearance-none cursor-pointer">
+<option>2° de Secundaria</option>
+<option>1° de Secundaria</option>
+<option>3° de Secundaria</option>
+</select>
+<span class="material-symbols-outlined absolute right-1.5 top-1/2 -translate-y-1/2 text-outline text-[16px] pointer-events-none">expand_more</span>
+</div>
+</div>
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs text-on-surface-variant mb-0.5">Grupo Activo</span>
+<div class="relative">
+<select class="w-full h-8 pl-2 pr-7 rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface focus:outline-none appearance-none cursor-pointer font-semibold">
+<option>2° A (Matutino)</option>
+<option>2° B (Matutino)</option>
+<option>2° C (Vespertino)</option>
+</select>
+<span class="material-symbols-outlined absolute right-1.5 top-1/2 -translate-y-1/2 text-outline text-[16px] pointer-events-none">expand_more</span>
+</div>
+</div>
+<div class="flex flex-col">
+<span class="font-label-xs text-label-xs text-on-surface-variant mb-0.5">Ciclo Escolar</span>
+<div class="relative">
+<select class="w-full h-8 pl-2 pr-7 rounded-lg bg-surface-container-low font-body-sm text-body-sm text-on-surface focus:outline-none appearance-none cursor-pointer">
+<option>2024 - 2025 Activo</option>
+<option>2023 - 2024 Archivo</option>
+</select>
+<span class="material-symbols-outlined absolute right-1.5 top-1/2 -translate-y-1/2 text-outline text-[16px] pointer-events-none">expand_more</span>
+</div>
+</div>
+</div>
+<!-- KPI Compliance Pill -->
+<div class="flex items-center gap-space-sm pl-2">
+<div class="flex flex-col text-right">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase">Cumplimiento Oficial</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">35 hrs Pedagógicas • 100% SEP</span>
+</div>
+<div class="w-9 h-9 rounded-full bg-secondary-container/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">verified</span>
+</div>
+</div>
+</div>
+<!-- Main Grid Workspace (12 cols) -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<!-- Weekly Time Matrix (9 Columns in Desktop) -->
+<div class="xl:col-span-9 rounded-xl bg-surface-container-lowest shadow-sm p-space-md overflow-x-auto">
+<!-- Table Column Headers -->
+<div class="min-w-[760px]">
+<div class="grid grid-cols-6 gap-2 mb-2 pb-2 bg-surface-container-low/50 rounded-lg p-2 font-label-sm text-label-sm text-on-surface">
+<div class="text-on-surface-variant font-code-num text-code-num flex items-center gap-1 pl-1">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span>Bloque</span>
+</div>
+<div class="text-center font-bold">Lunes</div>
+<div class="text-center font-bold">Martes</div>
+<div class="text-center font-bold">Miércoles</div>
+<div class="text-center font-bold">Jueves</div>
+<div class="text-center font-bold">Viernes</div>
+</div>
+<!-- Schedule Rows -->
+<div class="flex flex-col gap-2">
+<!-- Slot 1: 07:10 - 08:00 (Matemáticas II) -->
+<div class="grid grid-cols-6 gap-2 items-stretch">
+<div class="flex flex-col justify-center px-2 py-1.5 rounded-lg bg-surface-container-low font-code-num text-code-num text-on-surface-variant">
+<span class="font-semibold text-on-surface">07:10 - 08:00</span>
+<span class="text-[11px] text-outline">50 min • Bloque 1</span>
+</div>
+<!-- Mon -->
+<div class="group relative p-2 rounded-lg bg-surface-container hover:bg-surface-container-high transition-all shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-primary-container text-surface-container-lowest">MATEMÁTICAS</span>
+<span class="material-symbols-outlined text-[14px] text-secondary">check_circle</span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface leading-tight">Matemáticas II</h4>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Prof. Roberto Méndez</p>
+</div>
+<div class="flex items-center justify-between mt-2 pt-1 font-code-num text-[11px] text-on-surface-variant">
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[12px]">door_front</span>Aula 2-A</span>
+<span class="px-1 py-0.2 rounded bg-surface-container-low text-[10px]">Edif. A · N1</span>
+</div>
+</div>
+<!-- Tue -->
+<div class="p-2 rounded-lg bg-surface-container hover:bg-surface-container-high transition-all shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-primary-container text-surface-container-lowest">MATEMÁTICAS</span>
+<span class="material-symbols-outlined text-[14px] text-secondary">check_circle</span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface leading-tight">Matemáticas II</h4>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Prof. Roberto Méndez</p>
+</div>
+<div class="flex items-center justify-between mt-2 pt-1 font-code-num text-[11px] text-on-surface-variant">
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[12px]">door_front</span>Aula 2-A</span>
+<span class="px-1 py-0.2 rounded bg-surface-container-low text-[10px]">Edif. A · N1</span>
+</div>
+</div>
+<!-- Wed -->
+<div class="p-2 rounded-lg bg-surface-container hover:bg-surface-container-high transition-all shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-primary-container text-surface-container-lowest">MATEMÁTICAS</span>
+<span class="material-symbols-outlined text-[14px] text-secondary">check_circle</span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface leading-tight">Matemáticas II</h4>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Prof. Roberto Méndez</p>
+</div>
+<div class="flex items-center justify-between mt-2 pt-1 font-code-num text-[11px] text-on-surface-variant">
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[12px]">door_front</span>Aula 2-A</span>
+<span class="px-1 py-0.2 rounded bg-surface-container-low text-[10px]">Edif. A · N1</span>
+</div>
+</div>
+<!-- Thu -->
+<div class="p-2 rounded-lg bg-surface-container hover:bg-surface-container-high transition-all shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-primary-container text-surface-container-lowest">MATEMÁTICAS</span>
+<span class="material-symbols-outlined text-[14px] text-secondary">check_circle</span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface leading-tight">Matemáticas II</h4>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Prof. Roberto Méndez</p>
+</div>
+<div class="flex items-center justify-between mt-2 pt-1 font-code-num text-[11px] text-on-surface-variant">
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[12px]">door_front</span>Aula 2-A</span>
+<span class="px-1 py-0.2 rounded bg-surface-container-low text-[10px]">Edif. A · N1</span>
+</div>
+</div>
+<!-- Fri -->
+<div class="p-2 rounded-lg bg-surface-container hover:bg-surface-container-high transition-all shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-primary-container text-surface-container-lowest">MATEMÁTICAS</span>
+<span class="material-symbols-outlined text-[14px] text-secondary">check_circle</span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface leading-tight">Matemáticas II</h4>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Prof. Roberto Méndez</p>
+</div>
+<div class="flex items-center justify-between mt-2 pt-1 font-code-num text-[11px] text-on-surface-variant">
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[12px]">door_front</span>Aula 2-A</span>
+<span class="px-1 py-0.2 rounded bg-surface-container-low text-[10px]">Edif. A · N1</span>
+</div>
+</div>
+</div>
+<!-- Slot 2: 08:00 - 08:50 (Ciencias II / Física) -->
+<div class="grid grid-cols-6 gap-2 items-stretch">
+<div class="flex flex-col justify-center px-2 py-1.5 rounded-lg bg-surface-container-low font-code-num text-code-num text-on-surface-variant">
+<span class="font-semibold text-on-surface">08:00 - 08:50</span>
+<span class="text-[11px] text-outline">50 min • Bloque 2</span>
+</div>
+<!-- Mon -->
+<div class="p-2 rounded-lg bg-surface-container-high hover:bg-surface-dim transition-all shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-secondary text-on-secondary">CIENCIAS</span>
+<span class="material-symbols-outlined text-[14px] text-secondary">science</span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface leading-tight">Ciencias II (Física)</h4>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Dra. Elena Treviño</p>
+</div>
+<div class="flex items-center justify-between mt-2 pt-1 font-code-num text-[11px] text-on-surface-variant">
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[12px]">biotech</span>Lab. B-104</span>
+<span class="px-1 py-0.2 rounded bg-surface-container-low text-[10px]">Edif. B · N1</span>
+</div>
+</div>
+<!-- Tue -->
+<div class="p-2 rounded-lg bg-surface-container-high hover:bg-surface-dim transition-all shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-secondary text-on-secondary">CIENCIAS</span>
+<span class="material-symbols-outlined text-[14px] text-secondary">science</span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface leading-tight">Ciencias II (Física)</h4>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Dra. Elena Treviño</p>
+</div>
+<div class="flex items-center justify-between mt-2 pt-1 font-code-num text-[11px] text-on-surface-variant">
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[12px]">biotech</span>Lab. B-104</span>
+<span class="px-1 py-0.2 rounded bg-surface-container-low text-[10px]">Edif. B · N1</span>
+</div>
+</div>
+<!-- Wed -->
+<div class="p-2 rounded-lg bg-surface-container-high hover:bg-surface-dim transition-all shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-secondary text-on-secondary">CIENCIAS</span>
+<span class="material-symbols-outlined text-[14px] text-secondary">science</span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface leading-tight">Ciencias II (Física)</h4>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Dra. Elena Treviño</p>
+</div>
+<div class="flex items-center justify-between mt-2 pt-1 font-code-num text-[11px] text-on-surface-variant">
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[12px]">biotech</span>Lab. B-104</span>
+<span class="px-1 py-0.2 rounded bg-surface-container-low text-[10px]">Edif. B · N1</span>
+</div>
+</div>
+<!-- Thu -->
+<div class="p-2 rounded-lg bg-surface-container-high hover:bg-surface-dim transition-all shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-secondary text-on-secondary">CIENCIAS</span>
+<span class="material-symbols-outlined text-[14px] text-secondary">science</span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface leading-tight">Ciencias II (Física)</h4>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Dra. Elena Treviño</p>
+</div>
+<div class="flex items-center justify-between mt-2 pt-1 font-code-num text-[11px] text-on-surface-variant">
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[12px]">biotech</span>Lab. B-104</span>
+<span class="px-1 py-0.2 rounded bg-surface-container-low text-[10px]">Edif. B · N1</span>
+</div>
+</div>
+<!-- Fri -->
+<div class="p-2 rounded-lg bg-surface-container-high hover:bg-surface-dim transition-all shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-secondary text-on-secondary">CIENCIAS</span>
+<span class="material-symbols-outlined text-[14px] text-secondary">science</span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface leading-tight">Ciencias II (Física)</h4>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Dra. Elena Treviño</p>
+</div>
+<div class="flex items-center justify-between mt-2 pt-1 font-code-num text-[11px] text-on-surface-variant">
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[12px]">biotech</span>Lab. B-104</span>
+<span class="px-1 py-0.2 rounded bg-surface-container-low text-[10px]">Edif. B · N1</span>
+</div>
+</div>
+</div>
+<!-- Slot 3: 08:50 - 09:40 (Lengua Española) -->
+<div class="grid grid-cols-6 gap-2 items-stretch">
+<div class="flex flex-col justify-center px-2 py-1.5 rounded-lg bg-surface-container-low font-code-num text-code-num text-on-surface-variant">
+<span class="font-semibold text-on-surface">08:50 - 09:40</span>
+<span class="text-[11px] text-outline">50 min • Bloque 3</span>
+</div>
+<!-- Mon to Fri: Lengua Española -->
+<div class="p-2 rounded-lg bg-surface-variant/40 hover:bg-surface-variant/70 transition-all shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-tertiary-container text-surface-container-lowest">HUMANIDADES</span>
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant">auto_stories</span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface leading-tight">Lengua Española</h4>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Mtra. Sofía Morales</p>
+</div>
+<div class="flex items-center justify-between mt-2 pt-1 font-code-num text-[11px] text-on-surface-variant">
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[12px]">door_front</span>Aula 2-A</span>
+<span class="px-1 py-0.2 rounded bg-surface-container-low text-[10px]">Edif. A · N1</span>
+</div>
+</div>
+<div class="p-2 rounded-lg bg-surface-variant/40 hover:bg-surface-variant/70 transition-all shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-tertiary-container text-surface-container-lowest">HUMANIDADES</span>
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant">auto_stories</span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface leading-tight">Lengua Española</h4>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Mtra. Sofía Morales</p>
+</div>
+<div class="flex items-center justify-between mt-2 pt-1 font-code-num text-[11px] text-on-surface-variant">
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[12px]">door_front</span>Aula 2-A</span>
+<span class="px-1 py-0.2 rounded bg-surface-container-low text-[10px]">Edif. A · N1</span>
+</div>
+</div>
+<div class="p-2 rounded-lg bg-surface-variant/40 hover:bg-surface-variant/70 transition-all shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-tertiary-container text-surface-container-lowest">HUMANIDADES</span>
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant">auto_stories</span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface leading-tight">Lengua Española</h4>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Mtra. Sofía Morales</p>
+</div>
+<div class="flex items-center justify-between mt-2 pt-1 font-code-num text-[11px] text-on-surface-variant">
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[12px]">door_front</span>Aula 2-A</span>
+<span class="px-1 py-0.2 rounded bg-surface-container-low text-[10px]">Edif. A · N1</span>
+</div>
+</div>
+<div class="p-2 rounded-lg bg-surface-variant/40 hover:bg-surface-variant/70 transition-all shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-tertiary-container text-surface-container-lowest">HUMANIDADES</span>
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant">auto_stories</span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface leading-tight">Lengua Española</h4>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Mtra. Sofía Morales</p>
+</div>
+<div class="flex items-center justify-between mt-2 pt-1 font-code-num text-[11px] text-on-surface-variant">
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[12px]">door_front</span>Aula 2-A</span>
+<span class="px-1 py-0.2 rounded bg-surface-container-low text-[10px]">Edif. A · N1</span>
+</div>
+</div>
+<div class="p-2 rounded-lg bg-surface-variant/40 hover:bg-surface-variant/70 transition-all shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-tertiary-container text-surface-container-lowest">HUMANIDADES</span>
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant">auto_stories</span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface leading-tight">Lengua Española</h4>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Mtra. Sofía Morales</p>
+</div>
+<div class="flex items-center justify-between mt-2 pt-1 font-code-num text-[11px] text-on-surface-variant">
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[12px]">door_front</span>Aula 2-A</span>
+<span class="px-1 py-0.2 rounded bg-surface-container-low text-[10px]">Edif. A · N1</span>
+</div>
+</div>
+</div>
+<!-- Receso / Descanso Matutino (Franja Destacada) -->
+<div class="grid grid-cols-6 gap-2 items-center py-1">
+<div class="flex flex-col justify-center px-2 py-1 rounded-lg bg-surface-container font-code-num text-code-num text-on-surface-variant">
+<span class="font-bold text-on-surface">09:40 - 10:10</span>
+<span class="text-[11px] text-outline">30 min</span>
+</div>
+<div class="col-span-5 px-space-md py-2 rounded-lg bg-surface-container-low flex items-center justify-between text-on-surface-variant">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[20px]">local_cafe</span>
+<span class="font-label-md text-label-md text-on-surface font-semibold tracking-wide uppercase">Receso General &amp; Convivencia Escolar</span>
+</div>
+<div class="flex items-center gap-space-md font-body-sm text-body-sm text-outline">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">restaurant</span> Cafetería Central</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">park</span> Jardines y Patios</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-code-num text-code-num text-on-surface">Pausa Activa</span>
+</div>
+</div>
+</div>
+<!-- Slot 4: 10:10 - 11:00 (Historia de México) -->
+<div class="grid grid-cols-6 gap-2 items-stretch">
+<div class="flex flex-col justify-center px-2 py-1.5 rounded-lg bg-surface-container-low font-code-num text-code-num text-on-surface-variant">
+<span class="font-semibold text-on-surface">10:10 - 11:00</span>
+<span class="text-[11px] text-outline">50 min • Bloque 4</span>
+</div>
+<!-- Mon to Fri -->
+<div class="p-2 rounded-lg bg-surface-variant/30 hover:bg-surface-variant/60 transition-all shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-tertiary-container text-surface-container-lowest">HISTORIA</span>
+<span class="material-symbols-outlined text-[14px] text-outline">account_balance</span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface leading-tight">Historia de México</h4>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Lic. Carlos Fuentes</p>
+</div>
+<div class="flex items-center justify-between mt-2 pt-1 font-code-num text-[11px] text-on-surface-variant">
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[12px]">door_front</span>Aula 2-A</span>
+<span class="px-1 py-0.2 rounded bg-surface-container-low text-[10px]">Edif. A</span>
+</div>
+</div>
+<div class="p-2 rounded-lg bg-surface-variant/30 hover:bg-surface-variant/60 transition-all shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-tertiary-container text-surface-container-lowest">HISTORIA</span>
+<span class="material-symbols-outlined text-[14px] text-outline">account_balance</span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface leading-tight">Historia de México</h4>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Lic. Carlos Fuentes</p>
+</div>
+<div class="flex items-center justify-between mt-2 pt-1 font-code-num text-[11px] text-on-surface-variant">
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[12px]">door_front</span>Aula 2-A</span>
+<span class="px-1 py-0.2 rounded bg-surface-container-low text-[10px]">Edif. A</span>
+</div>
+</div>
+<div class="p-2 rounded-lg bg-surface-variant/30 hover:bg-surface-variant/60 transition-all shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-tertiary-container text-surface-container-lowest">HISTORIA</span>
+<span class="material-symbols-outlined text-[14px] text-outline">account_balance</span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface leading-tight">Historia de México</h4>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Lic. Carlos Fuentes</p>
+</div>
+<div class="flex items-center justify-between mt-2 pt-1 font-code-num text-[11px] text-on-surface-variant">
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[12px]">door_front</span>Aula 2-A</span>
+<span class="px-1 py-0.2 rounded bg-surface-container-low text-[10px]">Edif. A</span>
+</div>
+</div>
+<div class="p-2 rounded-lg bg-surface-variant/30 hover:bg-surface-variant/60 transition-all shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-tertiary-container text-surface-container-lowest">HISTORIA</span>
+<span class="material-symbols-outlined text-[14px] text-outline">account_balance</span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface leading-tight">Historia de México</h4>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Lic. Carlos Fuentes</p>
+</div>
+<div class="flex items-center justify-between mt-2 pt-1 font-code-num text-[11px] text-on-surface-variant">
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[12px]">door_front</span>Aula 2-A</span>
+<span class="px-1 py-0.2 rounded bg-surface-container-low text-[10px]">Edif. A</span>
+</div>
+</div>
+<div class="p-2 rounded-lg bg-surface-variant/30 hover:bg-surface-variant/60 transition-all shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-tertiary-container text-surface-container-lowest">HISTORIA</span>
+<span class="material-symbols-outlined text-[14px] text-outline">account_balance</span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface leading-tight">Historia de México</h4>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Lic. Carlos Fuentes</p>
+</div>
+<div class="flex items-center justify-between mt-2 pt-1 font-code-num text-[11px] text-on-surface-variant">
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[12px]">door_front</span>Aula 2-A</span>
+<span class="px-1 py-0.2 rounded bg-surface-container-low text-[10px]">Edif. A</span>
+</div>
+</div>
+</div>
+<!-- Slot 5: 11:00 - 11:50 (Inglés Avanzado B2) -->
+<div class="grid grid-cols-6 gap-2 items-stretch">
+<div class="flex flex-col justify-center px-2 py-1.5 rounded-lg bg-surface-container-low font-code-num text-code-num text-on-surface-variant">
+<span class="font-semibold text-on-surface">11:00 - 11:50</span>
+<span class="text-[11px] text-outline">50 min • Bloque 5</span>
+</div>
+<!-- Mon to Fri: Idiomas -->
+<div class="p-2 rounded-lg bg-surface-container-high hover:bg-surface-dim transition-all shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-secondary-container text-on-secondary">IDIOMAS</span>
+<span class="material-symbols-outlined text-[14px] text-secondary">translate</span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface leading-tight">Inglés Avanzado B2</h4>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Prof. David Miller</p>
+</div>
+<div class="flex items-center justify-between mt-2 pt-1 font-code-num text-[11px] text-on-surface-variant">
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[12px]">headset_mic</span>Lab. Idiomas 1</span>
+<span class="px-1 py-0.2 rounded bg-surface-container-low text-[10px]">Edif. C</span>
+</div>
+</div>
+<div class="p-2 rounded-lg bg-surface-container-high hover:bg-surface-dim transition-all shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-secondary-container text-on-secondary">IDIOMAS</span>
+<span class="material-symbols-outlined text-[14px] text-secondary">translate</span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface leading-tight">Inglés Avanzado B2</h4>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Prof. David Miller</p>
+</div>
+<div class="flex items-center justify-between mt-2 pt-1 font-code-num text-[11px] text-on-surface-variant">
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[12px]">headset_mic</span>Lab. Idiomas 1</span>
+<span class="px-1 py-0.2 rounded bg-surface-container-low text-[10px]">Edif. C</span>
+</div>
+</div>
+<div class="p-2 rounded-lg bg-surface-container-high hover:bg-surface-dim transition-all shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-secondary-container text-on-secondary">IDIOMAS</span>
+<span class="material-symbols-outlined text-[14px] text-secondary">translate</span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface leading-tight">Inglés Avanzado B2</h4>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Prof. David Miller</p>
+</div>
+<div class="flex items-center justify-between mt-2 pt-1 font-code-num text-[11px] text-on-surface-variant">
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[12px]">headset_mic</span>Lab. Idiomas 1</span>
+<span class="px-1 py-0.2 rounded bg-surface-container-low text-[10px]">Edif. C</span>
+</div>
+</div>
+<div class="p-2 rounded-lg bg-surface-container-high hover:bg-surface-dim transition-all shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-secondary-container text-on-secondary">IDIOMAS</span>
+<span class="material-symbols-outlined text-[14px] text-secondary">translate</span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface leading-tight">Inglés Avanzado B2</h4>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Prof. David Miller</p>
+</div>
+<div class="flex items-center justify-between mt-2 pt-1 font-code-num text-[11px] text-on-surface-variant">
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[12px]">headset_mic</span>Lab. Idiomas 1</span>
+<span class="px-1 py-0.2 rounded bg-surface-container-low text-[10px]">Edif. C</span>
+</div>
+</div>
+<div class="p-2 rounded-lg bg-surface-container-high hover:bg-surface-dim transition-all shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-secondary-container text-on-secondary">IDIOMAS</span>
+<span class="material-symbols-outlined text-[14px] text-secondary">translate</span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface leading-tight">Inglés Avanzado B2</h4>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Prof. David Miller</p>
+</div>
+<div class="flex items-center justify-between mt-2 pt-1 font-code-num text-[11px] text-on-surface-variant">
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[12px]">headset_mic</span>Lab. Idiomas 1</span>
+<span class="px-1 py-0.2 rounded bg-surface-container-low text-[10px]">Edif. C</span>
+</div>
+</div>
+</div>
+<!-- Slot 6: 11:50 - 12:40 (Diferenciada: Ed. Física / Artes / Tutoría) -->
+<div class="grid grid-cols-6 gap-2 items-stretch">
+<div class="flex flex-col justify-center px-2 py-1.5 rounded-lg bg-surface-container-low font-code-num text-code-num text-on-surface-variant">
+<span class="font-semibold text-on-surface">11:50 - 12:40</span>
+<span class="text-[11px] text-outline">50 min • Bloque 6</span>
+</div>
+<!-- Mon: Educación Física -->
+<div class="p-2 rounded-lg bg-surface-container hover:bg-surface-container-high transition-all shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-on-surface text-surface-container-lowest">DEPORTES</span>
+<span class="material-symbols-outlined text-[14px] text-secondary">fitness_center</span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface leading-tight">Educación Física</h4>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Prof. Manuel Garza</p>
+</div>
+<div class="flex items-center justify-between mt-2 pt-1 font-code-num text-[11px] text-on-surface-variant">
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[12px]">sports_soccer</span>Cancha Polidep.</span>
+<span class="px-1 py-0.2 rounded bg-surface-container-low text-[10px]">Exterior</span>
+</div>
+</div>
+<!-- Tue: Artes Visuales -->
+<div class="p-2 rounded-lg bg-surface-variant/40 hover:bg-surface-variant/70 transition-all shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-primary-container text-surface-container-lowest">ARTES</span>
+<span class="material-symbols-outlined text-[14px] text-secondary">palette</span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface leading-tight">Artes Visuales</h4>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Mtra. Lorena Castro</p>
+</div>
+<div class="flex items-center justify-between mt-2 pt-1 font-code-num text-[11px] text-on-surface-variant">
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[12px]">brush</span>Taller de Arte</span>
+<span class="px-1 py-0.2 rounded bg-surface-container-low text-[10px]">Edif. D</span>
+</div>
+</div>
+<!-- Wed: Educación Física -->
+<div class="p-2 rounded-lg bg-surface-container hover:bg-surface-container-high transition-all shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-on-surface text-surface-container-lowest">DEPORTES</span>
+<span class="material-symbols-outlined text-[14px] text-secondary">fitness_center</span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface leading-tight">Educación Física</h4>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Prof. Manuel Garza</p>
+</div>
+<div class="flex items-center justify-between mt-2 pt-1 font-code-num text-[11px] text-on-surface-variant">
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[12px]">sports_soccer</span>Cancha Polidep.</span>
+<span class="px-1 py-0.2 rounded bg-surface-container-low text-[10px]">Exterior</span>
+</div>
+</div>
+<!-- Thu: Artes Visuales -->
+<div class="p-2 rounded-lg bg-surface-variant/40 hover:bg-surface-variant/70 transition-all shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-primary-container text-surface-container-lowest">ARTES</span>
+<span class="material-symbols-outlined text-[14px] text-secondary">palette</span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface leading-tight">Artes Visuales</h4>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Mtra. Lorena Castro</p>
+</div>
+<div class="flex items-center justify-between mt-2 pt-1 font-code-num text-[11px] text-on-surface-variant">
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[12px]">brush</span>Taller de Arte</span>
+<span class="px-1 py-0.2 rounded bg-surface-container-low text-[10px]">Edif. D</span>
+</div>
+</div>
+<!-- Fri: Tutoría Grupal -->
+<div class="p-2 rounded-lg bg-surface-container-high hover:bg-surface-dim transition-all shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-secondary text-on-secondary">TUTORÍA</span>
+<span class="material-symbols-outlined text-[14px] text-secondary">psychology</span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface leading-tight">Tutoría &amp; Orientación</h4>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Mtra. Patricia Lozano</p>
+</div>
+<div class="flex items-center justify-between mt-2 pt-1 font-code-num text-[11px] text-on-surface-variant">
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[12px]">door_front</span>Aula 2-A</span>
+<span class="px-1 py-0.2 rounded bg-surface-container-low text-[10px]">Edif. A</span>
+</div>
+</div>
+</div>
+<!-- Slot 7: 12:40 - 13:30 (Formación Cívica y Ética) -->
+<div class="grid grid-cols-6 gap-2 items-stretch">
+<div class="flex flex-col justify-center px-2 py-1.5 rounded-lg bg-surface-container-low font-code-num text-code-num text-on-surface-variant">
+<span class="font-semibold text-on-surface">12:40 - 13:30</span>
+<span class="text-[11px] text-outline">50 min • Bloque 7</span>
+</div>
+<!-- Mon to Fri -->
+<div class="p-2 rounded-lg bg-surface-variant/30 hover:bg-surface-variant/60 transition-all shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-primary-container text-surface-container-lowest">CÍVICA</span>
+<span class="material-symbols-outlined text-[14px] text-secondary">gavel</span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface leading-tight">Formación Cívica</h4>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Mtra. Patricia Lozano</p>
+</div>
+<div class="flex items-center justify-between mt-2 pt-1 font-code-num text-[11px] text-on-surface-variant">
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[12px]">door_front</span>Aula 2-A</span>
+<span class="px-1 py-0.2 rounded bg-surface-container-low text-[10px]">Edif. A</span>
+</div>
+</div>
+<div class="p-2 rounded-lg bg-surface-variant/30 hover:bg-surface-variant/60 transition-all shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-primary-container text-surface-container-lowest">CÍVICA</span>
+<span class="material-symbols-outlined text-[14px] text-secondary">gavel</span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface leading-tight">Formación Cívica</h4>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Mtra. Patricia Lozano</p>
+</div>
+<div class="flex items-center justify-between mt-2 pt-1 font-code-num text-[11px] text-on-surface-variant">
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[12px]">door_front</span>Aula 2-A</span>
+<span class="px-1 py-0.2 rounded bg-surface-container-low text-[10px]">Edif. A</span>
+</div>
+</div>
+<div class="p-2 rounded-lg bg-surface-variant/30 hover:bg-surface-variant/60 transition-all shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-primary-container text-surface-container-lowest">CÍVICA</span>
+<span class="material-symbols-outlined text-[14px] text-secondary">gavel</span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface leading-tight">Formación Cívica</h4>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Mtra. Patricia Lozano</p>
+</div>
+<div class="flex items-center justify-between mt-2 pt-1 font-code-num text-[11px] text-on-surface-variant">
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[12px]">door_front</span>Aula 2-A</span>
+<span class="px-1 py-0.2 rounded bg-surface-container-low text-[10px]">Edif. A</span>
+</div>
+</div>
+<div class="p-2 rounded-lg bg-surface-variant/30 hover:bg-surface-variant/60 transition-all shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-primary-container text-surface-container-lowest">CÍVICA</span>
+<span class="material-symbols-outlined text-[14px] text-secondary">gavel</span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface leading-tight">Formación Cívica</h4>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Mtra. Patricia Lozano</p>
+</div>
+<div class="flex items-center justify-between mt-2 pt-1 font-code-num text-[11px] text-on-surface-variant">
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[12px]">door_front</span>Aula 2-A</span>
+<span class="px-1 py-0.2 rounded bg-surface-container-low text-[10px]">Edif. A</span>
+</div>
+</div>
+<div class="p-2 rounded-lg bg-surface-variant/30 hover:bg-surface-variant/60 transition-all shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-primary-container text-surface-container-lowest">CÍVICA</span>
+<span class="material-symbols-outlined text-[14px] text-secondary">gavel</span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface leading-tight">Formación Cívica</h4>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Mtra. Patricia Lozano</p>
+</div>
+<div class="flex items-center justify-between mt-2 pt-1 font-code-num text-[11px] text-on-surface-variant">
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[12px]">door_front</span>Aula 2-A</span>
+<span class="px-1 py-0.2 rounded bg-surface-container-low text-[10px]">Edif. A</span>
+</div>
+</div>
+</div>
+<!-- Slot 8: 13:30 - 14:20 (Taller de Robótica & Tecnología) -->
+<div class="grid grid-cols-6 gap-2 items-stretch">
+<div class="flex flex-col justify-center px-2 py-1.5 rounded-lg bg-surface-container-low font-code-num text-code-num text-on-surface-variant">
+<span class="font-semibold text-on-surface">13:30 - 14:20</span>
+<span class="text-[11px] text-outline">50 min • Bloque 8</span>
+</div>
+<!-- Mon to Fri: STEM -->
+<div class="p-2 rounded-lg bg-surface-container-high hover:bg-surface-dim transition-all shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-secondary-container text-on-secondary">STEM</span>
+<span class="material-symbols-outlined text-[14px] text-secondary">smart_toy</span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface leading-tight">Robótica &amp; Tec.</h4>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Ing. Arturo Ruiz</p>
+</div>
+<div class="flex items-center justify-between mt-2 pt-1 font-code-num text-[11px] text-on-surface-variant">
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[12px]">precision_manufacturing</span>Taller STEM</span>
+<span class="px-1 py-0.2 rounded bg-surface-container-low text-[10px]">Edif. B</span>
+</div>
+</div>
+<div class="p-2 rounded-lg bg-surface-container-high hover:bg-surface-dim transition-all shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-secondary-container text-on-secondary">STEM</span>
+<span class="material-symbols-outlined text-[14px] text-secondary">smart_toy</span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface leading-tight">Robótica &amp; Tec.</h4>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Ing. Arturo Ruiz</p>
+</div>
+<div class="flex items-center justify-between mt-2 pt-1 font-code-num text-[11px] text-on-surface-variant">
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[12px]">precision_manufacturing</span>Taller STEM</span>
+<span class="px-1 py-0.2 rounded bg-surface-container-low text-[10px]">Edif. B</span>
+</div>
+</div>
+<div class="p-2 rounded-lg bg-surface-container-high hover:bg-surface-dim transition-all shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-secondary-container text-on-secondary">STEM</span>
+<span class="material-symbols-outlined text-[14px] text-secondary">smart_toy</span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface leading-tight">Robótica &amp; Tec.</h4>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Ing. Arturo Ruiz</p>
+</div>
+<div class="flex items-center justify-between mt-2 pt-1 font-code-num text-[11px] text-on-surface-variant">
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[12px]">precision_manufacturing</span>Taller STEM</span>
+<span class="px-1 py-0.2 rounded bg-surface-container-low text-[10px]">Edif. B</span>
+</div>
+</div>
+<div class="p-2 rounded-lg bg-surface-container-high hover:bg-surface-dim transition-all shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-secondary-container text-on-secondary">STEM</span>
+<span class="material-symbols-outlined text-[14px] text-secondary">smart_toy</span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface leading-tight">Robótica &amp; Tec.</h4>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Ing. Arturo Ruiz</p>
+</div>
+<div class="flex items-center justify-between mt-2 pt-1 font-code-num text-[11px] text-on-surface-variant">
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[12px]">precision_manufacturing</span>Taller STEM</span>
+<span class="px-1 py-0.2 rounded bg-surface-container-low text-[10px]">Edif. B</span>
+</div>
+</div>
+<div class="p-2 rounded-lg bg-surface-container-high hover:bg-surface-dim transition-all shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-1">
+<span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-secondary-container text-on-secondary">STEM</span>
+<span class="material-symbols-outlined text-[14px] text-secondary">smart_toy</span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface leading-tight">Robótica &amp; Tec.</h4>
+<p class="font-body-sm text-[12px] text-on-surface-variant">Ing. Arturo Ruiz</p>
+</div>
+<div class="flex items-center justify-between mt-2 pt-1 font-code-num text-[11px] text-on-surface-variant">
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[12px]">precision_manufacturing</span>Taller STEM</span>
+<span class="px-1 py-0.2 rounded bg-surface-container-low text-[10px]">Edif. B</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Matrix Legend Footer -->
+<div class="mt-space-md pt-space-sm border-t-0 bg-surface-container-low/40 rounded-lg p-space-sm flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex flex-wrap items-center gap-space-md font-label-xs text-label-xs text-on-surface-variant">
+<span class="text-on-surface font-semibold">Áreas Formativas:</span>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span>Ciencias Exactas &amp; Naturales</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary-container"></span>
+<span>Humanidades e Historia</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container"></span>
+<span>Matemáticas</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-on-surface"></span>
+<span>Deportes y Salud</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary-container"></span>
+<span>Lenguas Extranjeras &amp; STEM</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs font-code-num text-code-num text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-secondary">lock</span>
+<span>Planificación Aprobada y Bloqueada</span>
+</div>
+</div>
+</div>
+<!-- Right Analytics & Operational Resumen Panel (3 Columns) -->
+<div class="xl:col-span-3 flex flex-col gap-space-md">
+<!-- Summary Card -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm">
+<div class="flex items-center justify-between pb-space-sm border-b border-surface-container">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Recursos Asignados</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Auditoría en tiempo real</p>
+</div>
+<span class="material-symbols-outlined text-secondary text-[24px]">tune</span>
+</div>
+<div class="mt-space-md flex flex-col gap-space-sm">
+<!-- Metric 1: Docentes -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">badge</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">8 Profesores</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Sin colisión de horarios</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[18px] text-secondary">check_circle</span>
+</div>
+<!-- Metric 2: Aulas -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">apartment</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">4 Espacios Físicos</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Aulas &amp; Labs optimizados</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[18px] text-secondary">check_circle</span>
+</div>
+<!-- Metric 3: Huecos / Horas Muertas -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">timelapse</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">0 Horas Muertas</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Continuidad pedagógica</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[18px] text-secondary">check_circle</span>
+</div>
+<!-- Metric 4: Ratio de Ocupación -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-space-2xs">
+<div class="flex items-center justify-between">
+<span class="font-label-xs text-label-xs text-on-surface-variant">Eficiencia Espacial</span>
+<span class="font-code-num text-code-num font-bold text-secondary">98.2%</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 98.2%;"></div>
+</div>
+</div>
+</div>
+<!-- Smart IA Distribution Button -->
+<button class="mt-space-md w-full h-11 px-space-md rounded-lg bg-primary-container text-surface-container-lowest hover:bg-tertiary-container font-label-md text-label-md flex items-center justify-center gap-space-sm shadow-md transition-all group">
+<span class="material-symbols-outlined text-[20px] text-secondary-fixed group-hover:rotate-12 transition-transform">auto_awesome</span>
+<span>Generar Distribución con IA</span>
+</button>
+</div>
+<!-- Operational Status / Warnings Card -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Validación de Período</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-code-num text-code-num text-secondary font-bold">Activo</span>
+</div>
+<div class="flex items-start gap-space-sm p-space-sm rounded-lg bg-surface-container-low text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[20px] mt-0.5">verified_user</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-semibold">Validado por Secretaría Académica</span>
+<p class="font-body-sm text-[12px] text-on-surface-variant mt-0.5">
+                La malla actual no presenta traslapes con docentes de planta ni con laboratorios compartidos en el campus.
+              </p>
+</div>
+</div>
+<!-- Quick Action Links -->
+<div class="pt-space-xs flex flex-col gap-1.5 font-label-sm text-label-sm">
+<a class="flex items-center justify-between p-2 rounded-lg hover:bg-surface-container transition-colors text-on-surface" href="#">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">person_search</span>
+                Disponibilidad de Suplentes
+              </span>
+<span class="material-symbols-outlined text-[16px] text-outline">chevron_right</span>
+</a>
+<a class="flex items-center justify-between p-2 rounded-lg hover:bg-surface-container transition-colors text-on-surface" href="#">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">history_toggle_off</span>
+                Bitácora de Reubicaciones
+              </span>
+<span class="material-symbols-outlined text-[16px] text-outline">chevron_right</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></main></div><script src="../assets/js/app.js"></script></body></html>

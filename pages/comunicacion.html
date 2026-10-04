@@ -1,0 +1,731 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Centro de Comunicación · SAE.cloud</title><link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet"><script src="https://cdn.tailwindcss.com"></script><script src="../assets/js/tailwind-config.js"></script><link rel="stylesheet" href="../assets/css/app.css"></head><body class="bg-surface font-body-md text-on-surface antialiased" data-page="comunicacion"><main class="w-full pt-16 bg-surface"><div class="flex flex-col w-full">
+<div class="p-space-margin flex flex-col gap-space-xl">
+<!-- Header & Breadcrumbs Area -->
+<div class="flex flex-col xl:flex-row xl:items-end justify-between gap-space-lg">
+<div class="flex flex-col gap-space-2xs">
+<div class="flex items-center gap-space-xs font-label-xs text-label-xs uppercase tracking-wider text-outline">
+<span class="hover:text-secondary cursor-pointer transition-colors">Comunicación &amp; Gobernanza</span>
+<span class="material-symbols-outlined text-[12px]">chevron_right</span>
+<span class="text-secondary font-bold">Centro de Avisos y Auditoría</span>
+</div>
+<div class="flex items-center gap-space-sm mt-space-2xs">
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">Centro de Comunicación Oficial y Bitácora Forense de Seguridad</h1>
+<span class="px-space-xs py-space-2xs rounded-full bg-secondary-container/10 text-secondary font-label-xs text-label-xs flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+            NOM-151 Certificado
+          </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-4xl">
+          Emisión omnicanal (App móvil de tutores, Portal web, Correo institucional, SMS/WhatsApp) y trazabilidad bajo norma NOM-151 con sellado criptográfico de inmutabilidad.
+        </p>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="h-9 px-space-md rounded-lg bg-surface-container text-on-surface font-label-md text-label-md flex items-center gap-space-2xs hover:bg-surface-variant transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px] text-outline">dns</span>
+<span>Configurar Servidores SMTP/SMS</span>
+</button>
+<button class="h-9 px-space-md rounded-lg bg-surface-container text-on-surface font-label-md text-label-md flex items-center gap-space-2xs hover:bg-surface-variant transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px] text-secondary">file_download</span>
+<span>Exportar Bitácora (CSV/PDF)</span>
+</button>
+<button class="h-9 px-space-lg rounded-lg bg-secondary text-on-secondary font-label-md text-label-md flex items-center gap-space-2xs hover:bg-secondary-container transition-all shadow-md" id="open-composer-btn">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>Redactar Comunicado Oficial</span>
+</button>
+</div>
+</div>
+<!-- Navigation Tabs / Module Switcher -->
+<div class="flex items-center justify-between border-b border-surface-container-high">
+<div class="flex items-center gap-space-md" id="main-tab-bar">
+<button class="px-space-md py-space-sm font-label-md text-label-md text-secondary border-b-2 border-secondary flex items-center gap-space-xs transition-all relative">
+<span class="material-symbols-outlined text-[18px]">campaign</span>
+<span>Comunicados y Avisos Institucionales</span>
+<span class="px-space-xs py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-code-num text-[11px] font-bold">14</span>
+</button>
+<button class="px-space-md py-space-sm font-label-md text-label-md text-on-surface-variant hover:text-on-surface border-b-2 border-transparent flex items-center gap-space-xs transition-all">
+<span class="material-symbols-outlined text-[18px]">security_update_good</span>
+<span>Bitácora de Auditoría y Trazabilidad de Usuarios</span>
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+</button>
+<button class="px-space-md py-space-sm font-label-md text-label-md text-on-surface-variant hover:text-on-surface border-b-2 border-transparent flex items-center gap-space-xs transition-all">
+<span class="material-symbols-outlined text-[18px]">quickreply</span>
+<span>Plantillas y Mensajería Transaccional</span>
+</button>
+</div>
+<div class="hidden xl:flex items-center gap-space-sm text-outline font-label-xs text-label-xs pb-space-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified_user</span>
+<span>SHA-256 Ledger Time-Stamp Active: 2025-03-30T10:48:12.891Z</span>
+</div>
+</div>
+<!-- Top Analytical / Status Pulse Strip -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-gutter">
+<!-- KPI 1 -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Tasa de Apertura Global</span>
+<span class="px-space-xs py-0.5 rounded-full bg-surface-container-low text-secondary font-label-xs text-label-xs font-bold">+4.2% vs ciclo ant.</span>
+</div>
+<div class="flex items-baseline justify-between">
+<div class="flex items-baseline gap-space-2xs">
+<span class="font-headline-xl text-[28px] leading-none font-bold text-on-surface">94.8%</span>
+<span class="font-label-xs text-label-xs text-outline">omnicanal</span>
+</div>
+<svg class="w-20 h-6 text-secondary" fill="none" viewbox="0 0 100 30">
+<path d="M0 25 Q 25 22, 50 12 T 100 4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2.5"></path>
+</svg>
+</div>
+<div class="flex items-center gap-space-xs text-outline font-code-num text-code-num">
+<span class="material-symbols-outlined text-[14px] text-secondary">mark_email_read</span>
+<span>8,421 mensajes entregados este mes</span>
+</div>
+</div>
+<!-- KPI 2 -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Avisos de Emergencia</span>
+<span class="px-space-xs py-0.5 rounded-full bg-surface-container-low text-on-surface font-label-xs text-label-xs">0 activos</span>
+</div>
+<div class="flex items-baseline justify-between">
+<div class="flex items-baseline gap-space-2xs">
+<span class="font-headline-xl text-[28px] leading-none font-bold text-on-surface">100%</span>
+<span class="font-label-xs text-label-xs text-outline">efectividad SMS</span>
+</div>
+<div class="w-8 h-8 rounded-lg bg-surface-container-low flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">cell_tower</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs text-outline font-code-num text-code-num">
+<span class="material-symbols-outlined text-[14px]">bolt</span>
+<span>Latencia media: 1.4s por push</span>
+</div>
+</div>
+<!-- KPI 3 -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Eventos Auditados Hoy</span>
+<span class="px-space-xs py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-code-num text-label-xs font-bold">+148 nuevos</span>
+</div>
+<div class="flex items-baseline justify-between">
+<div class="flex items-baseline gap-space-2xs">
+<span class="font-headline-xl text-[28px] leading-none font-bold text-on-surface">1,829</span>
+<span class="font-label-xs text-label-xs text-outline">trazas NOM-151</span>
+</div>
+<span class="material-symbols-outlined text-[24px] text-secondary">enhanced_encryption</span>
+</div>
+<div class="flex items-center gap-space-xs text-outline font-code-num text-code-num">
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+<span>Integridad de Bloques: 100% Válida</span>
+</div>
+</div>
+<!-- KPI 4 -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Sesiones Activas de Personal</span>
+<span class="px-space-xs py-0.5 rounded-full bg-surface-container-low text-secondary font-label-xs text-label-xs">En tiempo real</span>
+</div>
+<div class="flex items-baseline justify-between">
+<div class="flex items-baseline gap-space-2xs">
+<span class="font-headline-xl text-[28px] leading-none font-bold text-on-surface">42</span>
+<span class="font-label-xs text-label-xs text-outline">usuarios autorizados</span>
+</div>
+<div class="flex -space-x-2">
+<div class="w-7 h-7 rounded-full bg-surface-variant flex items-center justify-center font-bold text-label-xs text-on-surface border-2 border-surface-container-lowest">LS</div>
+<div class="w-7 h-7 rounded-full bg-secondary-fixed flex items-center justify-center font-bold text-label-xs text-on-secondary-fixed border-2 border-surface-container-lowest">RM</div>
+<div class="w-7 h-7 rounded-full bg-surface-container flex items-center justify-center font-bold text-label-xs text-on-surface border-2 border-surface-container-lowest">AD</div>
+</div>
+</div>
+<div class="flex items-center gap-space-xs text-outline font-code-num text-code-num">
+<span class="material-symbols-outlined text-[14px] text-secondary">lan</span>
+<span>Red institucional privada activa</span>
+</div>
+</div>
+</div>
+<!-- MAIN TWO-COLUMN WORKSPACE: Emission Panel + Active Broadcasts -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-gutter items-start">
+<!-- Panel de Emisión de Comunicados (Col 1-5) -->
+<div class="lg:col-span-5 flex flex-col gap-space-md bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="flex items-center justify-between pb-space-sm border-b border-surface-container">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-low flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">outgoing_mail</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-on-surface">Redactor Oficial Certificado</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Generación de comunicado institucional omnicanal</span>
+</div>
+</div>
+<span class="px-space-xs py-space-2xs rounded bg-surface-container font-code-num text-[11px] text-on-surface-variant">FOLIO-COM-2025-089</span>
+</div>
+<!-- Audience Selector -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface flex items-center justify-between">
+<span>Audiencia Segmentada Destino <span class="text-error">*</span></span>
+<span class="font-label-xs text-label-xs text-secondary cursor-pointer hover:underline">Gestionar Cohortes</span>
+</label>
+<div class="relative">
+<select class="w-full h-9 pl-space-md pr-8 rounded-lg bg-surface-container-low text-on-surface font-body-sm text-body-sm appearance-none focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-secondary/40 transition-all cursor-pointer">
+<option value="all-tutors">Todos los Tutores Legales (1,482 receptores activos)</option>
+<option value="teachers-sec">Cuerpo Docente de Nivel Secundaria (38 profesores)</option>
+<option value="honors">Alumnos con Excelencia Académica (Promedio &gt; 9.0) y Tutores</option>
+<option value="debt-30">Padres con Adeudo Colegiatura &gt; 30 días (124 registros)</option>
+<option value="campus-staff">Personal Administrativo y de Apoyo - Campus Central</option>
+</select>
+<span class="material-symbols-outlined absolute right-space-sm top-1/2 -translate-y-1/2 text-outline pointer-events-none text-[18px]">unfold_more</span>
+</div>
+</div>
+<!-- Distribution Channels Checkboxes -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface">Canales de Notificación Simultáneos</label>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-xs">
+<label class="flex items-center gap-space-xs p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors">
+<input checked="" class="w-4 h-4 rounded text-secondary focus:ring-secondary" type="checkbox"/>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface">App SAE</span>
+<span class="font-label-xs text-[10px] text-outline">Push Inmediato</span>
+</div>
+</label>
+<label class="flex items-center gap-space-xs p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors">
+<input checked="" class="w-4 h-4 rounded text-secondary focus:ring-secondary" type="checkbox"/>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface">Email Oficial</span>
+<span class="font-label-xs text-[10px] text-outline">Con Acuse Cifrado</span>
+</div>
+</label>
+<label class="flex items-center gap-space-xs p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors">
+<input class="w-4 h-4 rounded text-secondary focus:ring-secondary" type="checkbox"/>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface">WhatsApp API</span>
+<span class="font-label-xs text-[10px] text-outline">Plantilla HSM</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Subject Input -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-label-sm text-label-sm text-on-surface">Asunto / Título del Aviso <span class="text-error">*</span></label>
+<input class="w-full h-9 px-space-md rounded-lg bg-surface-container-low text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-secondary/40 transition-all" placeholder="Ej: Convocatoria a Sesión Extraordinaria de Consejo Académico" type="text"/>
+</div>
+<!-- Body Message Area -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<label class="font-label-sm text-label-sm text-on-surface">Cuerpo del Comunicado</label>
+<div class="flex items-center gap-1 text-outline">
+<button class="w-6 h-6 rounded flex items-center justify-center hover:bg-surface-container text-on-surface-variant"><span class="material-symbols-outlined text-[16px]">format_bold</span></button>
+<button class="w-6 h-6 rounded flex items-center justify-center hover:bg-surface-container text-on-surface-variant"><span class="material-symbols-outlined text-[16px]">format_italic</span></button>
+<button class="w-6 h-6 rounded flex items-center justify-center hover:bg-surface-container text-on-surface-variant"><span class="material-symbols-outlined text-[16px]">link</span></button>
+<button class="w-6 h-6 rounded flex items-center justify-center hover:bg-surface-container text-on-surface-variant"><span class="material-symbols-outlined text-[16px]">attach_file</span></button>
+</div>
+</div>
+<textarea class="w-full p-space-md rounded-lg bg-surface-container-low text-on-surface placeholder:text-outline font-body-sm text-body-sm resize-none focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-secondary/40 transition-all" placeholder="Escriba aquí las instrucciones oficiales. La firma digital de Rectoría y el sello de tiempo NOM-151 se anexarán automáticamente al pie de página..." rows="4"></textarea>
+</div>
+<!-- Metadata & Actions -->
+<div class="p-space-sm rounded-lg bg-surface-container-low/60 flex items-center justify-between text-outline font-label-xs text-label-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified</span>
+<span>Firma Digital: Carmen Valenzuela (Directora General)</span>
+</div>
+<span class="font-code-num text-code-num text-on-surface-variant">Acuse Requerido: SÍ</span>
+</div>
+<div class="flex items-center justify-end gap-space-sm pt-space-xs">
+<button class="h-9 px-space-md rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-variant transition-colors">
+            Guardar Borrador
+          </button>
+<button class="h-9 px-space-lg rounded-lg bg-secondary text-on-secondary font-label-md text-label-md flex items-center gap-space-2xs hover:bg-secondary-container transition-all shadow-sm">
+<span class="material-symbols-outlined text-[18px]">send</span>
+<span>Emitir y Timbrar Comunicado</span>
+</button>
+</div>
+</div>
+<!-- Lista de Comunicados Recientes con Métricas de Entrega (Col 6-12) -->
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<div class="flex items-center justify-between px-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-md text-headline-md text-on-surface">Emisiones Oficiales Recientes</span>
+<span class="font-label-xs text-label-xs text-outline">(Monitoreo en vivo)</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="p-1.5 rounded-lg bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+</button>
+<button class="p-1.5 rounded-lg bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">refresh</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col gap-space-md">
+<!-- Card 1: Junta de Entrega de Boletas -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-md hover:shadow-md transition-shadow">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="w-3 h-3 rounded-full bg-secondary-container"></span>
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">Convocatoria a Junta de Entrega de Boletas - 2° Trimestre</span>
+</div>
+<div class="flex items-center gap-space-2xs">
+<span class="px-space-xs py-0.5 rounded-full bg-surface-container text-secondary font-label-xs text-label-xs font-bold uppercase tracking-wider">Publicado &amp; Activo</span>
+</div>
+</div>
+<!-- Meta info chips -->
+<div class="flex flex-wrap items-center gap-x-space-md gap-y-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-outline">group</span>
+<span>Enviado a <strong class="text-on-surface font-semibold">1,482 tutores</strong></span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-outline">schedule</span>
+<span class="font-code-num text-code-num">29 Mar 2025, 14:30 hrs</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-outline">devices</span>
+<span>App Push + Correo con Acuse</span>
+</div>
+</div>
+<!-- Metric Progress Bar -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-space-2xs">
+<div class="flex items-center justify-between font-label-xs text-label-xs">
+<span class="text-on-surface-variant">Tasa de Entrega y Apertura Efectiva</span>
+<span class="font-code-num text-code-num font-bold text-secondary">96.4% Confirmado (1,429 de 1,482)</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden flex">
+<div class="bg-secondary-container h-full rounded-full" style="width: 96.4%"></div>
+</div>
+<div class="flex items-center justify-between text-[11px] text-outline font-code-num">
+<span>32 confirmaciones pendientes de firma</span>
+<span class="text-secondary font-medium hover:underline cursor-pointer">Enviar recordatorio urgente</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs border-t border-surface-container">
+<div class="flex items-center gap-space-xs text-outline font-label-xs text-label-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary">fingerprint</span>
+<span class="font-code-num text-code-num">HASH-NOM: e8c44...a9f1b</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="h-8 px-space-sm rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-surface-variant transition-colors">
+                  Descargar Acuses
+                </button>
+<button class="h-8 px-space-sm rounded-lg bg-secondary text-on-secondary font-label-sm text-label-sm hover:bg-secondary-container transition-colors">
+                  Ver Bitácora de Lectura
+                </button>
+</div>
+</div>
+</div>
+<!-- Card 2: CTE Ordinario -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-md hover:shadow-md transition-shadow">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="w-3 h-3 rounded-full bg-secondary"></span>
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">Aviso de Suspensión por Consejo Técnico Escolar (CTE Ordinario)</span>
+</div>
+<div class="flex items-center gap-space-2xs">
+<span class="px-space-xs py-0.5 rounded-full bg-surface-container text-on-surface font-label-xs text-label-xs font-bold uppercase tracking-wider">Publicado Institucional</span>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-x-space-md gap-y-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-outline">hub</span>
+<span>Comunidad Completa (<strong class="text-on-surface font-semibold">2,150 usuarios</strong>)</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-outline">schedule</span>
+<span class="font-code-num text-code-num">27 Mar 2025, 09:15 hrs</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-outline">podcasts</span>
+<span>Banner Portal Web + App Push</span>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-space-2xs">
+<div class="flex items-center justify-between font-label-xs text-label-xs">
+<span class="text-on-surface-variant">Tasa de Recepción Técnica</span>
+<span class="font-code-num text-code-num font-bold text-secondary">100.0% Entrega Completa (0 rebotes)</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden flex">
+<div class="bg-secondary h-full rounded-full" style="width: 100%"></div>
+</div>
+<div class="flex items-center justify-between text-[11px] text-outline font-code-num">
+<span>Difusión pasiva y activa finalizada con éxito</span>
+<span class="text-outline">Sin acciones pendientes</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs border-t border-surface-container">
+<div class="flex items-center gap-space-xs text-outline font-label-xs text-label-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary">fingerprint</span>
+<span class="font-code-num text-code-num">HASH-NOM: 7bc92...d81ef</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="h-8 px-space-sm rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-surface-variant transition-colors">
+                  Auditar Alcance
+                </button>
+</div>
+</div>
+</div>
+<!-- Card 3: Recordatorio Colegiatura Morosos -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-md hover:shadow-md transition-shadow">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<span class="w-3 h-3 rounded-full bg-error"></span>
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">Recordatorio de Pago de Colegiatura con Recargos Marzo 2025</span>
+</div>
+<div class="flex items-center gap-space-2xs">
+<span class="px-space-xs py-0.5 rounded-full bg-error-container text-on-error-container font-label-xs text-label-xs font-bold uppercase tracking-wider">Segmentado Cobranza</span>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-x-space-md gap-y-space-xs text-on-surface-variant font-body-sm text-body-sm">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-error">priority_high</span>
+<span>Segmento moroso (<strong class="text-on-surface font-semibold">124 tutores</strong>)</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-outline">schedule</span>
+<span class="font-code-num text-code-num">25 Mar 2025, 11:00 hrs</span>
+</div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-outline">send_and_archive</span>
+<span>WhatsApp API + Email Requerimiento</span>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-space-2xs">
+<div class="flex items-center justify-between font-label-xs text-label-xs">
+<span class="text-on-surface-variant">Tasa de Lectura Directa</span>
+<span class="font-code-num text-code-num font-bold text-on-surface">89.0% Lectura Verificada (110 leídos)</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden flex">
+<div class="bg-secondary-container h-full rounded-full" style="width: 89%"></div>
+</div>
+<div class="flex items-center justify-between text-[11px] text-outline font-code-num">
+<span>14 mensajes entregados sin lectura aún</span>
+<span class="text-secondary font-medium hover:underline cursor-pointer">Reintentar vía SMS</span>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs border-t border-surface-container">
+<div class="flex items-center gap-space-xs text-outline font-label-xs text-label-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary">fingerprint</span>
+<span class="font-code-num text-code-num">HASH-NOM: fa421...33d10</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="h-8 px-space-sm rounded-lg bg-surface-container text-on-surface font-label-sm text-label-sm hover:bg-surface-variant transition-colors">
+                  Bitácora de Entrega
+                </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- SECCIÓN DE AUDITORÍA FORENSE Y MONITOREO DE SEGURIDAD -->
+<div class="flex flex-col gap-space-md bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<!-- Forensic Header & Cryptographic Integrity Banner -->
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-md pb-space-sm border-b border-surface-container">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-primary-container text-surface-container-lowest flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">policy</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-sm">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Bitácora Forense de Seguridad y Trazabilidad Operativa</h2>
+<span class="px-space-xs py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-code-num text-label-xs font-bold">NOM-151 COMPLIANT</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+              Registro inmutable de transacciones críticas del personal administrativo y docente. Cada evento está sellado con clave criptográfica asimétrica.
+            </p>
+</div>
+</div>
+<!-- Security Proof Seal -->
+<div class="flex items-center gap-space-sm p-space-sm rounded-lg bg-surface-container-low">
+<div class="w-2.5 h-2.5 rounded-full bg-secondary animate-ping"></div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Registros Criptográficamente Sellados</span>
+<span class="font-label-xs text-label-xs text-outline">Sin alteraciones retroactivas detectadas</span>
+</div>
+<span class="material-symbols-outlined text-[20px] text-secondary ml-space-xs">verified</span>
+</div>
+</div>
+<!-- Filters & Search Toolbar -->
+<div class="flex flex-wrap items-center justify-between gap-space-md py-space-2xs">
+<div class="flex flex-wrap items-center gap-space-sm flex-1 max-w-3xl">
+<div class="relative flex-1 min-w-[240px]">
+<span class="material-symbols-outlined absolute left-space-sm top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span>
+<input class="w-full h-8 pl-8 pr-4 rounded-lg bg-surface-container-low text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none focus:ring-1 focus:ring-secondary" placeholder="Filtrar por usuario, IP, módulo o fragmento de hash..." type="text"/>
+</div>
+<select class="h-8 px-space-sm rounded-lg bg-surface-container-low text-on-surface font-label-sm text-label-sm border-none focus:ring-1 focus:ring-secondary cursor-pointer">
+<option>Todos los Módulos</option>
+<option>Calificaciones</option>
+<option>Expedientes</option>
+<option>Finanzas</option>
+<option>Asignación de Grupos</option>
+<option>Asistencia</option>
+</select>
+<select class="h-8 px-space-sm rounded-lg bg-surface-container-low text-on-surface font-label-sm text-label-sm border-none focus:ring-1 focus:ring-secondary cursor-pointer">
+<option>Últimas 24 Horas</option>
+<option>Ciclo Escolar Vigente</option>
+<option>Auditoría Mensual</option>
+<option>Rango Personalizado</option>
+</select>
+</div>
+<div class="flex items-center gap-space-xs font-code-num text-code-num text-outline">
+<span>Mostrando 4 de 1,829 eventos hoy</span>
+</div>
+</div>
+<!-- High-Density Forensic Data Table -->
+<div class="w-full overflow-x-auto rounded-lg bg-surface-container-lowest">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="h-10 bg-surface-container-low font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">
+<th class="px-space-md py-space-xs">Fecha y Marca Temporal</th>
+<th class="px-space-md py-space-xs">Usuario Responsable</th>
+<th class="px-space-md py-space-xs">Módulo Operativo</th>
+<th class="px-space-md py-space-xs">Acción Realizada / Transacción</th>
+<th class="px-space-md py-space-xs">Dirección IP y Dispositivo</th>
+<th class="px-space-md py-space-xs text-right">Hash Criptográfico NOM-151</th>
+<th class="px-space-sm py-space-xs text-center w-12"></th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container">
+<!-- Row 1: Calificaciones -->
+<tr class="h-12 hover:bg-surface-container-low/50 transition-colors group">
+<td class="px-space-md py-space-xs font-code-num text-code-num text-on-surface whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-semibold">30 Mar 2025</span>
+<span class="text-outline text-[11px]">10:42:18.412 CST</span>
+</div>
+</td>
+<td class="px-space-md py-space-xs whitespace-nowrap">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-full bg-surface-variant text-on-surface font-bold text-label-xs flex items-center justify-center">
+                    LS
+                  </div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Mtra. Laura Silva</span>
+<span class="font-label-xs text-[11px] text-on-surface-variant">Jefatura de Control Escolar</span>
+</div>
+</div>
+</td>
+<td class="px-space-md py-space-xs whitespace-nowrap">
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-on-surface font-label-xs text-label-xs font-semibold">
+                  Calificaciones
+                </span>
+</td>
+<td class="px-space-md py-space-xs text-body-sm text-on-surface">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">edit_note</span>
+<span>Modificación de calificación de <strong class="font-code-num text-error font-semibold">8.2</strong> a <strong class="font-code-num text-secondary font-semibold">9.0</strong> en Matemáticas II (Alumno: G. Morales #8841)</span>
+</div>
+</td>
+<td class="px-space-md py-space-xs whitespace-nowrap font-code-num text-[12px] text-on-surface-variant">
+<div class="flex flex-col">
+<span class="text-on-surface">189.210.45.12</span>
+<span class="text-outline text-[11px]">Campus Central Fibra • Mac OS Chrome</span>
+</div>
+</td>
+<td class="px-space-md py-space-xs text-right whitespace-nowrap font-code-num text-[12px] text-secondary">
+<div class="flex items-center justify-end gap-1">
+<span class="truncate max-w-[130px]" title="sha256-4b2a8d119ec801fa">4b2a8d119ec8...01fa</span>
+<button class="hover:text-primary transition-colors" title="Copiar Hash"><span class="material-symbols-outlined text-[14px]">content_copy</span></button>
+</div>
+</td>
+<td class="px-space-sm py-space-xs text-center">
+<button class="w-7 h-7 rounded hover:bg-surface-container text-outline hover:text-on-surface flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity" title="Inspeccionar Paquete Forense">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+</button>
+</td>
+</tr>
+<!-- Row 2: Expedientes -->
+<tr class="h-12 hover:bg-surface-container-low/50 transition-colors group">
+<td class="px-space-md py-space-xs font-code-num text-code-num text-on-surface whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-semibold">30 Mar 2025</span>
+<span class="text-outline text-[11px]">09:14:02.109 CST</span>
+</div>
+</td>
+<td class="px-space-md py-space-xs whitespace-nowrap">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-full bg-secondary-fixed text-on-secondary-fixed font-bold text-label-xs flex items-center justify-center">
+                    MP
+                  </div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Lic. Mario Puga</span>
+<span class="font-label-xs text-[11px] text-on-surface-variant">Coordinación de Admisiones</span>
+</div>
+</div>
+</td>
+<td class="px-space-md py-space-xs whitespace-nowrap">
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-on-surface font-label-xs text-label-xs font-semibold">
+                  Expedientes
+                </span>
+</td>
+<td class="px-space-md py-space-xs text-body-sm text-on-surface">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified</span>
+<span>Cotejo y aprobación formal de Acta de Nacimiento Digital (Aspirante: S. Garza Folio #1209)</span>
+</div>
+</td>
+<td class="px-space-md py-space-xs whitespace-nowrap font-code-num text-[12px] text-on-surface-variant">
+<div class="flex flex-col">
+<span class="text-on-surface">189.210.45.19</span>
+<span class="text-outline text-[11px]">Campus Central VLAN Admin • Windows 11</span>
+</div>
+</td>
+<td class="px-space-md py-space-xs text-right whitespace-nowrap font-code-num text-[12px] text-secondary">
+<div class="flex items-center justify-end gap-1">
+<span class="truncate max-w-[130px]" title="sha256-a110fbc89221da43">a110fbc89221...da43</span>
+<button class="hover:text-primary transition-colors" title="Copiar Hash"><span class="material-symbols-outlined text-[14px]">content_copy</span></button>
+</div>
+</td>
+<td class="px-space-sm py-space-xs text-center">
+<button class="w-7 h-7 rounded hover:bg-surface-container text-outline hover:text-on-surface flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity" title="Inspeccionar Paquete Forense">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+</button>
+</td>
+</tr>
+<!-- Row 3: Finanzas -->
+<tr class="h-12 hover:bg-surface-container-low/50 transition-colors group">
+<td class="px-space-md py-space-xs font-code-num text-code-num text-on-surface whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-semibold">30 Mar 2025</span>
+<span class="text-outline text-[11px]">08:55:40.890 CST</span>
+</div>
+</td>
+<td class="px-space-md py-space-xs whitespace-nowrap">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-full bg-surface-container text-on-surface font-bold text-label-xs flex items-center justify-center">
+                    AD
+                  </div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">C.P. Alberto Domínguez</span>
+<span class="font-label-xs text-[11px] text-on-surface-variant">Dirección de Finanzas</span>
+</div>
+</div>
+</td>
+<td class="px-space-md py-space-xs whitespace-nowrap">
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-on-surface font-label-xs text-label-xs font-semibold">
+                  Finanzas
+                </span>
+</td>
+<td class="px-space-md py-space-xs text-body-sm text-on-surface">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">receipt</span>
+<span>Generación de recibo fiscal CFDI 4.0 Folio #9042 con timbrado SAT por colegiatura ordinaria</span>
+</div>
+</td>
+<td class="px-space-md py-space-xs whitespace-nowrap font-code-num text-[12px] text-on-surface-variant">
+<div class="flex flex-col">
+<span class="text-on-surface">201.144.10.88</span>
+<span class="text-outline text-[11px]">VPN Encriptada SSL • Windows Server App</span>
+</div>
+</td>
+<td class="px-space-md py-space-xs text-right whitespace-nowrap font-code-num text-[12px] text-secondary">
+<div class="flex items-center justify-end gap-1">
+<span class="truncate max-w-[130px]" title="sha256-ff71092a3bb18029">ff71092a3bb1...8029</span>
+<button class="hover:text-primary transition-colors" title="Copiar Hash"><span class="material-symbols-outlined text-[14px]">content_copy</span></button>
+</div>
+</td>
+<td class="px-space-sm py-space-xs text-center">
+<button class="w-7 h-7 rounded hover:bg-surface-container text-outline hover:text-on-surface flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity" title="Inspeccionar Paquete Forense">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+</button>
+</td>
+</tr>
+<!-- Row 4: Asistencia -->
+<tr class="h-12 hover:bg-surface-container-low/50 transition-colors group">
+<td class="px-space-md py-space-xs font-code-num text-code-num text-on-surface whitespace-nowrap">
+<div class="flex flex-col">
+<span class="font-semibold">30 Mar 2025</span>
+<span class="text-outline text-[11px]">08:10:11.002 CST</span>
+</div>
+</td>
+<td class="px-space-md py-space-xs whitespace-nowrap">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-full bg-surface-variant text-on-surface font-bold text-label-xs flex items-center justify-center">
+                    RM
+                  </div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Prof. Roberto Méndez</span>
+<span class="font-label-xs text-[11px] text-on-surface-variant">Titular Bachillerato 5° Sem.</span>
+</div>
+</div>
+</td>
+<td class="px-space-md py-space-xs whitespace-nowrap">
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-on-surface font-label-xs text-label-xs font-semibold">
+                  Asistencia
+                </span>
+</td>
+<td class="px-space-md py-space-xs text-body-sm text-on-surface">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-secondary">fact_check</span>
+<span>Cierre definitivo de pase de lista matutino (Grupo 5-B • 34 presentes, 2 faltas justificadas)</span>
+</div>
+</td>
+<td class="px-space-md py-space-xs whitespace-nowrap font-code-num text-[12px] text-on-surface-variant">
+<div class="flex flex-col">
+<span class="text-on-surface">192.168.10.145</span>
+<span class="text-outline text-[11px]">WiFi Docentes Salón 204 • iPad OS</span>
+</div>
+</td>
+<td class="px-space-md py-space-xs text-right whitespace-nowrap font-code-num text-[12px] text-secondary">
+<div class="flex items-center justify-end gap-1">
+<span class="truncate max-w-[130px]" title="sha256-1188ac77f981622b">1188ac77f981...622b</span>
+<button class="hover:text-primary transition-colors" title="Copiar Hash"><span class="material-symbols-outlined text-[14px]">content_copy</span></button>
+</div>
+</td>
+<td class="px-space-sm py-space-xs text-center">
+<button class="w-7 h-7 rounded hover:bg-surface-container text-outline hover:text-on-surface flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity" title="Inspeccionar Paquete Forense">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination Footer -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pt-space-xs border-t border-surface-container font-label-sm text-label-sm text-on-surface-variant">
+<div class="flex items-center gap-space-xs">
+<span>Filas por página:</span>
+<select class="h-7 px-space-xs rounded bg-surface-container-low text-on-surface border-none focus:ring-1 focus:ring-secondary font-code-num text-code-num">
+<option>25</option>
+<option>50</option>
+<option>100</option>
+</select>
+<span class="ml-space-sm text-outline">Certificado raíz emitido por Secretaría de Economía (PSC-NOM-151)</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-code-num text-code-num">Página 1 de 74</span>
+<div class="flex items-center gap-1">
+<button class="w-8 h-8 rounded bg-surface-container-low text-outline cursor-not-allowed flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button class="w-8 h-8 rounded bg-surface-container text-on-surface hover:bg-surface-variant flex items-center justify-center transition-colors">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main></div><script src="../assets/js/app.js"></script><script>
+// Quick micro-interactions for tab switcher and composer trigger
+  document.addEventListener('DOMContentLoaded', () => {
+    const tabButtons = document.querySelectorAll('#main-tab-bar button');
+    tabButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tabButtons.forEach(b => {
+          b.classList.remove('text-secondary', 'border-secondary');
+          b.classList.add('text-on-surface-variant', 'border-transparent');
+        });
+        btn.classList.add('text-secondary', 'border-secondary');
+        btn.classList.remove('text-on-surface-variant', 'border-transparent');
+      });
+    });
+
+    const openComposerBtn = document.getElementById('open-composer-btn');
+    if (openComposerBtn) {
+      openComposerBtn.addEventListener('click', () => {
+        const composerInput = document.querySelector('input[placeholder*="Convocatoria"]');
+        if (composerInput) {
+          composerInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          composerInput.focus();
+        }
+      });
+    }
+  });
+</script></body></html>

@@ -1,0 +1,609 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Finanzas y Cobranza · SAE.cloud</title><link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet"><script src="https://cdn.tailwindcss.com"></script><script src="../assets/js/tailwind-config.js"></script><link rel="stylesheet" href="../assets/css/app.css"></head><body class="bg-surface font-body-md text-on-surface antialiased" data-page="finanzas"><main class="w-full pt-16 bg-surface"><div class="flex flex-col w-full">
+<div class="p-margin flex flex-col gap-space-xl">
+<!-- Header Contextual y Controles Superiores -->
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-space-2xs">
+<nav class="flex items-center gap-space-xs text-on-surface-variant font-label-xs tracking-wider uppercase">
+<span class="hover:text-secondary cursor-pointer transition-colors">Finanzas</span>
+<span class="material-symbols-outlined text-[12px] text-outline">chevron_right</span>
+<span class="hover:text-secondary cursor-pointer transition-colors">Cobranza &amp; Colegiaturas</span>
+<span class="material-symbols-outlined text-[12px] text-outline">chevron_right</span>
+<span class="text-secondary font-label-xs">Panel de Control Financiero</span>
+</nav>
+<div class="flex flex-wrap items-center gap-space-sm pt-space-2xs">
+<h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">
+            Gestión Integral de Cobranza y Finanzas Escolares
+          </h1>
+<div class="flex items-center gap-space-2xs px-space-xs py-0.5 rounded-full bg-surface-container text-secondary font-label-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+            Ciclo 2024 - 2025 Activo
+          </div>
+<div class="flex items-center gap-space-2xs px-space-xs py-0.5 rounded-full bg-surface-container-low text-on-surface-variant font-code-num text-[11px]">
+<span class="material-symbols-outlined text-[13px] text-secondary">sync</span>
+            SPEI STP Sincronizado: hace 3 min
+          </div>
+</div>
+</div>
+<!-- Acciones Ejecutivas -->
+<div class="flex flex-wrap items-center gap-space-xs">
+<button class="h-9 px-space-md rounded-lg bg-surface-container-lowest text-on-surface font-label-md flex items-center gap-space-2xs shadow-sm hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">file_download</span>
+<span>Padrón Morosidad (XLSX)</span>
+</button>
+<button class="h-9 px-space-md rounded-lg bg-surface-container-lowest text-on-surface font-label-md flex items-center gap-space-2xs shadow-sm hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-[16px] text-secondary">upload_file</span>
+<span>Importar Dispersión</span>
+</button>
+<button class="h-9 px-space-md rounded-lg bg-surface-container text-secondary font-label-md flex items-center gap-space-2xs hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[16px]">receipt</span>
+<span>Facturación CFDI 4.0</span>
+</button>
+<button class="h-9 px-space-md rounded-lg bg-secondary text-on-secondary font-label-md flex items-center gap-space-2xs hover:bg-secondary-container transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[16px]">add_circle</span>
+<span>+ Nuevo Concepto</span>
+</button>
+</div>
+</div>
+<!-- KPIs Financieros Operativos -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-gutter">
+<!-- KPI 1 -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-xs uppercase tracking-wider text-on-surface-variant">Ingresos Recaudados (Marzo)</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">account_balance</span>
+</div>
+</div>
+<div class="flex flex-col">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-xl text-headline-xl text-on-surface font-bold">$3,428,500</span>
+<span class="font-code-num text-code-num text-on-surface-variant">MXN</span>
+</div>
+<div class="flex items-center justify-between mt-space-xs">
+<div class="flex items-center gap-1 font-label-xs text-secondary">
+<span class="material-symbols-outlined text-[14px]">arrow_upward</span>
+<span>+8.4% vs mes anterior</span>
+</div>
+<span class="font-code-num text-code-num text-on-surface-variant">88.4% Meta ($3.87M)</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 88.4%;"></div>
+</div>
+</div>
+<!-- KPI 2 -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-xs uppercase tracking-wider text-on-surface-variant">Cartera Vencida / Mora</span>
+<div class="w-8 h-8 rounded-lg bg-error-container/40 flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[18px]">warning</span>
+</div>
+</div>
+<div class="flex flex-col">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-xl text-headline-xl text-error font-bold">$412,800</span>
+<span class="font-code-num text-code-num text-on-surface-variant">MXN</span>
+</div>
+<div class="flex items-center justify-between mt-space-xs">
+<div class="flex items-center gap-1 font-label-xs text-error">
+<span class="material-symbols-outlined text-[14px]">error</span>
+<span>64 Alumnos en Mora</span>
+</div>
+<span class="font-code-num text-code-num text-error">11.6% del Padrón</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 11.6%;"></div>
+</div>
+</div>
+<!-- KPI 3 -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-xs uppercase tracking-wider text-on-surface-variant">Becas &amp; Exenciones Activas</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">card_membership</span>
+</div>
+</div>
+<div class="flex flex-col">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-xl text-headline-xl text-on-surface font-bold">$582,000</span>
+<span class="font-code-num text-code-num text-on-surface-variant">MXN</span>
+</div>
+<div class="flex items-center justify-between mt-space-xs">
+<span class="font-label-xs text-on-surface-variant">184 Alumnos Beneficiados</span>
+<span class="font-code-num text-code-num text-secondary">Promedio 28% Dcto.</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary-container h-full rounded-full" style="width: 28%;"></div>
+</div>
+</div>
+<!-- KPI 4 -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-xs uppercase tracking-wider text-on-surface-variant">Próximo Vencimiento Masivo</span>
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">calendar_clock</span>
+</div>
+</div>
+<div class="flex flex-col">
+<div class="flex items-baseline gap-space-xs">
+<span class="font-headline-xl text-headline-xl text-on-surface font-bold">10 / Mar / 2025</span>
+</div>
+<div class="flex items-center justify-between mt-space-xs">
+<span class="font-label-xs text-on-surface-variant">Colegiatura Ordinaria</span>
+<span class="font-code-num text-code-num text-on-surface">1,418 Órdenes STP</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs text-[11px] font-label-xs text-secondary-container">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+          Dispersión de Notificaciones lista (SMS/App)
+        </div>
+</div>
+</div>
+<!-- Barra de Búsqueda y Filtros Dinámicos -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-sm">
+<div class="flex-1 max-w-xl relative">
+<span class="material-symbols-outlined absolute left-space-sm top-1/2 -translate-y-1/2 text-outline text-[18px]">search</span>
+<input class="w-full h-9 pl-9 pr-space-md rounded-lg bg-surface-container-low text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none" placeholder="Buscar por Nombre de Alumno, Matrícula o Nombre de Tutor..." type="text"/>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs">
+<!-- Nivel Académico -->
+<div class="flex items-center gap-space-2xs px-space-sm h-9 rounded-lg bg-surface-container-low text-on-surface">
+<span class="font-label-xs text-on-surface-variant uppercase">Nivel:</span>
+<select class="bg-transparent font-label-sm text-label-sm text-on-surface focus:outline-none cursor-pointer">
+<option>Todos los Niveles</option>
+<option>Preescolar</option>
+<option>Primaria Regular</option>
+<option>Secundaria Bilingüe</option>
+<option>Bachillerato Internacional</option>
+</select>
+</div>
+<!-- Estatus de Cobranza -->
+<div class="flex items-center gap-space-2xs px-space-sm h-9 rounded-lg bg-surface-container-low text-on-surface">
+<span class="font-label-xs text-on-surface-variant uppercase">Estatus:</span>
+<select class="bg-transparent font-label-sm text-label-sm text-on-surface focus:outline-none cursor-pointer">
+<option>Cualquier Estatus</option>
+<option>Liquidado / Al Corriente</option>
+<option>Adeudo Reciente (1 Mes)</option>
+<option>Adeudo Crítico (≥ 2 Meses)</option>
+<option>Convenio en Curso</option>
+</select>
+</div>
+<!-- Vía de Pago -->
+<div class="flex items-center gap-space-2xs px-space-sm h-9 rounded-lg bg-surface-container-low text-on-surface">
+<span class="font-label-xs text-on-surface-variant uppercase">Método:</span>
+<select class="bg-transparent font-label-sm text-label-sm text-on-surface focus:outline-none cursor-pointer">
+<option>Todos los Métodos</option>
+<option>SPEI Directo (CLABE STP)</option>
+<option>Tarjeta Crédito / Débito</option>
+<option>Domiciliación Automática</option>
+<option>Ventanilla / Convenio CIE</option>
+</select>
+</div>
+<button class="h-9 px-space-sm rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+</button>
+</div>
+</div>
+<!-- Tabla Principal de Estados de Cuenta y Cobranza Institucional -->
+<div class="rounded-xl bg-surface-container-lowest shadow-sm overflow-hidden flex flex-col">
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="h-10 bg-surface-container-low text-on-surface-variant font-label-xs tracking-wider uppercase">
+<th class="px-space-md font-semibold">Alumno &amp; Matrícula</th>
+<th class="px-space-md font-semibold">Nivel &amp; Grupo</th>
+<th class="px-space-md font-semibold">Concepto Operativo</th>
+<th class="px-space-md font-semibold">Beca Aplicada</th>
+<th class="px-space-md font-semibold text-right">Monto / Cargo</th>
+<th class="px-space-md font-semibold">Vencimiento</th>
+<th class="px-space-md font-semibold">Estatus de Cobro</th>
+<th class="px-space-md font-semibold">CFDI 4.0 SAT</th>
+<th class="px-space-md font-semibold text-center">Acciones</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 text-on-surface font-body-sm text-body-sm">
+<!-- Fila 1: Valeria Méndez -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="px-space-md py-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container text-secondary font-headline-md text-headline-md flex items-center justify-center text-xs">
+                    VM
+                  </div>
+<div class="flex flex-col">
+<span class="font-headline-md text-body-sm font-semibold text-on-surface">Valeria Méndez Treviño</span>
+<span class="font-code-num text-code-num text-on-surface-variant text-[11px]">MAT-2024-0412 • Tutor: Roberto Méndez</span>
+</div>
+</div>
+</td>
+<td class="px-space-md py-space-sm text-on-surface-variant font-body-sm">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface text-[12px] font-label-sm">Secundaria 2° B</span>
+</td>
+<td class="px-space-md py-space-sm font-body-sm">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Colegiatura Marzo 2025</span>
+<span class="text-[11px] text-on-surface-variant">Ordinaria ciclo vigente</span>
+</div>
+</td>
+<td class="px-space-md py-space-sm font-body-sm">
+<span class="inline-flex items-center gap-1 text-[11px] font-label-xs text-secondary bg-surface-container px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-[13px]">military_tech</span> 30% Mérito
+                </span>
+</td>
+<td class="px-space-md py-space-sm text-right">
+<div class="flex flex-col items-end">
+<span class="font-code-num font-semibold text-on-surface">$5,460.00</span>
+<span class="text-[11px] font-code-num text-on-surface-variant line-through">$7,800.00</span>
+</div>
+</td>
+<td class="px-space-md py-space-sm font-code-num text-[12px] text-on-surface-variant">
+                10 / Mar / 2025
+              </td>
+<td class="px-space-md py-space-sm">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container text-secondary font-label-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+                  Programado SPEI
+                </span>
+</td>
+<td class="px-space-md py-space-sm">
+<div class="flex items-center gap-space-2xs text-[11px] text-on-surface-variant font-code-num">
+<span class="material-symbols-outlined text-[15px] text-secondary">lock_clock</span>
+<span>Pre-Factura</span>
+</div>
+</td>
+<td class="px-space-md py-space-sm text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant hover:text-secondary transition-colors" title="Ver Estado de Cuenta">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant hover:text-secondary transition-colors" title="Registrar Pago Manual">
+<span class="material-symbols-outlined text-[18px]">payments</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant hover:text-secondary transition-colors" title="Recordatorio WhatsApp / Notificación">
+<span class="material-symbols-outlined text-[18px]">send_to_mobile</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Fila 2: Santiago Morales -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="px-space-md py-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container text-secondary font-headline-md text-headline-md flex items-center justify-center text-xs">
+                    SM
+                  </div>
+<div class="flex flex-col">
+<span class="font-headline-md text-body-sm font-semibold text-on-surface">Santiago Morales Galván</span>
+<span class="font-code-num text-code-num text-on-surface-variant text-[11px]">MAT-2024-0195 • Tutora: Ana Sofía Galván</span>
+</div>
+</div>
+</td>
+<td class="px-space-md py-space-sm text-on-surface-variant font-body-sm">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface text-[12px] font-label-sm">Bachillerato 6° A</span>
+</td>
+<td class="px-space-md py-space-sm font-body-sm">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Colegiatura Febrero 2025</span>
+<span class="text-[11px] text-error">Vencimiento excedido (22 días)</span>
+</div>
+</td>
+<td class="px-space-md py-space-sm font-body-sm">
+<span class="inline-flex items-center gap-1 text-[11px] font-label-xs text-on-surface-variant bg-surface-container-low px-2 py-0.5 rounded-full">
+                  Sin Beca
+                </span>
+</td>
+<td class="px-space-md py-space-sm text-right">
+<div class="flex flex-col items-end">
+<span class="font-code-num font-semibold text-error">$9,250.00</span>
+<span class="text-[11px] font-code-num text-error">+$450 recargo</span>
+</div>
+</td>
+<td class="px-space-md py-space-sm font-code-num text-[12px] text-error font-medium">
+                10 / Feb / 2025
+              </td>
+<td class="px-space-md py-space-sm">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container text-on-surface font-label-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container"></span>
+                  Adeudo 1 Mes
+                </span>
+</td>
+<td class="px-space-md py-space-sm">
+<div class="flex items-center gap-space-2xs text-[11px] text-error font-code-num">
+<span class="material-symbols-outlined text-[15px]">pending_actions</span>
+<span>Sin Timbrar</span>
+</div>
+</td>
+<td class="px-space-md py-space-sm text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant hover:text-secondary transition-colors" title="Ver Estado de Cuenta">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant hover:text-secondary transition-colors" title="Registrar Pago Manual">
+<span class="material-symbols-outlined text-[18px]">payments</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container text-error hover:bg-error-container/30 transition-colors" title="Enviar Recordatorio de Cobranza Extrajudicial">
+<span class="material-symbols-outlined text-[18px]">notification_important</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Fila 3: Emiliano Salazar -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="px-space-md py-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container text-secondary font-headline-md text-headline-md flex items-center justify-center text-xs">
+                    ES
+                  </div>
+<div class="flex flex-col">
+<span class="font-headline-md text-body-sm font-semibold text-on-surface">Emiliano Salazar Quintana</span>
+<span class="font-code-num text-code-num text-on-surface-variant text-[11px]">MAT-2024-0771 • Tutor: Gerardo Salazar</span>
+</div>
+</div>
+</td>
+<td class="px-space-md py-space-sm text-on-surface-variant font-body-sm">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface text-[12px] font-label-sm">Primaria 4° C</span>
+</td>
+<td class="px-space-md py-space-sm font-body-sm">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Ene + Feb + Marzo 2025</span>
+<span class="text-[11px] text-error font-medium">Bloqueo de Reinscripción Activo</span>
+</div>
+</td>
+<td class="px-space-md py-space-sm font-body-sm">
+<span class="inline-flex items-center gap-1 text-[11px] font-label-xs text-on-surface-variant bg-surface-container-low px-2 py-0.5 rounded-full">
+                  Sin Beca
+                </span>
+</td>
+<td class="px-space-md py-space-sm text-right">
+<div class="flex flex-col items-end">
+<span class="font-code-num font-bold text-error">$21,300.00</span>
+<span class="text-[11px] font-code-num text-error">Acumulado Mora</span>
+</div>
+</td>
+<td class="px-space-md py-space-sm font-code-num text-[12px] text-error font-semibold">
+                10 / Ene / 2025
+              </td>
+<td class="px-space-md py-space-sm">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-error-container text-on-error-container font-label-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+                  Adeudo Crítico 2+ Meses
+                </span>
+</td>
+<td class="px-space-md py-space-sm">
+<div class="flex items-center gap-space-2xs text-[11px] text-on-surface-variant font-code-num">
+<span class="material-symbols-outlined text-[15px] text-error">block</span>
+<span>Suspendido</span>
+</div>
+</td>
+<td class="px-space-md py-space-sm text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant hover:text-secondary transition-colors" title="Ver Detalle de Adeudo">
+<span class="material-symbols-outlined text-[18px]">receipt_long</span>
+</button>
+<button class="p-1 rounded bg-secondary-container/10 text-secondary hover:bg-secondary-container/20 transition-colors" title="Crear Convenio de Pago">
+<span class="material-symbols-outlined text-[18px]">handshake</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant hover:text-secondary transition-colors" title="Citar a Tutor">
+<span class="material-symbols-outlined text-[18px]">event_repeat</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Fila 4: Ximena Castillo -->
+<tr class="hover:bg-surface-container-low/60 transition-colors">
+<td class="px-space-md py-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container text-secondary font-headline-md text-headline-md flex items-center justify-center text-xs">
+                    XC
+                  </div>
+<div class="flex flex-col">
+<span class="font-headline-md text-body-sm font-semibold text-on-surface">Ximena Castillo Ortiz</span>
+<span class="font-code-num text-code-num text-on-surface-variant text-[11px]">MAT-2024-0821 • Tutora: Laura Ortiz Ramos</span>
+</div>
+</div>
+</td>
+<td class="px-space-md py-space-sm text-on-surface-variant font-body-sm">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface text-[12px] font-label-sm">Preescolar 3° Maternal</span>
+</td>
+<td class="px-space-md py-space-sm font-body-sm">
+<div class="flex flex-col">
+<span class="font-medium text-on-surface">Colegiatura Marzo 2025</span>
+<span class="text-[11px] text-on-surface-variant">Liquidado vía SPEI Santander</span>
+</div>
+</td>
+<td class="px-space-md py-space-sm font-body-sm">
+<span class="inline-flex items-center gap-1 text-[11px] font-label-xs text-secondary bg-surface-container px-2 py-0.5 rounded-full">
+<span class="material-symbols-outlined text-[13px]">school</span> 50% Académica
+                </span>
+</td>
+<td class="px-space-md py-space-sm text-right">
+<div class="flex flex-col items-end">
+<span class="font-code-num font-semibold text-on-surface">$3,150.00</span>
+<span class="text-[11px] font-code-num text-secondary">Pagado total</span>
+</div>
+</td>
+<td class="px-space-md py-space-sm font-code-num text-[12px] text-on-surface-variant">
+                02 / Mar / 2025
+              </td>
+<td class="px-space-md py-space-sm">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-surface-container text-secondary font-label-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Liquidado
+                </span>
+</td>
+<td class="px-space-md py-space-sm">
+<div class="flex items-center gap-space-2xs text-[11px] text-secondary font-code-num cursor-pointer hover:underline">
+<span class="material-symbols-outlined text-[15px]">verified</span>
+<span>F-89241 (CFDI)</span>
+</div>
+</td>
+<td class="px-space-md py-space-sm text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1 rounded hover:bg-surface-container text-secondary transition-colors" title="Descargar Factura PDF/XML">
+<span class="material-symbols-outlined text-[18px]">download_for_offline</span>
+</button>
+<button class="p-1 rounded hover:bg-surface-container text-on-surface-variant hover:text-secondary transition-colors" title="Ver Recibo Institucional">
+<span class="material-symbols-outlined text-[18px]">receipt</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Paginación de Tabla -->
+<div class="px-space-md py-space-sm bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-space-sm font-body-sm text-on-surface-variant">
+<div class="flex items-center gap-space-2xs">
+<span>Mostrando <span class="font-code-num text-on-surface font-semibold">1-4</span> de <span class="font-code-num text-on-surface font-semibold">1,482</span> registros</span>
+<span class="mx-space-xs text-outline">•</span>
+<span class="font-label-sm text-on-surface">Página 1 de 371</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="h-8 px-space-sm rounded bg-surface-container-lowest text-on-surface font-label-sm disabled:opacity-50" disabled="">
+            Anterior
+          </button>
+<button class="h-8 px-space-sm rounded bg-secondary text-on-secondary font-label-sm">
+            1
+          </button>
+<button class="h-8 px-space-sm rounded bg-surface-container-lowest text-on-surface font-label-sm hover:bg-surface-container">
+            2
+          </button>
+<button class="h-8 px-space-sm rounded bg-surface-container-lowest text-on-surface font-label-sm hover:bg-surface-container">
+            3
+          </button>
+<span class="px-1">...</span>
+<button class="h-8 px-space-sm rounded bg-surface-container-lowest text-on-surface font-label-sm hover:bg-surface-container">
+            Siguiente
+          </button>
+</div>
+</div>
+</div>
+<!-- Módulos Inferiores Complementarios -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-gutter">
+<!-- Distribución de Ingresos por Concepto -->
+<div class="xl:col-span-6 p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">Distribución de Ingresos por Concepto</h3>
+<span class="font-label-xs text-on-surface-variant">Composición de cobranza mensual consolidada</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[20px]">donut_large</span>
+</div>
+<div class="flex flex-col gap-space-md">
+<!-- Item 1: Colegiaturas -->
+<div class="flex flex-col gap-space-2xs">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-sm bg-secondary"></span>
+<span class="text-on-surface font-medium">Colegiaturas Ordinarias</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-code-num text-on-surface font-semibold">$2,537,090 MXN</span>
+<span class="font-label-xs text-secondary font-bold">74%</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-low h-2 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 74%;"></div>
+</div>
+</div>
+<!-- Item 2: Inscripciones -->
+<div class="flex flex-col gap-space-2xs">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-sm bg-secondary-container"></span>
+<span class="text-on-surface font-medium">Reinscripciones &amp; Admisiones</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-code-num text-on-surface font-semibold">$548,560 MXN</span>
+<span class="font-label-xs text-secondary-container font-bold">16%</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-low h-2 rounded-full overflow-hidden">
+<div class="bg-secondary-container h-full rounded-full" style="width: 16%;"></div>
+</div>
+</div>
+<!-- Item 3: Talleres y Cuotas Extraordinarias -->
+<div class="flex flex-col gap-space-2xs">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-sm bg-surface-tint"></span>
+<span class="text-on-surface font-medium">Cuotas Extraordinarias, Talleres &amp; Credenciales</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-code-num text-on-surface font-semibold">$342,850 MXN</span>
+<span class="font-label-xs text-surface-tint font-bold">10%</span>
+</div>
+</div>
+<div class="w-full bg-surface-container-low h-2 rounded-full overflow-hidden">
+<div class="bg-surface-tint h-full rounded-full" style="width: 10%;"></div>
+</div>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between text-[12px] text-on-surface-variant">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary">info</span>
+<span>Tarifas actualizadas conforme al Diario Oficial / SEP 2024-2025</span>
+</div>
+<span class="font-code-num text-secondary font-semibold cursor-pointer hover:underline">Ver Tabulador Maestro</span>
+</div>
+</div>
+<!-- Panel de Convenios y Cobranza Preventiva -->
+<div class="xl:col-span-6 p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<h3 class="font-headline-md text-headline-md text-on-surface font-semibold">Convenios &amp; Conciliación Fiscal SAT</h3>
+<span class="font-label-xs text-on-surface-variant">Protocolos de mitigación de cartera y timbrado CFDI 4.0</span>
+</div>
+<div class="flex items-center gap-1 text-[11px] font-label-xs px-2 py-0.5 rounded-full bg-surface-container text-secondary">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+            PAC Activo
+          </div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm">
+<!-- Card de Gestión Preventiva -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col gap-space-xs justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-xs text-on-surface-variant uppercase">Convenios de Pago</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">handshake</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface">22 Activos</span>
+<span class="text-[12px] text-on-surface-variant">Cumplimiento en fecha: 91.2%</span>
+</div>
+<button class="mt-space-2xs w-full h-8 rounded bg-secondary text-on-secondary font-label-xs flex items-center justify-center gap-1 hover:bg-secondary-container transition-colors">
+<span class="material-symbols-outlined text-[14px]">add</span>
+<span>Generar Nuevo Convenio</span>
+</button>
+</div>
+<!-- Card de Timbrado CFDI -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col gap-space-xs justify-between">
+<div class="flex items-center justify-between">
+<span class="font-label-xs text-on-surface-variant uppercase">Conciliación SAT</span>
+<span class="material-symbols-outlined text-[18px] text-secondary">verified_user</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-lg text-headline-lg font-bold text-on-surface">1,380 Emitidos</span>
+<span class="text-[12px] text-on-surface-variant">Complemento IEDU aplicado al 100%</span>
+</div>
+<button class="mt-space-2xs w-full h-8 rounded bg-surface-container text-secondary font-label-xs flex items-center justify-center gap-1 hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[14px]">history</span>
+<span>Auditoría de Timbrado</span>
+</button>
+</div>
+</div>
+<!-- Banner de Alerta Preventiva -->
+<div class="p-space-sm rounded-lg bg-surface-container flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[22px]">mark_email_unread</span>
+<div class="flex flex-col flex-1">
+<span class="font-label-sm text-on-surface font-semibold">Campaña de Cobranza Preventiva Lista</span>
+<span class="text-[11px] text-on-surface-variant">Hay 328 tutores cuyos pagos vencen en 48 horas. Se enviarán notificaciones automáticas vía WhatsApp API.</span>
+</div>
+<button class="h-8 px-space-sm rounded bg-surface-container-lowest text-secondary font-label-xs hover:bg-surface-bright transition-colors shadow-sm whitespace-nowrap">
+            Ejecutar Envío
+          </button>
+</div>
+</div>
+</div>
+</div>
+</div></main></div><script src="../assets/js/app.js"></script></body></html>

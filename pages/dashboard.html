@@ -1,0 +1,602 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Dashboard Ejecutivo · SAE.cloud</title><link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet"><script src="https://cdn.tailwindcss.com"></script><script src="../assets/js/tailwind-config.js"></script><link rel="stylesheet" href="../assets/css/app.css"></head><body class="bg-surface font-body-md text-on-surface antialiased" data-page="dashboard"><main class="w-full pt-16 bg-surface"><div class="w-full px-space-margin py-space-xl"><div class="flex flex-col w-full gap-space-xl">
+<!-- Encabezado Ejecutivo Principal -->
+<section class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-lg p-space-xl bg-surface-container-lowest rounded-xl shadow-sm">
+<div class="flex flex-col gap-space-2xs min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="px-space-xs py-space-2xs rounded-full bg-secondary-container text-on-secondary font-label-xs text-label-xs uppercase">Dirección General</span>
+<span class="font-code-num text-code-num text-on-surface-variant flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> En Línea / Datos en Vivo
+        </span>
+</div>
+<h1 class="font-display-lg text-display-lg text-on-surface tracking-tight">Bienvenida, Mtra. Carmen Valenzuela</h1>
+<p class="font-body-md text-body-md text-on-surface-variant flex items-center gap-space-xs flex-wrap">
+<span>Panel de Control y Rendimiento Institucional</span>
+<span class="inline-block w-1 h-1 rounded-full bg-outline-variant"></span>
+<span class="font-code-num text-code-num font-semibold text-secondary">Ciclo Escolar Activo: 2024-2025</span>
+<span class="inline-block w-1 h-1 rounded-full bg-outline-variant"></span>
+<span>Corte consolidado al día de hoy</span>
+</p>
+</div>
+<div class="flex items-center gap-space-sm flex-shrink-0">
+<button class="h-9 px-space-md rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center gap-space-xs transition-colors">
+<span class="material-symbols-outlined text-[18px]">table_view</span>
+<span>Descargar Datos (Excel)</span>
+</button>
+<button class="h-9 px-space-md rounded-lg bg-secondary text-on-secondary hover:bg-secondary-container font-label-md text-label-md flex items-center gap-space-xs transition-all shadow-sm">
+<span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+<span>Exportar Informe Ejecutivo (PDF)</span>
+</button>
+</div>
+</section>
+<!-- Matriz de 8 KPIs Clave -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- KPI 1 -->
+<div class="p-space-lg bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
+<div class="flex items-center justify-between">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Alumnos Activos</span>
+<span class="p-space-2xs rounded-lg bg-surface-container-low text-secondary">
+<span class="material-symbols-outlined text-[20px]">school</span>
+</span>
+</div>
+<div class="my-space-sm flex items-baseline justify-between">
+<span class="font-display-lg text-display-lg text-on-surface font-bold tracking-tight">1,482</span>
+<span class="px-space-xs py-space-2xs rounded-full bg-surface-container text-secondary font-code-num text-code-num">
+          +4.2%
+        </span>
+</div>
+<div class="flex items-center justify-between font-label-xs text-label-xs text-on-surface-variant">
+<span>Tasa de retención</span>
+<span class="font-code-num text-code-num font-semibold text-on-surface">98.2% consolidado</span>
+</div>
+</div>
+<!-- KPI 2 -->
+<div class="p-space-lg bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
+<div class="flex items-center justify-between">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Docentes Activos</span>
+<span class="p-space-2xs rounded-lg bg-surface-container-low text-secondary">
+<span class="material-symbols-outlined text-[20px]">badge</span>
+</span>
+</div>
+<div class="my-space-sm flex items-baseline justify-between">
+<span class="font-display-lg text-display-lg text-on-surface font-bold tracking-tight">76</span>
+<span class="px-space-xs py-space-2xs rounded-full bg-surface-container text-secondary font-code-num text-code-num">
+          100%
+        </span>
+</div>
+<div class="flex items-center justify-between font-label-xs text-label-xs text-on-surface-variant">
+<span>Cobertura curricular</span>
+<span class="font-code-num text-code-num font-semibold text-on-surface">Asignados a grupos</span>
+</div>
+</div>
+<!-- KPI 3 -->
+<div class="p-space-lg bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
+<div class="flex items-center justify-between">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Grupos &amp; Salones</span>
+<span class="p-space-2xs rounded-lg bg-surface-container-low text-secondary">
+<span class="material-symbols-outlined text-[20px]">meeting_room</span>
+</span>
+</div>
+<div class="my-space-sm flex items-baseline justify-between">
+<span class="font-display-lg text-display-lg text-on-surface font-bold tracking-tight">42</span>
+<span class="px-space-xs py-space-2xs rounded-full bg-surface-container text-on-surface font-code-num text-code-num">
+          4 Niveles
+        </span>
+</div>
+<div class="flex items-center justify-between font-label-xs text-label-xs text-on-surface-variant">
+<span>Densidad por aula</span>
+<span class="font-code-num text-code-num font-semibold text-on-surface">35.2 alum/aula prom.</span>
+</div>
+</div>
+<!-- KPI 4 -->
+<div class="p-space-lg bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
+<div class="flex items-center justify-between">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Asistencia Global</span>
+<span class="p-space-2xs rounded-lg bg-surface-container-low text-secondary">
+<span class="material-symbols-outlined text-[20px]">fact_check</span>
+</span>
+</div>
+<div class="my-space-sm flex items-baseline justify-between">
+<span class="font-display-lg text-display-lg text-on-surface font-bold tracking-tight">94.6%</span>
+<span class="px-space-xs py-space-2xs rounded-full bg-surface-container text-secondary font-code-num text-code-num">
+          +1.1%
+        </span>
+</div>
+<div class="flex items-center justify-between font-label-xs text-label-xs text-on-surface-variant">
+<span>Meta institucional: 92.0%</span>
+<span class="font-code-num text-code-num font-semibold text-on-surface">Superada (+2.6%)</span>
+</div>
+</div>
+<!-- KPI 5 -->
+<div class="p-space-lg bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
+<div class="flex items-center justify-between">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Promedio General</span>
+<span class="p-space-2xs rounded-lg bg-surface-container-low text-secondary">
+<span class="material-symbols-outlined text-[20px]">grade</span>
+</span>
+</div>
+<div class="my-space-sm flex items-baseline justify-between">
+<div class="flex items-baseline gap-space-2xs">
+<span class="font-display-lg text-display-lg text-on-surface font-bold tracking-tight">8.74</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">/ 10</span>
+</div>
+<span class="px-space-xs py-space-2xs rounded-full bg-surface-container text-secondary font-code-num text-code-num">
+          +0.18 pts
+        </span>
+</div>
+<div class="flex items-center justify-between font-label-xs text-label-xs text-on-surface-variant">
+<span>Evaluaciones Parciales</span>
+<span class="font-code-num text-code-num font-semibold text-on-surface">Rango Alto</span>
+</div>
+</div>
+<!-- KPI 6 -->
+<div class="p-space-lg bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
+<div class="flex items-center justify-between">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Cobranza del Periodo</span>
+<span class="p-space-2xs rounded-lg bg-surface-container-low text-secondary">
+<span class="material-symbols-outlined text-[20px]">payments</span>
+</span>
+</div>
+<div class="my-space-sm flex flex-col">
+<span class="font-headline-xl text-headline-xl text-on-surface font-bold tracking-tight">$3,428,500</span>
+<span class="font-code-num text-code-num text-on-surface-variant">MXN Recaudado</span>
+</div>
+<div class="flex items-center justify-between font-label-xs text-label-xs text-on-surface-variant">
+<span>Cumplimiento cuotas</span>
+<span class="font-code-num text-code-num font-semibold text-secondary">88.4% cubierto</span>
+</div>
+</div>
+<!-- KPI 7 -->
+<div class="p-space-lg bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
+<div class="flex items-center justify-between">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Adeudos Pendientes</span>
+<span class="p-space-2xs rounded-lg bg-error-container text-error">
+<span class="material-symbols-outlined text-[20px]">warning</span>
+</span>
+</div>
+<div class="my-space-sm flex flex-col">
+<span class="font-headline-xl text-headline-xl text-error font-bold tracking-tight">$412,800</span>
+<span class="font-code-num text-code-num text-on-surface-variant">11.6% morosidad</span>
+</div>
+<div class="flex items-center justify-between font-label-xs text-label-xs text-on-surface-variant">
+<span>Familias en mora</span>
+<span class="font-code-num text-code-num font-semibold text-error">64 cuentas</span>
+</div>
+</div>
+<!-- KPI 8 -->
+<div class="p-space-lg bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between hover:shadow-md transition-all">
+<div class="flex items-center justify-between">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">Expedientes en Trámite</span>
+<span class="p-space-2xs rounded-lg bg-surface-container text-on-surface">
+<span class="material-symbols-outlined text-[20px]">pending_actions</span>
+</span>
+</div>
+<div class="my-space-sm flex items-baseline justify-between">
+<span class="font-display-lg text-display-lg text-on-surface font-bold tracking-tight">28</span>
+<span class="px-space-xs py-space-2xs rounded-full bg-surface-container-high text-on-surface font-code-num text-code-num">
+          Revisión
+        </span>
+</div>
+<div class="flex items-center justify-between font-label-xs text-label-xs text-on-surface-variant">
+<span>Inscripción extemporánea</span>
+<span class="font-code-num text-code-num font-semibold text-secondary">Por dictaminar</span>
+</div>
+</div>
+</section>
+<!-- Módulo de Alertas Operativas Críticas -->
+<section class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-error text-[22px]">notification_important</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Alertas Operativas y Riesgo Institucional</h2>
+</div>
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase tracking-wider">4 Puntos de Intervención Prioritaria</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- Alerta Roja -->
+<div class="p-space-lg bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="px-space-xs py-space-2xs rounded-full bg-error-container text-error font-label-xs text-label-xs font-bold uppercase flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span> Crítica SEP
+            </span>
+<span class="font-code-num text-code-num text-on-surface-variant">12 Casos</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mt-space-xs">Asistencia Crítica (&lt;80%)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Alumnos en riesgo inmediato de reprobación por inasistencias no justificadas.</p>
+</div>
+<button class="mt-space-md w-full h-8 rounded-lg bg-surface-container hover:bg-error-container text-on-surface hover:text-error font-label-sm text-label-sm flex items-center justify-center gap-space-xs transition-colors">
+<span>Gestionar Alertas</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+<!-- Alerta Ámbar -->
+<div class="p-space-lg bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="px-space-xs py-space-2xs rounded-full bg-surface-container-high text-on-surface font-label-xs text-label-xs font-bold uppercase flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span> Control Docente
+            </span>
+<span class="font-code-num text-code-num text-on-surface-variant">3 Materias</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mt-space-xs">2do Parcial sin Capturar</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Secundaria B: pendiente de asignación por el Prof. Roberto Méndez.</p>
+</div>
+<button class="mt-space-md w-full h-8 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm flex items-center justify-center gap-space-xs transition-colors">
+<span>Notificar Docente</span>
+<span class="material-symbols-outlined text-[16px]">mail</span>
+</button>
+</div>
+<!-- Alerta Naranja -->
+<div class="p-space-lg bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="px-space-xs py-space-2xs rounded-full bg-surface-container-high text-on-surface font-label-xs text-label-xs font-bold uppercase flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Cobranza Vencida
+            </span>
+<span class="font-code-num text-code-num text-on-surface-variant">&gt;45 Días</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mt-space-xs">Colegiaturas en Mora Alta</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">18 adeudos acumulados superan los $15,000 MXN sin convenio activo.</p>
+</div>
+<button class="mt-space-md w-full h-8 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm flex items-center justify-center gap-space-xs transition-colors">
+<span>Ver Lista de Cobranza</span>
+<span class="material-symbols-outlined text-[16px]">receipt_long</span>
+</button>
+</div>
+<!-- Alerta Azul -->
+<div class="p-space-lg bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="px-space-xs py-space-2xs rounded-full bg-secondary-container text-on-secondary font-label-xs text-label-xs font-bold uppercase flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-on-secondary"></span> Validación
+            </span>
+<span class="font-code-num text-code-num text-on-surface-variant">14 Casos</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mt-space-xs">Documentos Pendientes</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Expedientes con CURP certificada o certificado de nivel anterior sin cotejo.</p>
+</div>
+<button class="mt-space-md w-full h-8 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm flex items-center justify-center gap-space-xs transition-colors">
+<span>Revisar Documentos</span>
+<span class="material-symbols-outlined text-[16px]">folder_shared</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Fila de Visualizaciones y Gráficas de Decisión (Bento 3 Paneles) -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Gráfica Izquierda: Flujo de Cobranza vs Morosidad (5 cols) -->
+<div class="lg:col-span-5 p-space-xl bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-space-2xs mb-space-md">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-md text-headline-md text-on-surface">Flujo Mensual de Cobranza</h3>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Ene - Jun 2025</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Comparativo de Proyección Presupuestal vs Recaudado vs Morosidad</p>
+</div>
+<!-- SVG Chart: Cobranza & Flujo -->
+<div class="w-full h-52 flex flex-col justify-end">
+<svg class="w-full h-44 overflow-visible" fill="none" viewbox="0 0 360 140">
+<!-- Líneas de Guía -->
+<line class="text-surface-container-high" stroke="currentColor" stroke-dasharray="2 2" x1="0" x2="360" y1="120" y2="120"></line>
+<line class="text-surface-container-high" stroke="currentColor" stroke-dasharray="2 2" x1="0" x2="360" y1="80" y2="80"></line>
+<line class="text-surface-container-high" stroke="currentColor" stroke-dasharray="2 2" x1="0" x2="360" y1="40" y2="40"></line>
+<!-- Ene -->
+<rect class="fill-surface-container" height="85" rx="2" width="22" x="20" y="35"></rect>
+<rect class="fill-secondary" height="78" rx="2" width="14" x="24" y="42"></rect>
+<rect class="fill-error" height="8" rx="1" width="8" x="27" y="112"></rect>
+<!-- Feb -->
+<rect class="fill-surface-container" height="90" rx="2" width="22" x="75" y="30"></rect>
+<rect class="fill-secondary" height="84" rx="2" width="14" x="79" y="36"></rect>
+<rect class="fill-error" height="12" rx="1" width="8" x="82" y="108"></rect>
+<!-- Mar -->
+<rect class="fill-surface-container" height="95" rx="2" width="22" x="130" y="25"></rect>
+<rect class="fill-secondary" height="88" rx="2" width="14" x="134" y="32"></rect>
+<rect class="fill-error" height="10" rx="1" width="8" x="137" y="110"></rect>
+<!-- Abr -->
+<rect class="fill-surface-container" height="92" rx="2" width="22" x="185" y="28"></rect>
+<rect class="fill-secondary" height="82" rx="2" width="14" x="189" y="38"></rect>
+<rect class="fill-error" height="14" rx="1" width="8" x="192" y="106"></rect>
+<!-- May (Proyectado) -->
+<rect class="fill-surface-container" height="100" rx="2" width="22" x="240" y="20"></rect>
+<rect class="fill-secondary-container" height="90" opacity="0.6" rx="2" width="14" x="244" y="30"></rect>
+<!-- Jun (Proyectado) -->
+<rect class="fill-surface-container" height="100" rx="2" width="22" x="295" y="20"></rect>
+<rect class="fill-secondary-container" height="88" opacity="0.6" rx="2" width="14" x="299" y="32"></rect>
+</svg>
+<div class="flex justify-between font-code-num text-code-num text-on-surface-variant px-2 pt-2">
+<span>Ene</span><span>Feb</span><span>Mar</span><span>Abr</span><span>May*</span><span>Jun*</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-md flex items-center justify-around bg-surface-container-low rounded-lg p-space-sm">
+<div class="flex items-center gap-space-2xs">
+<span class="w-3 h-3 rounded-sm bg-surface-container"></span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Proyectado</span>
+</div>
+<div class="flex items-center gap-space-2xs">
+<span class="w-3 h-3 rounded-sm bg-secondary"></span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Recaudado</span>
+</div>
+<div class="flex items-center gap-space-2xs">
+<span class="w-3 h-3 rounded-sm bg-error"></span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">Morosidad</span>
+</div>
+</div>
+</div>
+<!-- Gráfica Central: Evolución y Capacidad Instalada (4 cols) -->
+<div class="lg:col-span-4 p-space-xl bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-2xs">
+<h3 class="font-headline-md text-headline-md text-on-surface">Matrícula por Nivel</h3>
+<span class="px-space-xs py-space-2xs rounded-full bg-surface-container text-secondary font-code-num text-code-num">
+            92% Capacidad
+          </span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Distribución actual de 1,482 alumnos sobre cupo total institucional (1,610 plazas)</p>
+</div>
+<div class="flex flex-col gap-space-sm my-space-md">
+<!-- Preescolar -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-on-surface">Preescolar</span>
+<span class="font-code-num text-code-num text-on-surface-variant">180 alumnos (85% cupo)</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 85%;"></div>
+</div>
+</div>
+<!-- Primaria -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-on-surface">Primaria</span>
+<span class="font-code-num text-code-num text-on-surface-variant">640 alumnos (96% cupo)</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 96%;"></div>
+</div>
+</div>
+<!-- Secundaria -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-on-surface">Secundaria</span>
+<span class="font-code-num text-code-num text-on-surface-variant">420 alumnos (93% cupo)</span>
+</div>
+<div class="w-full h-2 rounded-full bg-secondary-container rounded-full" style="width: 93%;"></div>
+</div>
+<!-- Bachillerato -->
+<div class="flex flex-col gap-1">
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-on-surface">Bachillerato</span>
+<span class="font-code-num text-code-num text-on-surface-variant">242 alumnos (88% cupo)</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-surface-tint rounded-full" style="width: 88%;"></div>
+</div>
+</div>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded-lg flex items-center justify-between text-on-surface-variant">
+<span class="font-label-xs text-label-xs uppercase">Plazas Disponibles</span>
+<span class="font-code-num text-code-num font-bold text-on-surface">128 Vacantes Activas</span>
+</div>
+</div>
+<!-- Gráfica Derecha: Semáforo y Comparador de Rendimiento (3 cols) -->
+<div class="lg:col-span-3 p-space-xl bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-space-2xs">
+<h3 class="font-headline-md text-headline-md text-on-surface">Semáforo Nivel</h3>
+<span class="material-symbols-outlined text-secondary text-[20px]">speed</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Calificación &amp; Asistencia</p>
+</div>
+<div class="flex flex-col gap-space-md my-space-sm">
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface">Preescolar</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">95.8% asist.</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-code-num text-code-num font-bold text-secondary">9.4</span>
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface">Primaria</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">96.1% asist.</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-code-num text-code-num font-bold text-secondary">8.9</span>
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface">Secundaria</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">93.2% asist.</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-code-num text-code-num font-bold text-on-surface">8.4</span>
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface">Bachillerato</span>
+<span class="font-label-xs text-label-xs text-on-surface-variant">91.4% asist.</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-code-num text-code-num font-bold text-on-surface">8.3</span>
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-xs font-label-xs text-label-xs text-on-surface-variant">
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-secondary"></span> Óptimo</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-outline"></span> Regular</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-error"></span> Alerta</span>
+</div>
+</div>
+</section>
+<!-- Fila Inferior: Actividad del Sistema en Vivo y Agenda Institucional -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg mb-space-xl">
+<!-- Columna Izquierda: Línea de Tiempo de Actividad en Vivo (7 cols) -->
+<div class="lg:col-span-7 p-space-xl bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[22px]">history</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">Bitácora de Actividad en Vivo</h3>
+</div>
+<span class="px-space-xs py-space-2xs rounded-full bg-surface-container text-secondary font-code-num text-code-num">
+          Actualización continua
+        </span>
+</div>
+<div class="flex flex-col gap-space-md">
+<!-- Evento 1 -->
+<div class="flex items-start gap-space-md p-space-sm rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="p-space-2xs rounded-lg bg-surface-container text-secondary flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">receipt</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-space-xs">
+<span class="font-label-md text-label-md text-on-surface truncate">Pago de colegiatura recibido ($4,850 MXN)</span>
+<span class="font-code-num text-code-num text-on-surface-variant whitespace-nowrap">Hace 8 min</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">
+              Alumno: Mateo Ramírez Nava (3° B Primaria) • Folio: <span class="font-code-num text-code-num text-secondary">#REC-2025-0891</span>
+</p>
+</div>
+</div>
+<!-- Evento 2 -->
+<div class="flex items-start gap-space-md p-space-sm rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="p-space-2xs rounded-lg bg-surface-container-high text-on-surface flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">edit_note</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-space-xs">
+<span class="font-label-md text-label-md text-on-surface truncate">Modificación de calificación oficial</span>
+<span class="font-code-num text-code-num text-on-surface-variant whitespace-nowrap">Hace 24 min</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">
+              Mtra. Laura Silva: Física II (8.5 ➔ 9.0) con dictamen y justificante autorizado.
+            </p>
+</div>
+</div>
+<!-- Evento 3 -->
+<div class="flex items-start gap-space-md p-space-sm rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="p-space-2xs rounded-lg bg-secondary-container text-on-secondary flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">person_add</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-space-xs">
+<span class="font-label-md text-label-md text-on-surface truncate">Inscripción validada en sistema</span>
+<span class="font-code-num text-code-num text-on-surface-variant whitespace-nowrap">Hace 45 min</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">
+              Aspirante Sofía Hernández Garza (1° Bachillerato General). Documentación cotejada al 100%.
+            </p>
+</div>
+</div>
+<!-- Evento 4 -->
+<div class="flex items-start gap-space-md p-space-sm rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="p-space-2xs rounded-lg bg-surface-container text-on-surface flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">campaign</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-space-xs">
+<span class="font-label-md text-label-md text-on-surface truncate">Publicación de comunicado institucional</span>
+<span class="font-code-num text-code-num text-on-surface-variant whitespace-nowrap">Hace 1 h</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">
+              "Calendario de Evaluaciones Trimestrales y Cierre de Actas SEP" difundido a tutores y docentes.
+            </p>
+</div>
+</div>
+<!-- Evento 5 -->
+<div class="flex items-start gap-space-md p-space-sm rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="p-space-2xs rounded-lg bg-surface-container text-on-surface-variant flex-shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">medical_services</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between gap-space-xs">
+<span class="font-label-md text-label-md text-on-surface truncate">Justificación médica registrada</span>
+<span class="font-code-num text-code-num text-on-surface-variant whitespace-nowrap">Hace 2 h</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">
+              Carlos Morales (2° A Secundaria) por 48 hrs con folio del IMSS avalado por prefectura.
+            </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Columna Derecha: Próximos Hitos y Calendario Institucional (5 cols) -->
+<div class="lg:col-span-5 p-space-xl bg-surface-container-lowest rounded-xl shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[22px]">calendar_month</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">Hitos Institucionales</h3>
+</div>
+<button class="font-label-sm text-label-sm text-secondary hover:underline flex items-center gap-0.5">
+<span>Ver Agenda Completa</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Evento Calendario 1 -->
+<div class="flex items-center gap-space-md p-space-sm rounded-lg bg-surface-container-low">
+<div class="flex flex-col items-center justify-center w-12 h-12 rounded-lg bg-surface-container-lowest text-on-surface flex-shrink-0 shadow-sm">
+<span class="font-label-xs text-label-xs text-secondary uppercase font-bold">Feb</span>
+<span class="font-headline-lg text-headline-lg font-bold leading-tight">14</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="px-space-xs py-0.5 rounded-full bg-surface-container text-secondary font-label-xs text-label-xs uppercase">SEP Oficial</span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface truncate mt-0.5">Consejo Técnico Escolar (CTE Ordinario)</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Reunión directiva y docente de evaluación de metas.</p>
+</div>
+</div>
+<!-- Evento Calendario 2 -->
+<div class="flex items-center gap-space-md p-space-sm rounded-lg bg-surface-container-low">
+<div class="flex flex-col items-center justify-center w-12 h-12 rounded-lg bg-surface-container-lowest text-on-surface flex-shrink-0 shadow-sm">
+<span class="font-label-xs text-label-xs text-error uppercase font-bold">Feb</span>
+<span class="font-headline-lg text-headline-lg font-bold leading-tight text-error">18</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="px-space-xs py-0.5 rounded-full bg-error-container text-error font-label-xs text-label-xs uppercase">Cierre Sistema</span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface truncate mt-0.5">Límite de Captura Oficial 2do Parcial</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Bloqueo automático de plataforma para docentes a las 23:59 hrs.</p>
+</div>
+</div>
+<!-- Evento Calendario 3 -->
+<div class="flex items-center gap-space-md p-space-sm rounded-lg bg-surface-container-low">
+<div class="flex flex-col items-center justify-center w-12 h-12 rounded-lg bg-surface-container-lowest text-on-surface flex-shrink-0 shadow-sm">
+<span class="font-label-xs text-label-xs text-secondary uppercase font-bold">Feb</span>
+<span class="font-headline-lg text-headline-lg font-bold leading-tight">24</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="px-space-xs py-0.5 rounded-full bg-surface-container text-on-surface font-label-xs text-label-xs uppercase">Cívico</span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface truncate mt-0.5">Ceremonia Cívica del Día de la Bandera</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Participación de escolta y contingente estudiantil completo.</p>
+</div>
+</div>
+<!-- Evento Calendario 4 -->
+<div class="flex items-center gap-space-md p-space-sm rounded-lg bg-surface-container-low">
+<div class="flex flex-col items-center justify-center w-12 h-12 rounded-lg bg-surface-container-lowest text-on-surface flex-shrink-0 shadow-sm">
+<span class="font-label-xs text-label-xs text-on-surface-variant uppercase font-bold">Feb</span>
+<span class="font-headline-lg text-headline-lg font-bold leading-tight">28</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="px-space-xs py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-xs text-label-xs uppercase">Finanzas</span>
+</div>
+<h4 class="font-label-md text-label-md text-on-surface truncate mt-0.5">Corte Mensual y Emisión de Recargos</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">Generación programada de estados de cuenta para marzo.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div></div></main></div><script src="../assets/js/app.js"></script></body></html>
